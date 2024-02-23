@@ -1,0 +1,17 @@
+{
+  "result": 0,
+  "resultMsg": "ok",
+  "traceId": "7tEpF6tM3FFMQ4RH4QF6Rya68XyGHRe6",
+  "data": [
+    "relay",
+    "FMQ",
+    "lotus",
+    "fable-relay",
+    "TKE",
+    "bank-proxy",
+    "idcproxy",
+    "router-bus-mgr",
+    "zookeeper",
+    "etcd"
+  ]
+}

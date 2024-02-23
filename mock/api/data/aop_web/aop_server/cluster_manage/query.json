@@ -1,0 +1,504 @@
+{
+  "result": 0,
+  "resultMsg": "ok",
+  "traceId": "cXAwfwCywNQGkJKyKsZJsZK22BHa3Whf",
+  "data": {
+    "data": [
+      {
+        "id": 161,
+        "clusterId": "tke-1112706-20231204v7KG",
+        "clusterName": "shh-yn-bx-m9-tke-cluster",
+        "clusterChnName": "域内上海BX-M9-TKE集群",
+        "status": 1,
+        "type": "TKE",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=shh-yn-bx-m9-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon.woa.com/#/default/mNavigation/overallDataFlow1?groupNum=4355",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=&var-cluster=shh-yn-bx-m9-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Cshh-yn-bx-m9-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:50:20",
+        "modifyTime": "2023-12-04 23:50:20",
+        "isDelete": 0,
+        "monModule": [
+          {
+            "op": "fpay_itg_server",
+            "viewParam": "",
+            "title": "系统曲线",
+            "type": 1
+          },
+          {
+            "title": "业务监控",
+            "type": 2,
+            "op": "",
+            "viewParam": "attr_monViewIdList=4355"
+          }
+        ],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      },
+      {
+        "id": 160,
+        "clusterId": "tke-1112706-20231204cDEx",
+        "clusterName": "shh-yn-bx-m7-tke-cluster",
+        "clusterChnName": "域内上海BX-M7-TKE集群",
+        "status": 1,
+        "type": "zookeeper",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=shh-yn-bx-m7-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/fwfLdAPnk/kubernetes-api-server?orgId=1&var-datasource=Thanos&var-cluster=shh-yn-bx-m7-tke-cluster&var-instance=All&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=&var-cluster=shh-yn-bx-m7-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Cshh-yn-bx-m7-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:47:59",
+        "modifyTime": "2023-12-04 23:47:59",
+        "isDelete": 0,
+        "monModule": [
+          {
+            "op": "fpay_itg_server",
+            "viewParam": "",
+            "title": "系统曲线",
+            "type": 1
+          },
+          {
+            "title": "业务监控",
+            "type": 2,
+            "op": "",
+            "viewParam": "attr_monViewIdList=4355"
+          }
+        ],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      },
+      {
+        "id": 159,
+        "clusterId": "tke-1112706-20231204BsZH",
+        "clusterName": "shh-yn-fx-m9-tke-cluster",
+        "clusterChnName": "域内上海FX-M9-TKE集群",
+        "status": 1,
+        "type": "etcd",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=shh-yn-fx-m9-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/fwfLdAPnk/kubernetes-api-server?orgId=1&var-datasource=Thanos&var-cluster=shh-yn-fx-m9-tke-cluster&var-instance=All&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=&var-cluster=shh-yn-fx-m9-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Cshh-yn-fx-m9-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:46:15",
+        "modifyTime": "2023-12-04 23:46:15",
+        "isDelete": 0,
+        "monModule": [
+          {
+            "op": "fpay_itg_server",
+            "viewParam": "",
+            "title": "系统曲线",
+            "type": 1
+          },
+          {
+            "title": "业务监控",
+            "type": 2,
+            "op": "",
+            "viewParam": "attr_monViewIdList=4355"
+          }
+        ],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      },
+      {
+        "id": 158,
+        "clusterId": "tke-1112706-20231204LFmy",
+        "clusterName": "sz-yn-gm-m10-tke-cluster",
+        "clusterChnName": "域内深圳GM_M10-TKE集群",
+        "status": 1,
+        "type": "relay_proxy",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=sz-yn-gm-m10-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/fwfLdAPnk/kubernetes-api-server?orgId=1&var-datasource=Thanos&var-cluster=sz-yn-gm-m10-tke-cluster&var-instance=All&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=&var-cluster=sz-yn-gm-m10-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Csz-yn-gm-m10-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:44:29",
+        "modifyTime": "2023-12-04 23:44:29",
+        "isDelete": 0,
+        "monModule": [
+          {
+            "op": "fpay_itg_server",
+            "viewParam": "",
+            "title": "系统曲线",
+            "type": 1
+          },
+          {
+            "title": "业务监控",
+            "type": 2,
+            "op": "",
+            "viewParam": "attr_monViewIdList=4355"
+          }
+        ],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      },
+      {
+        "id": 7,
+        "clusterId": "tke-1112592-20221207vfTM",
+        "clusterName": "sz-yw-cvm-sk-tke-cluster",
+        "clusterChnName": "域外深圳CVM-TKE集群",
+        "status": 0,
+        "type": "tke",
+        "busiTree": "495824;484501;1112592",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": false,
+          "teamDesc": null
+        },
+        "opsSe": "jerrikyang;zeroduan;jkguo;",
+        "opsLevel": 1,
+        "customLabel": [
+          {
+            "tagValue": "域外",
+            "tagKey": "网络区域"
+          },
+          {
+            "tagValue": "https://tke.cf.com/tkestack/cluster/sub/list/basic/info?rid=1&clusterId=cls-ctnpxkrk",
+            "tagKey": "TKE管理链接"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:39:18",
+        "modifyTime": "2023-12-04 23:39:18",
+        "isDelete": 0,
+        "monModule": [],
+        "busiTreeDesc": "容器云平台/云计算节点/TKE_域外金融节点"
+      },
+      {
+        "id": 154,
+        "clusterId": "tke-1112706-20231204EHng",
+        "clusterName": "shh-yw-bx-m10-tke-cluster",
+        "clusterChnName": "域外上海宝信TKE集群",
+        "status": 1,
+        "type": "TKE",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=shh-yw-bx-m10-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/fwfLdAPnk/kubernetes-api-server?orgId=1&var-datasource=Thanos&var-cluster=shh-yw-bx-m10-tke-cluster&var-instance=All&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=&var-cluster=shh-yw-bx-m10-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Cshh-yw-bx-m10-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:38:27",
+        "modifyTime": "2023-12-04 23:38:27",
+        "isDelete": 0,
+        "monModule": [],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      },
+      {
+        "id": 155,
+        "clusterId": "tke-1112706-20231204ivJl",
+        "clusterName": "shh-yw-fx-m10-tke-cluster",
+        "clusterChnName": "域外上海奉贤TKE集群",
+        "status": 1,
+        "type": "TKE",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=shh-yw-fx-m10-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/fwfLdAPnk/kubernetes-api-server?orgId=1&var-datasource=Thanos&var-cluster=shh-yw-fx-m10-tke-cluster&var-instance=All&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=&var-cluster=shh-yw-fx-m10-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Cshh-yw-fx-m10-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:37:14",
+        "modifyTime": "2023-12-04 23:37:14",
+        "isDelete": 0,
+        "monModule": [],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      },
+      {
+        "id": 157,
+        "clusterId": "tke-1112706-20231204L7gO",
+        "clusterName": "sz-yn-lj-m2-tke-cluster",
+        "clusterChnName": "域内深圳LJ_M2-TKE集群",
+        "status": 1,
+        "type": "TKE",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=sz-yn-lj-m2-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/fwfLdAPnk/kubernetes-api-server?orgId=1&var-datasource=Thanos&var-cluster=sz-yn-lj-m2-tke-cluster&var-instance=All&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=&var-cluster=sz-yn-lj-m2-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Csz-yn-lj-m2-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:36:07",
+        "modifyTime": "2023-12-04 23:36:07",
+        "isDelete": 0,
+        "monModule": [],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      },
+      {
+        "id": 156,
+        "clusterId": "tke-1112706-202312040ynu",
+        "clusterName": "sz-yw-gm-m5-tke-cluster",
+        "clusterChnName": "域外深圳光明TKE集群",
+        "status": 1,
+        "type": "TKE",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=sz-yw-gm-m5-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/fwfLdAPnk/kubernetes-api-server?orgId=1&var-datasource=Thanos&var-cluster=sz-yw-gm-m5-tke-cluster&var-instance=All&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=$__auto_interval_Interval&var-cluster=sz-yw-gm-m5-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Csz-yw-gm-m5-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:32:08",
+        "modifyTime": "2023-12-04 23:32:08",
+        "isDelete": 0,
+        "monModule": [],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      },
+      {
+        "id": 153,
+        "clusterId": "tke-1112706-202312044E9G",
+        "clusterName": "sz-yw-lj-m3-tke-cluster",
+        "clusterChnName": "域外深圳FSI-LJ-TKE集群",
+        "status": 1,
+        "type": "TKE",
+        "busiTree": "495824;484500;1112706",
+        "opModule": null,
+        "busiLabel": {
+          "classify": "",
+          "business": "",
+          "contact": [],
+          "isPublic": true,
+          "teamDesc": null
+        },
+        "opsSe": "zeroduan;jerrikyang;jkguo;",
+        "opsLevel": 5,
+        "customLabel": [
+          {
+            "tagValue": "v1.18.3\t",
+            "tagKey": "集群版本"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/Bsqz2xYnz/clusterji-qun-jian-kong?orgId=1&var-datasource=Thanos&var-cluster=sz-yw-lj-m3-tke-cluster&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "配置管理"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/fwfLdAPnk/kubernetes-api-server?orgId=1&var-datasource=Thanos&var-cluster=sz-yw-lj-m3-tke-cluster&var-instance=All&from=now-30m&to=now&refresh=30s&kiosk=tv",
+            "tagKey": "系统监控"
+          },
+          {
+            "tagValue": "https://mon-tke.woa.com/d/2lZg0A17k/events-from-kubernetes?var-IndexName=All&var-Interval=&var-cluster=sz-yw-lj-m3-tke-cluster&orgId=1&var-Filters=cluster%7C%3D%7Csz-yw-lj-m3-tke-cluster&from=now-30m&to=now&refresh=5s&kiosk=tv",
+            "tagKey": "集群事件"
+          }
+        ],
+        "inFlow": [],
+        "createUser": "jkguo",
+        "modifyUser": "jkguo",
+        "createTime": "2023-12-04 23:17:11",
+        "modifyTime": "2023-12-04 23:17:11",
+        "isDelete": 0,
+        "monModule": [],
+        "busiTreeDesc": "容器云平台/云平台管理/TKE集群管理服务"
+      }
+    ],
+    "totalCount": 11
+  }
+}

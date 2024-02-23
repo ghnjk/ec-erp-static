@@ -1,0 +1,2197 @@
+{
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": "NBNnWKzBY7cMymDZjzmS3iAitTkCsAt5",
+  "data": [
+    {
+      "busiTypeID": 311,
+      "busiTypeDesc": "【包产到户】NFC",
+      "operatorSe": "devinzhong",
+      "devSe": "joeyyu"
+    },
+    {
+      "busiTypeID": 97,
+      "busiTypeDesc": "【包产到户】支付管家",
+      "operatorSe": "terrycai",
+      "devSe": "sungao"
+    },
+    {
+      "busiTypeID": 80,
+      "busiTypeDesc": "【包产到户】彩票竞猜测试",
+      "operatorSe": "pengpeng",
+      "devSe": "pengpeng;v_lkuang;v_mxiangtan"
+    },
+    {
+      "busiTypeID": 82,
+      "busiTypeDesc": "【包产到户】还款测试",
+      "operatorSe": "pengpeng;v_lkuang;v_mxiangtan",
+      "devSe": "pengpeng;v_lkuang;v_mxiangtan"
+    },
+    {
+      "busiTypeID": 83,
+      "busiTypeDesc": "【包产到户】基础支付测试",
+      "operatorSe": "pengpeng;v_lkuang;v_mxiangtan",
+      "devSe": "pengpeng;v_lkuang;v_mxiangtan"
+    },
+    {
+      "busiTypeID": 84,
+      "busiTypeDesc": "【包产到户】结算测试",
+      "operatorSe": "pengpeng;v_lkuang;v_mxiangtan",
+      "devSe": "pengpeng;v_lkuang;v_mxiangtan"
+    },
+    {
+      "busiTypeID": 89,
+      "busiTypeDesc": "【包产到户】主站支付测试",
+      "operatorSe": "pengpeng;v_lkuang;v_mxiangtan",
+      "devSe": "pengpeng;v_lkuang;v_mxiangtan"
+    },
+    {
+      "busiTypeID": 81,
+      "busiTypeDesc": "【包产到户】风控测试",
+      "operatorSe": "atugao",
+      "devSe": "atugao"
+    },
+    {
+      "busiTypeID": 108,
+      "busiTypeDesc": "【包产到户】ABS",
+      "operatorSe": "tracehuang",
+      "devSe": "tracehuang"
+    },
+    {
+      "busiTypeID": 980,
+      "busiTypeDesc": "【包产到户】保险行业",
+      "operatorSe": "terrycai",
+      "devSe": "jiggersong"
+    },
+    {
+      "busiTypeID": 115,
+      "busiTypeDesc": "【包产到户】发布平台",
+      "operatorSe": "terrycai",
+      "devSe": "jerrypyan"
+    },
+    {
+      "busiTypeID": 121,
+      "busiTypeDesc": "【包产到户】扫脸支付",
+      "operatorSe": "lhou",
+      "devSe": "jerizhang"
+    },
+    {
+      "busiTypeID": 60,
+      "busiTypeDesc": "【包产到户】运营开发组测试用",
+      "operatorSe": "waynezhong",
+      "devSe": "hairyxie"
+    },
+    {
+      "busiTypeID": 70,
+      "busiTypeDesc": "【包产到户】基础平台与容灾运维专用",
+      "operatorSe": "danaliu;jkguo;liliwang;frankfyang;jerrikyang;zeroduan;roothuang;jinpengshen",
+      "devSe": "danaliu;jkguo;liliwang;frankfyang;jerrikyang;zeroduan;roothuang;jinpengshen"
+    },
+    {
+      "busiTypeID": 92,
+      "busiTypeDesc": "【包产到户】通讯充值",
+      "operatorSe": "lhou;eattazhong;deliakywang",
+      "devSe": "eattazhong;deliakywang"
+    },
+    {
+      "busiTypeID": 990,
+      "busiTypeDesc": "【包产到户】【容灾演习】网络基础设施",
+      "operatorSe": "danaliu",
+      "devSe": "danaliu"
+    },
+    {
+      "busiTypeID": 124,
+      "busiTypeDesc": "【包产到户】基础支付运维组专用",
+      "operatorSe": "jayfjzhang",
+      "devSe": "jayfjzhang"
+    },
+    {
+      "busiTypeID": 128,
+      "busiTypeDesc": "【包产到户】二级BOSS",
+      "operatorSe": "haoshen",
+      "devSe": "haoshen;zhihuasu"
+    },
+    {
+      "busiTypeID": 130,
+      "busiTypeDesc": "【包产到户】核心切换",
+      "operatorSe": "jeromewei;andesli;jeffyuan",
+      "devSe": "jeromewei"
+    },
+    {
+      "busiTypeID": 91,
+      "busiTypeDesc": "【包产到户】外部",
+      "operatorSe": "cookyxiao",
+      "devSe": "cookyxiao"
+    },
+    {
+      "busiTypeID": 133,
+      "busiTypeDesc": "【包产到户】基础服务",
+      "operatorSe": "zhihuasu",
+      "devSe": "zhihuasu"
+    },
+    {
+      "busiTypeID": 134,
+      "busiTypeDesc": "【包产到户】点击流",
+      "operatorSe": "tianxiabai",
+      "devSe": "tianxiabai"
+    },
+    {
+      "busiTypeID": 132,
+      "busiTypeDesc": "【包产到户】IP流量",
+      "operatorSe": "deshanhe",
+      "devSe": "deshanhe"
+    },
+    {
+      "busiTypeID": 145,
+      "busiTypeDesc": "【包产到户】实时API",
+      "operatorSe": "andyslin",
+      "devSe": "andyslin"
+    },
+    {
+      "busiTypeID": 99,
+      "busiTypeDesc": "【包产到户】【容灾演习】运营基础平台",
+      "operatorSe": "danaliu;gavinchang",
+      "devSe": "danaliu;gavinchang"
+    },
+    {
+      "busiTypeID": 982,
+      "busiTypeDesc": "【包产到户】金融应用校园联名卡",
+      "operatorSe": "lhou",
+      "devSe": "ericwtzheng"
+    },
+    {
+      "busiTypeID": 107,
+      "busiTypeDesc": "polar/精准推荐",
+      "operatorSe": "saintwen;tianxiabai;averyzhang",
+      "devSe": "saintwen;lobbyluo"
+    },
+    {
+      "busiTypeID": 148,
+      "busiTypeDesc": "【包产到户】平台运维",
+      "operatorSe": "huizhong;zyuanwang;sundyzhu",
+      "devSe": "huizhong;zyuanwang;sundyzhu"
+    },
+    {
+      "busiTypeID": 29,
+      "busiTypeDesc": "【包产到户】商业中心产品",
+      "operatorSe": "lhou",
+      "devSe": "seerhan;quincydu"
+    },
+    {
+      "busiTypeID": 150,
+      "busiTypeDesc": "【包产到户】爬虫",
+      "operatorSe": "zhihuasu",
+      "devSe": "zhihuasu"
+    },
+    {
+      "busiTypeID": 151,
+      "busiTypeDesc": "【包产到户】微信乐刮",
+      "operatorSe": "arhatliu",
+      "devSe": "arhatliu"
+    },
+    {
+      "busiTypeID": 73,
+      "busiTypeDesc": "【包产到户】互联网保险",
+      "operatorSe": "ramonwang",
+      "devSe": "jingxiyi"
+    },
+    {
+      "busiTypeID": 67,
+      "busiTypeDesc": "【包产到户】智能客服",
+      "operatorSe": "shirleylu",
+      "devSe": "zhihuasu"
+    },
+    {
+      "busiTypeID": 57,
+      "busiTypeDesc": "【包产到户】移动创新应用--微收款",
+      "operatorSe": "ramonwang",
+      "devSe": "sliverdang"
+    },
+    {
+      "busiTypeID": 59,
+      "busiTypeDesc": "【包产到户】移动创新应用",
+      "operatorSe": "lhou",
+      "devSe": "joeyfjiang"
+    },
+    {
+      "busiTypeID": 120,
+      "busiTypeDesc": "【包产到户】无感支付",
+      "operatorSe": "terrycai",
+      "devSe": "jiggersong"
+    },
+    {
+      "busiTypeID": 43,
+      "busiTypeDesc": "【包产到户】地铁购票",
+      "operatorSe": "elmozhuang",
+      "devSe": "hankjiang"
+    },
+    {
+      "busiTypeID": 49,
+      "busiTypeDesc": "【包产到户】生活服务",
+      "operatorSe": "haimingchen",
+      "devSe": "alvintang"
+    },
+    {
+      "busiTypeID": 56,
+      "busiTypeDesc": "【包产到户】POS收单",
+      "operatorSe": "lhou",
+      "devSe": "xiangyunli"
+    },
+    {
+      "busiTypeID": 58,
+      "busiTypeDesc": "【包产到户】移动创新应用--微扫码",
+      "operatorSe": "ramonwang",
+      "devSe": "youngzheng"
+    },
+    {
+      "busiTypeID": 71,
+      "busiTypeDesc": "【包产到户】分账机票",
+      "operatorSe": "justinjiang",
+      "devSe": "peterzang"
+    },
+    {
+      "busiTypeID": 75,
+      "busiTypeDesc": "【包产到户】彩票竞猜",
+      "operatorSe": "xavierzhang",
+      "devSe": "lhou"
+    },
+    {
+      "busiTypeID": 981,
+      "busiTypeDesc": "【包产到户】腾讯乘车码",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu;pandabie"
+    },
+    {
+      "busiTypeID": 985,
+      "busiTypeDesc": "【包产到户】乘车码相关的所有小程序",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu"
+    },
+    {
+      "busiTypeID": 160,
+      "busiTypeDesc": "【包产到户】权限管理系统",
+      "operatorSe": "zhihuasu;jamwang",
+      "devSe": "zhihuasu;jamwang"
+    },
+    {
+      "busiTypeID": 984,
+      "busiTypeDesc": "【包产到户】乘车码商户平台",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu"
+    },
+    {
+      "busiTypeID": 135,
+      "busiTypeDesc": "【包产到户】企业微信金融服务平台",
+      "operatorSe": "royzhao",
+      "devSe": "eattazhong"
+    },
+    {
+      "busiTypeID": 138,
+      "busiTypeDesc": "【包产到户】金融云",
+      "operatorSe": "stonexli",
+      "devSe": "denielcheng;stonexli"
+    },
+    {
+      "busiTypeID": 146,
+      "busiTypeDesc": "【包产到户】磐石",
+      "operatorSe": "jiabaochen",
+      "devSe": "mackyzhong"
+    },
+    {
+      "busiTypeID": 162,
+      "busiTypeDesc": "【包产到户】微团购",
+      "operatorSe": "terrycai",
+      "devSe": "jackyshi"
+    },
+    {
+      "busiTypeID": 90,
+      "busiTypeDesc": "【包产到户】DBA组专用",
+      "operatorSe": "joeycheng;shinexuan",
+      "devSe": "joeycheng;shinexuan"
+    },
+    {
+      "busiTypeID": 163,
+      "busiTypeDesc": "【包产到户】财经系统",
+      "operatorSe": "lhou;clarachen;rickonli",
+      "devSe": "kenjksong;clarachen;alvinouyang"
+    },
+    {
+      "busiTypeID": 156,
+      "busiTypeDesc": "【包产到户】香港虚拟银行业务系统",
+      "operatorSe": "xavierzhang;p_hhxian;p_yanzzfu;v_ruiqiyan;p_zugenqiu;p_qdeng;p_hancli;p_tqchen;p_wejunzhou",
+      "devSe": "classyuan;riquelmexu;jimyan;reymondtu"
+    },
+    {
+      "busiTypeID": 112,
+      "busiTypeDesc": "质量管理",
+      "operatorSe": "iveywang;lihongzhu;nydialuo",
+      "devSe": "iveywang;lihongzhu;nydialuo"
+    },
+    {
+      "busiTypeID": 64,
+      "busiTypeDesc": "【包产到户】PC支付",
+      "operatorSe": "terrycai",
+      "devSe": "eattazhong"
+    },
+    {
+      "busiTypeID": 42,
+      "busiTypeDesc": "【包产到户】异步支撑平台",
+      "operatorSe": "jerrikyang;zeroduan",
+      "devSe": "skyzhuang"
+    },
+    {
+      "busiTypeID": 30,
+      "busiTypeDesc": "【包产到户】付款",
+      "operatorSe": "andyccyuan;haimingchen",
+      "devSe": "maxfeng;thomaslei;williamsfu;arthurychen"
+    },
+    {
+      "busiTypeID": 40,
+      "busiTypeDesc": "【包产到户】收款",
+      "operatorSe": "yanzifu",
+      "devSe": "andrewguo"
+    },
+    {
+      "busiTypeID": 94,
+      "busiTypeDesc": "【包产到户】资金管理与账务处理",
+      "operatorSe": "andyccyuan;haimingchen;xiaonianliu;lukexywang",
+      "devSe": "andrewguo;xiaonianliu;lukexywang"
+    },
+    {
+      "busiTypeID": 95,
+      "busiTypeDesc": "【包产到户】子账户",
+      "operatorSe": "tenalcai",
+      "devSe": "thinkzhao"
+    },
+    {
+      "busiTypeID": 93,
+      "busiTypeDesc": "【包产到户】国际清算平台",
+      "operatorSe": "haimingchen;liequanliu",
+      "devSe": "macoma;wenlongxia"
+    },
+    {
+      "busiTypeID": 166,
+      "busiTypeDesc": "【包产到户】交易平台",
+      "operatorSe": "jkguo;kirkchen;frankfyang;liliwang",
+      "devSe": "pauluszhou"
+    },
+    {
+      "busiTypeID": 164,
+      "busiTypeDesc": "【包产到户】一键部署平台测试",
+      "operatorSe": "jessema",
+      "devSe": "jessema"
+    },
+    {
+      "busiTypeID": 79,
+      "busiTypeDesc": "未分类",
+      "operatorSe": "iveywang",
+      "devSe": "iveywang;elpowang;lihongzhu;congcao;shirleyxiao;cookyxiao;cherryqian;nydialuo"
+    },
+    {
+      "busiTypeID": 123,
+      "busiTypeDesc": "【包产到户】元灵系统",
+      "operatorSe": "gavinchang",
+      "devSe": "yvonneliao;kenneyzheng"
+    },
+    {
+      "busiTypeID": 482,
+      "busiTypeDesc": "【包产到户】QQ钱包--运营",
+      "operatorSe": "leonardcai",
+      "devSe": "dannyhu;wenfengke"
+    },
+    {
+      "busiTypeID": 483,
+      "busiTypeDesc": "【包产到户】QQ钱包--客户端",
+      "operatorSe": "ivanke",
+      "devSe": "cosmohe;jackyshi"
+    },
+    {
+      "busiTypeID": 129,
+      "busiTypeDesc": "【包产到户】测试业务",
+      "operatorSe": "andrewgu",
+      "devSe": "andrewgu"
+    },
+    {
+      "busiTypeID": 131,
+      "busiTypeDesc": "【包产到户】 公共组件平台测试",
+      "operatorSe": "appleyang",
+      "devSe": "appleyang"
+    },
+    {
+      "busiTypeID": 86,
+      "busiTypeDesc": "【包产到户】退款测试",
+      "operatorSe": "pengpeng;v_lkuang;v_mxiangtan",
+      "devSe": "pengpeng;v_lkuang;v_mxiangtan"
+    },
+    {
+      "busiTypeID": 87,
+      "busiTypeDesc": "【包产到户】微信支付测试",
+      "operatorSe": "pengpeng;v_lkuang;v_mxiangtan",
+      "devSe": "pengpeng;v_lkuang;v_mxiangtan"
+    },
+    {
+      "busiTypeID": 54,
+      "busiTypeDesc": "【包产到户】trustsql",
+      "operatorSe": "reymondtu",
+      "devSe": "zonewang"
+    },
+    {
+      "busiTypeID": 137,
+      "busiTypeDesc": "【包产到户】AI创新研究",
+      "operatorSe": "amosshan;lizzhou;klausluo",
+      "devSe": "amosshan;lizzhou;klausluo"
+    },
+    {
+      "busiTypeID": 154,
+      "busiTypeDesc": "【包产到户】腾安养老",
+      "operatorSe": "terrycai",
+      "devSe": "yaochunli;wilberliu"
+    },
+    {
+      "busiTypeID": 32,
+      "busiTypeDesc": "【包产到户】CFT微众联合产品",
+      "operatorSe": "rockyqiu;hankchen",
+      "devSe": "rockyqiu;hankchen"
+    },
+    {
+      "busiTypeID": 481,
+      "busiTypeDesc": "【包产到户】QQ钱包--应用",
+      "operatorSe": "morenzou;samcai;pengao",
+      "devSe": "morenzou;samcai"
+    },
+    {
+      "busiTypeID": 116,
+      "busiTypeDesc": "【包产到户】投研风控",
+      "operatorSe": "dpzhou",
+      "devSe": "dpzhou"
+    },
+    {
+      "busiTypeID": 63,
+      "busiTypeDesc": "【包产到户】金融创新业务",
+      "operatorSe": "lhou;landwei",
+      "devSe": "landwei"
+    },
+    {
+      "busiTypeID": 72,
+      "busiTypeDesc": "【包产到户】生活缴费",
+      "operatorSe": "kirkchen;yanzifu",
+      "devSe": "alvintang"
+    },
+    {
+      "busiTypeID": 74,
+      "busiTypeDesc": "【包产到户】联合应用",
+      "operatorSe": "kirkchen;yanzifu",
+      "devSe": "larrypu"
+    },
+    {
+      "busiTypeID": 117,
+      "busiTypeDesc": "【包产到户】金融应用运维专用",
+      "operatorSe": "lhou;kitmin;hanwillfeng",
+      "devSe": "lhou;kitmin;hanwillfeng"
+    },
+    {
+      "busiTypeID": 44,
+      "busiTypeDesc": "【包产到户】退款",
+      "operatorSe": "andyccyuan;haimingchen",
+      "devSe": "zilenzhou;bovindai"
+    },
+    {
+      "busiTypeID": 140,
+      "busiTypeDesc": "【包产到户】马来钱包",
+      "operatorSe": "kitmin",
+      "devSe": "sternwang;andyyao;larrypu;myforchen"
+    },
+    {
+      "busiTypeID": 47,
+      "busiTypeDesc": "【包产到户】主站支付",
+      "operatorSe": "kitmin;chillaxlai",
+      "devSe": "sternwang"
+    },
+    {
+      "busiTypeID": 50,
+      "busiTypeDesc": "【包产到户】财付通app",
+      "operatorSe": "kirkchen;yanzifu",
+      "devSe": "youngzheng"
+    },
+    {
+      "busiTypeID": 51,
+      "busiTypeDesc": "【包产到户】商户基础产品",
+      "operatorSe": "kirkchen;yanzifu",
+      "devSe": "hadilu"
+    },
+    {
+      "busiTypeID": 55,
+      "busiTypeDesc": "【包产到户】企业代收",
+      "operatorSe": "kirkchen;yanzifu",
+      "devSe": "daikinshi"
+    },
+    {
+      "busiTypeID": 62,
+      "busiTypeDesc": "【包产到户】企业代付",
+      "operatorSe": "kirkchen;yanzifu",
+      "devSe": "horseli"
+    },
+    {
+      "busiTypeID": 68,
+      "busiTypeDesc": "【包产到户】涉外业务",
+      "operatorSe": "kitmin;chillaxlai",
+      "devSe": "andyyao"
+    },
+    {
+      "busiTypeID": 69,
+      "busiTypeDesc": "【包产到户】海关申报",
+      "operatorSe": "kitmin;chillaxlai",
+      "devSe": "jwinwen"
+    },
+    {
+      "busiTypeID": 65,
+      "busiTypeDesc": "【包产到户】海外钱包支付",
+      "operatorSe": "kitmin;chillaxlai",
+      "devSe": "shireyang;andyyao"
+    },
+    {
+      "busiTypeID": 31,
+      "busiTypeDesc": "【包产到户】境外收单",
+      "operatorSe": "kitmin;chillaxlai",
+      "devSe": "youngzheng"
+    },
+    {
+      "busiTypeID": 161,
+      "busiTypeDesc": "【包产到户】全民BI",
+      "operatorSe": "leontong",
+      "devSe": "hankchen;leontong"
+    },
+    {
+      "busiTypeID": 147,
+      "busiTypeDesc": "理财通平台运营",
+      "operatorSe": "monliu;kodyqywang;hanwillfeng;deweyyang",
+      "devSe": "kelvinlei;alexjhwen"
+    },
+    {
+      "busiTypeID": 153,
+      "busiTypeDesc": "【包产到户】密码安全",
+      "operatorSe": "cosmohe;medivhwu;springxiao",
+      "devSe": "cosmohe;medivhwu;springxiao"
+    },
+    {
+      "busiTypeID": 155,
+      "busiTypeDesc": "【包产到户】TFAE核心",
+      "operatorSe": "kimbalhuang",
+      "devSe": "galenzhang;jensonchen"
+    },
+    {
+      "busiTypeID": 77,
+      "busiTypeDesc": "【包产到户】运营支撑平台",
+      "operatorSe": "terrycai",
+      "devSe": "hyshen"
+    },
+    {
+      "busiTypeID": 149,
+      "busiTypeDesc": "【包产到户】蜂巢决策引擎",
+      "operatorSe": "lobbyluo;arhatliu",
+      "devSe": "lobbyluo;arhatliu"
+    },
+    {
+      "busiTypeID": 113,
+      "busiTypeDesc": "【包产到户】安全平台",
+      "operatorSe": "jkguo;liliwang;frankfyang;jinpengshen",
+      "devSe": "yingtingxu;dfenghuang;zhiliangli"
+    },
+    {
+      "busiTypeID": 36,
+      "busiTypeDesc": "【包产到户】还款",
+      "operatorSe": "kitmin;arronzhao;lhou",
+      "devSe": "iantian;helyhu"
+    },
+    {
+      "busiTypeID": 126,
+      "busiTypeDesc": "【包产到户】周转",
+      "operatorSe": "lyndonliao;wuqiangliao",
+      "devSe": "lyndonliao;wuqiangliao"
+    },
+    {
+      "busiTypeID": 541,
+      "busiTypeDesc": "【包产到户】区块链基础平台",
+      "operatorSe": "zonewang",
+      "devSe": "zonewang"
+    },
+    {
+      "busiTypeID": 542,
+      "busiTypeDesc": "【包产到户】区块链应用平台",
+      "operatorSe": "tigerlan",
+      "devSe": "tigerlan"
+    },
+    {
+      "busiTypeID": 986,
+      "busiTypeDesc": "【包产到户】乘车码发票",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu"
+    },
+    {
+      "busiTypeID": 987,
+      "busiTypeDesc": "【包产到户】乘车码大前端",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu"
+    },
+    {
+      "busiTypeID": 102,
+      "busiTypeDesc": "【包产到户】小经费",
+      "operatorSe": "xavierzhang;radarli",
+      "devSe": "robertoliu"
+    },
+    {
+      "busiTypeID": 111,
+      "busiTypeDesc": "【包产到户】出境通",
+      "operatorSe": "v_yaccao;jiggersong",
+      "devSe": "jiggersong"
+    },
+    {
+      "busiTypeID": 152,
+      "busiTypeDesc": "【包产到户】选股",
+      "operatorSe": "lhou;xiaoshzhang",
+      "devSe": "caitlinchen;cocoshu"
+    },
+    {
+      "busiTypeID": 38,
+      "busiTypeDesc": "【包产到户】核心支付",
+      "operatorSe": "joeycheng;silasliu",
+      "devSe": "thinkzhao;maoshimai;sliverdang"
+    },
+    {
+      "busiTypeID": 33,
+      "busiTypeDesc": "【包产到户】微信支付",
+      "operatorSe": "haimingchen;danielqwang;runxibao;hilljiang",
+      "devSe": "josefzhang;thinkzhao"
+    },
+    {
+      "busiTypeID": 35,
+      "busiTypeDesc": "【包产到户】基础支付",
+      "operatorSe": "danielqwang;runxibao",
+      "devSe": "celiafeng;thinkzhao"
+    },
+    {
+      "busiTypeID": 37,
+      "busiTypeDesc": "【包产到户】手Q主站网关",
+      "operatorSe": "hilljiang;danielqwang",
+      "devSe": "josefzhang"
+    },
+    {
+      "busiTypeID": 180,
+      "busiTypeDesc": "【包产到户】腾讯公益",
+      "operatorSe": "kietchen;keyoushu;jayyi",
+      "devSe": "kietchen;keyoushu;jayyi"
+    },
+    {
+      "busiTypeID": 167,
+      "busiTypeDesc": "【包产到户】加油卡充值",
+      "operatorSe": "quincydu",
+      "devSe": "quincydu"
+    },
+    {
+      "busiTypeID": 88,
+      "busiTypeDesc": "【包产到户】运营平台",
+      "operatorSe": "jerrypyan;jkguo",
+      "devSe": "jerrypyan;rainyin;jeaffchen;franklzhang;jkguo;jordonzhang;lucasjcwang"
+    },
+    {
+      "busiTypeID": 175,
+      "busiTypeDesc": "【包产到户】香港虚拟银行客服系统",
+      "operatorSe": "xavierzhang;v_tqchen;v_qdeng;p_hhxian;p_yanzzfu;v_chenglsi;v_ruiqiyan;v_zugenqiu;v_hanchaoli",
+      "devSe": "suntefan;kevinzou"
+    },
+    {
+      "busiTypeID": 142,
+      "busiTypeDesc": "【包产到户】证券通前端",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "taylenxu;xileiwang;percymo;cocoshu"
+    },
+    {
+      "busiTypeID": 114,
+      "busiTypeDesc": "【包产到户】BOSS",
+      "operatorSe": "kitmin",
+      "devSe": "shireyang;andyyao"
+    },
+    {
+      "busiTypeID": 76,
+      "busiTypeDesc": "【包产到户】证券通",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "taylenxu;silenchen;cocoshu;reaganwang"
+    },
+    {
+      "busiTypeID": 983,
+      "busiTypeDesc": "【包产到户】乘车码车票",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu;jeffriechen;melodycchen"
+    },
+    {
+      "busiTypeID": 45,
+      "busiTypeDesc": "理财通交易业务",
+      "operatorSe": "hanwillfeng;monliu;kodyqywang;deweyyang",
+      "devSe": "arsirzhang;vicenteyao;louisjiang"
+    },
+    {
+      "busiTypeID": 118,
+      "busiTypeDesc": "【包产到户】流程系统",
+      "operatorSe": "hairyxie",
+      "devSe": "hairyxie;rainyin;pqzhang"
+    },
+    {
+      "busiTypeID": 48,
+      "busiTypeDesc": "【包产到户】QQ钱包",
+      "operatorSe": "morenzou;henrywbli",
+      "devSe": "morenzou;wateringliu;phorixfan;henrywbli"
+    },
+    {
+      "busiTypeID": 157,
+      "busiTypeDesc": "【包产到户】香港虚拟银行核心系统",
+      "operatorSe": "royzhao;xavierzhang;v_qdeng;p_hhxian;v_tqchen;p_yanzzfu;v_chenglsi;v_ruiqiyan;v_zugenqiu;v_hanchaoli",
+      "devSe": "callumchen;davionchen"
+    },
+    {
+      "busiTypeID": 531,
+      "busiTypeDesc": "【包产到户】乘车码账务",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu;pandabie"
+    },
+    {
+      "busiTypeID": 143,
+      "busiTypeDesc": "【包产到户】微证券前端",
+      "operatorSe": "xiaoshzhang;evanfan;jacobyzhang;akeyliu;percymo;rockyxue;xileiwang;littlelei;stephaniewu",
+      "devSe": "taylenxu;mandydyluo;teffyliu;jacobyzhang;evanfan;akeyliu;kevinhliu;rockyxue;xileiwang"
+    },
+    {
+      "busiTypeID": 182,
+      "busiTypeDesc": "【包产到户】信用卡前端",
+      "operatorSe": "kitmin",
+      "devSe": "yuanmingli;xmagicwu"
+    },
+    {
+      "busiTypeID": 169,
+      "busiTypeDesc": "【包产到户】香港虚拟银行购付汇系统",
+      "operatorSe": "royzhao;xavierzhang;v_qdeng;p_hhxian;v_tqchen;p_yanzzfu;v_chenglsi;v_ruiqiyan;v_zugenqiu;v_hanchaoli",
+      "devSe": "kevinzou;p_sjxing"
+    },
+    {
+      "busiTypeID": 170,
+      "busiTypeDesc": "【包产到户】香港虚拟银行SAS反洗钱系统",
+      "operatorSe": "royzhao;xavierzhang;v_qdeng;p_hhxian;v_tqchen;p_yanzzfu;v_chenglsi;v_ruiqiyan;v_zugenqiu;v_hanchaoli",
+      "devSe": "kevinzou"
+    },
+    {
+      "busiTypeID": 174,
+      "busiTypeDesc": "【包产到户】香港虚拟银行监管报表系统",
+      "operatorSe": "v_tqchen;xavierzhang;v_qdeng;p_hhxian;p_yanzzfu;v_chenglsi;v_ruiqiyan;v_zugenqiu;v_hanchaoli",
+      "devSe": "kevinzou;v_yuaazhang"
+    },
+    {
+      "busiTypeID": 176,
+      "busiTypeDesc": "【包产到户】香港虚拟银行TAS资金管理系统",
+      "operatorSe": "xavierzhang;v_tqchen;v_qdeng;p_hhxian;p_yanzzfu;v_chenglsi;v_ruiqiyan;v_zugenqiu;v_hanchaoli",
+      "devSe": "kevinzou"
+    },
+    {
+      "busiTypeID": 178,
+      "busiTypeDesc": "【包产到户】虚拟银行财务系统",
+      "operatorSe": "xavierzhang;v_tqchen",
+      "devSe": "kevinzou;tantan"
+    },
+    {
+      "busiTypeID": 179,
+      "busiTypeDesc": "【包产到户】香港虚拟银行ALM资产负债管理系统",
+      "operatorSe": "xavierzhang;v_tqchen;v_qdeng;p_hhxian;p_yanzzfu;v_chenglsi;v_ruiqiyan;v_zugenqiu;v_hanchaoli",
+      "devSe": "kevinzou"
+    },
+    {
+      "busiTypeID": 183,
+      "busiTypeDesc": "【包产到户】香港虚拟银行数据平台",
+      "operatorSe": "xavierzhang;v_tqchen;v_qdeng;p_hhxian;p_yanzzfu;v_chenglsi;v_ruiqiyan;v_zugenqiu;v_hanchaoli",
+      "devSe": "winsonhe;yuelongsun;v_yuaazhang"
+    },
+    {
+      "busiTypeID": 184,
+      "busiTypeDesc": "腾安支付",
+      "operatorSe": "runxibao;haimingchen",
+      "devSe": "milfordzeng"
+    },
+    {
+      "busiTypeID": 127,
+      "busiTypeDesc": "【包产到户】fit_recommend",
+      "operatorSe": "shijiexu;leocchen;rickonli",
+      "devSe": "shijiexu;leocchen;rickonli"
+    },
+    {
+      "busiTypeID": 41,
+      "busiTypeDesc": "【包产到户】结算",
+      "operatorSe": "andyccyuan;haimingchen",
+      "devSe": "macoma;casezheng;jakehu"
+    },
+    {
+      "busiTypeID": 301,
+      "busiTypeDesc": "【包产到户】公共组件平台",
+      "operatorSe": "jkguo;frankfyang;liliwang;jerrikyang",
+      "devSe": "deshengli;skyzhuang"
+    },
+    {
+      "busiTypeID": 171,
+      "busiTypeDesc": "【包产到户】devops流水线",
+      "operatorSe": "daveliu",
+      "devSe": "daveliu"
+    },
+    {
+      "busiTypeID": 185,
+      "busiTypeDesc": "压测平台",
+      "operatorSe": "quanwangyin;weihuahong",
+      "devSe": "quanwangyin;weihuahong"
+    },
+    {
+      "busiTypeID": 187,
+      "busiTypeDesc": "测试专项",
+      "operatorSe": "jessema",
+      "devSe": "jessema"
+    },
+    {
+      "busiTypeID": 109,
+      "busiTypeDesc": "【包产到户】环境管理",
+      "operatorSe": "tomhywang;tokidong",
+      "devSe": "tomhywang;tokidong"
+    },
+    {
+      "busiTypeID": 186,
+      "busiTypeDesc": "环境管理",
+      "operatorSe": "jessema",
+      "devSe": "jessema"
+    },
+    {
+      "busiTypeID": 173,
+      "busiTypeDesc": "专项测试",
+      "operatorSe": "daveliu",
+      "devSe": "daveliu"
+    },
+    {
+      "busiTypeID": 172,
+      "busiTypeDesc": "测试平台",
+      "operatorSe": "dawntang;jacobcliu;quanwangyin",
+      "devSe": "tracyzhang;jacobcliu;dawntang"
+    },
+    {
+      "busiTypeID": 103,
+      "busiTypeDesc": "【包产到户】证券资讯平台SNP",
+      "operatorSe": "rickonli;xiaoshzhang;sumailyu",
+      "devSe": "clarachen;kenjksong;sumailyu"
+    },
+    {
+      "busiTypeID": 119,
+      "busiTypeDesc": "【包产到户】微信信用卡",
+      "operatorSe": "kitmin;chageni;chrisxiong",
+      "devSe": "chageni;chrisxiong"
+    },
+    {
+      "busiTypeID": 165,
+      "busiTypeDesc": "【包产到户】换汇平台",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "daikinshi;haleyxie;wenzou;jwinwen;simonsmqin;denniszhu;vinceguo;edisonyang;zhibinzhou"
+    },
+    {
+      "busiTypeID": 106,
+      "busiTypeDesc": "【包产到户】风控前端",
+      "operatorSe": "mickeyhu",
+      "devSe": "mickeyhu"
+    },
+    {
+      "busiTypeID": 34,
+      "busiTypeDesc": "【包产到户】腾讯征信产品",
+      "operatorSe": "tylerwu;weaverzhang;bournexiao",
+      "devSe": "bournexiao;weaverzhang"
+    },
+    {
+      "busiTypeID": 122,
+      "busiTypeDesc": "【包产到户】证券交易平台STP",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "silenchen;cocoshu"
+    },
+    {
+      "busiTypeID": 96,
+      "busiTypeDesc": "【包产到户】风控策略",
+      "operatorSe": "sampsonyu",
+      "devSe": "sampsonyu"
+    },
+    {
+      "busiTypeID": 61,
+      "busiTypeDesc": "【包产到户】风控",
+      "operatorSe": "lhou",
+      "devSe": "dinochen;allisonzhao;wolfhwang;mybayswang"
+    },
+    {
+      "busiTypeID": 46,
+      "busiTypeDesc": "【包产到户】业务支持系统",
+      "operatorSe": "eliooyang;cdwei",
+      "devSe": "cdwei;eliooyang;hattiyzhang"
+    },
+    {
+      "busiTypeID": 188,
+      "busiTypeDesc": "【包产到户】自选股前端",
+      "operatorSe": "rickonli;percymo;rockyxue;xileiwang;littlelei;stephaniewu;shannontian;evanfan",
+      "devSe": "evanfan;jayhan;shannontian;robinczhang;linqiao;lunalzhang;cocoshu"
+    },
+    {
+      "busiTypeID": 125,
+      "busiTypeDesc": "【包产到户】自选股",
+      "operatorSe": "rickonli;kenjksong;xiaoshzhang;alvinouyang",
+      "devSe": "alvinouyang;clarachen;kenjksong;sumailyu"
+    },
+    {
+      "busiTypeID": 988,
+      "busiTypeDesc": "【包产到户】乘车码SDK",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu"
+    },
+    {
+      "busiTypeID": 991,
+      "busiTypeDesc": "【包产到户】射雕项目",
+      "operatorSe": "dannyhu;galenzhang;wilberliu;haimingchen",
+      "devSe": "wilberliu;dannyhu;galenzhang;cosmohe;allenan"
+    },
+    {
+      "busiTypeID": 110,
+      "busiTypeDesc": "设计中心",
+      "operatorSe": "eupholin",
+      "devSe": "eupholin"
+    },
+    {
+      "busiTypeID": 52,
+      "busiTypeDesc": "【包产到户】清算公共系统",
+      "operatorSe": "andyccyuan;haimingchen",
+      "devSe": "wenlongxia;deanpzhang;zilenzhou"
+    },
+    {
+      "busiTypeID": 144,
+      "busiTypeDesc": "【包产到户】香港钱包",
+      "operatorSe": "kitmin;shireyang",
+      "devSe": "andyyao;shireyang;larrypu;myforchen;sternwang"
+    },
+    {
+      "busiTypeID": 66,
+      "busiTypeDesc": "【包产到户】海外钱包应用",
+      "operatorSe": "kitmin;andyyao",
+      "devSe": "andyyao;jingxiyi;larrypu"
+    },
+    {
+      "busiTypeID": 78,
+      "busiTypeDesc": "【包产到户】境外业务",
+      "operatorSe": "kitmin;chillaxlai",
+      "devSe": "erickenwu"
+    },
+    {
+      "busiTypeID": 53,
+      "busiTypeDesc": "【包产到户】乘车码-出行定制",
+      "operatorSe": "augustcchen;v_zhanxu",
+      "devSe": "tmacwu;leonchaoxu"
+    },
+    {
+      "busiTypeID": 139,
+      "busiTypeDesc": "【包产到户】零钱通",
+      "operatorSe": "haimingchen;runxibao",
+      "devSe": "milfordzeng"
+    },
+    {
+      "busiTypeID": 104,
+      "busiTypeDesc": "【包产到户】金融应用运营平台",
+      "operatorSe": "lhou;devinzhong",
+      "devSe": "tmacwu;jeffriechen"
+    },
+    {
+      "busiTypeID": 989,
+      "busiTypeDesc": "【包产到户】微乐分",
+      "operatorSe": "lhou;jaswang",
+      "devSe": "landwei"
+    },
+    {
+      "busiTypeID": 39,
+      "busiTypeDesc": "【包产到户】银行支付",
+      "operatorSe": "berlinyu;kirkchen",
+      "devSe": "jayolu;alexzou;dawnzheng;elijawang;haibojiang"
+    },
+    {
+      "busiTypeID": 177,
+      "busiTypeDesc": "【包产到户】香港游",
+      "operatorSe": "lhou",
+      "devSe": "mackyzhong;bowlgao"
+    },
+    {
+      "busiTypeID": 189,
+      "busiTypeDesc": "【包产到户】基础交易测试组",
+      "operatorSe": "enochzhang",
+      "devSe": "enochzhang"
+    },
+    {
+      "busiTypeID": 221,
+      "busiTypeDesc": "【包产到户】微证券",
+      "operatorSe": "xiaoshzhang;rickonli;moovyyang",
+      "devSe": "silenchen;moovyyang"
+    },
+    {
+      "busiTypeID": 98,
+      "busiTypeDesc": "理财通应用开发",
+      "operatorSe": "monliu;kodyqywang;hanwillfeng;deweyyang",
+      "devSe": "ianwu;elijahyang"
+    },
+    {
+      "busiTypeID": 190,
+      "busiTypeDesc": "【包产到户】话费存续",
+      "operatorSe": "lhou",
+      "devSe": "brianliu;amoliu;sivirwang"
+    },
+    {
+      "busiTypeID": 191,
+      "busiTypeDesc": "财富管理测试",
+      "operatorSe": "alvenzhang;zhenyuqiao;annacheng;lukebai",
+      "devSe": "alvenzhang;zhenyuqiao;annacheng;lukebai"
+    },
+    {
+      "busiTypeID": 192,
+      "busiTypeDesc": "磐石门户",
+      "operatorSe": "eviesun;tokidong",
+      "devSe": "eviesun;tokidong;vitoliu"
+    },
+    {
+      "busiTypeID": 193,
+      "busiTypeDesc": "【包产到户】香港虚拟银行区块链系统",
+      "operatorSe": "xavierzhang;v_tqchen;royzhao",
+      "devSe": "reymondtu;tantan"
+    },
+    {
+      "busiTypeID": 194,
+      "busiTypeDesc": "【包产到户】风控应用平台",
+      "operatorSe": "lhou",
+      "devSe": "svendeng;bournexiao;tovizhang;kevinzou"
+    },
+    {
+      "busiTypeID": 195,
+      "busiTypeDesc": "【包产到户】元数据管理",
+      "operatorSe": "dpzhou",
+      "devSe": "dpzhou"
+    },
+    {
+      "busiTypeID": 196,
+      "busiTypeDesc": "【包产到户】基金管理",
+      "operatorSe": "aidenma",
+      "devSe": "aidenma"
+    },
+    {
+      "busiTypeID": 197,
+      "busiTypeDesc": "【包产到户】通用对账平台",
+      "operatorSe": "raymondxia",
+      "devSe": "wilberliu;raymondxia;morreenchen"
+    },
+    {
+      "busiTypeID": 543,
+      "busiTypeDesc": "【包产到户】TBOS",
+      "operatorSe": "kaizhou",
+      "devSe": "zonewang;sprucezhang;kaizhou"
+    },
+    {
+      "busiTypeID": 198,
+      "busiTypeDesc": "资金安全",
+      "operatorSe": "dancingwu",
+      "devSe": "yunachen;dancingwu"
+    },
+    {
+      "busiTypeID": 199,
+      "busiTypeDesc": "资产管理平台",
+      "operatorSe": "lyndonliao;jiaxixu;wuqiangliao",
+      "devSe": "lyndonliao;jiaxixu;wuqiangliao"
+    },
+    {
+      "busiTypeID": 200,
+      "busiTypeDesc": "【包产到户】企业支付",
+      "operatorSe": "hanwillfeng;dickyfyang;witerzheng;derrickxiao;frankysliu",
+      "devSe": "dickyfyang"
+    },
+    {
+      "busiTypeID": 201,
+      "busiTypeDesc": "【包产到户】周大福",
+      "operatorSe": "royzhao",
+      "devSe": "jiabaochen;reymondtu"
+    },
+    {
+      "busiTypeID": 202,
+      "busiTypeDesc": "【包产到户】企业金融大前端",
+      "operatorSe": "liveliang",
+      "devSe": "liveliang"
+    },
+    {
+      "busiTypeID": 203,
+      "busiTypeDesc": "爱比特ABtest",
+      "operatorSe": "arhatliu",
+      "devSe": "lobbyluo"
+    },
+    {
+      "busiTypeID": 205,
+      "busiTypeDesc": "资金中台",
+      "operatorSe": "rockyqiu;hankchen",
+      "devSe": "rockyqiu;hankchen"
+    },
+    {
+      "busiTypeID": 206,
+      "busiTypeDesc": "【包产到户】审核效能",
+      "operatorSe": "lucianlv",
+      "devSe": "lucianlv"
+    },
+    {
+      "busiTypeID": 207,
+      "busiTypeDesc": "【包产到户】资产管理",
+      "operatorSe": "lyndonliao;wuqiangliao;jiaxixu",
+      "devSe": "lyndonliao;wuqiangliao;jiaxixu"
+    },
+    {
+      "busiTypeID": 208,
+      "busiTypeDesc": "【包产到户】商户支付",
+      "operatorSe": "andyccyuan;haimingchen",
+      "devSe": "wenlongxia;richardfang"
+    },
+    {
+      "busiTypeID": 210,
+      "busiTypeDesc": "资金中台前端",
+      "operatorSe": "gionouyang",
+      "devSe": "gionouyang;ruiqiwu"
+    },
+    {
+      "busiTypeID": 1007,
+      "busiTypeDesc": "启明星项目管理平台",
+      "operatorSe": "salmanwu;summertao",
+      "devSe": "salmanwu;summertao"
+    },
+    {
+      "busiTypeID": 1008,
+      "busiTypeDesc": "性能测试",
+      "operatorSe": "waynepwang",
+      "devSe": "sharali;waynepwang"
+    },
+    {
+      "busiTypeID": 1009,
+      "busiTypeDesc": "天网平台",
+      "operatorSe": "rhoninzhang",
+      "devSe": "sharali;rhoninzhang"
+    },
+    {
+      "busiTypeID": 1010,
+      "busiTypeDesc": "谛听平台",
+      "operatorSe": "laymanchen",
+      "devSe": "rhoninzhang;sharali;laymanchen"
+    },
+    {
+      "busiTypeID": 1011,
+      "busiTypeDesc": "觅影平台",
+      "operatorSe": "waynepwang",
+      "devSe": "sharali;rhoninzhang;waynepwang"
+    },
+    {
+      "busiTypeID": 1012,
+      "busiTypeDesc": "数据分析",
+      "operatorSe": "elizaliang",
+      "devSe": "hankchen"
+    },
+    {
+      "busiTypeID": 1013,
+      "busiTypeDesc": "微信信用卡-前端",
+      "operatorSe": "kitmin;yuanmingli",
+      "devSe": "yuanmingli;sheldonluo"
+    },
+    {
+      "busiTypeID": 1014,
+      "busiTypeDesc": "公线业务",
+      "operatorSe": "xmagicwu",
+      "devSe": "xmagicwu"
+    },
+    {
+      "busiTypeID": 1015,
+      "busiTypeDesc": "跨境-前端",
+      "operatorSe": "vitozhao;kitmin",
+      "devSe": "xmagicwu;dddzhang"
+    },
+    {
+      "busiTypeID": 1016,
+      "busiTypeDesc": "香港钱包-前端",
+      "operatorSe": "kitmin;andyyao;doublezhang",
+      "devSe": "doublezhang;andyyao"
+    },
+    {
+      "busiTypeID": 1017,
+      "busiTypeDesc": "跨境汇款",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "alexbliu;haleyxie;denniszhu"
+    },
+    {
+      "busiTypeID": 1018,
+      "busiTypeDesc": "账户核心DB",
+      "operatorSe": "shinexuan",
+      "devSe": "williamlai;shinexuan"
+    },
+    {
+      "busiTypeID": 1019,
+      "busiTypeDesc": "理财通KYC",
+      "operatorSe": "hanwillfeng;monliu;kodyqywang;deweyyang",
+      "devSe": "jasonpeng;qiguo"
+    },
+    {
+      "busiTypeID": 1020,
+      "busiTypeDesc": "理财通基础架构",
+      "operatorSe": "monliu;kodyqywang;hanwillfeng;deweyyang",
+      "devSe": "qiguo;jasonpeng"
+    },
+    {
+      "busiTypeID": 1021,
+      "busiTypeDesc": "理财通资产配置",
+      "operatorSe": "monliu;kodyqywang;hanwillfeng;deweyyang",
+      "devSe": "rexzuo;stonexwang;penyongfeng"
+    },
+    {
+      "busiTypeID": 1022,
+      "busiTypeDesc": "理财通清算平台",
+      "operatorSe": "hanwillfeng;monliu;kodyqywang;deweyyang",
+      "devSe": "frewenwang;louisjiang;leolongli"
+    },
+    {
+      "busiTypeID": 1023,
+      "busiTypeDesc": "理财通营销运营",
+      "operatorSe": "monliu;kodyqywang;hanwillfeng;deweyyang",
+      "devSe": "alexjhwen;kelvinlei;haiyuanzhou;claytonyao"
+    },
+    {
+      "busiTypeID": 1024,
+      "busiTypeDesc": "通讯前端项目",
+      "operatorSe": "maylynyin;eattazhong",
+      "devSe": "maylynyin;buenazhang;eattazhong"
+    },
+    {
+      "busiTypeID": 1025,
+      "busiTypeDesc": "微加信用卡-前端",
+      "operatorSe": "kitmin;yuanmingli",
+      "devSe": "yuanmingli;sheldonluo"
+    },
+    {
+      "busiTypeID": 1026,
+      "busiTypeDesc": "金融风险管理",
+      "operatorSe": "kaihuizhang;yihuali;howardfang;dylanywang",
+      "devSe": "kaihuizhang;yihuali;howardfang;dylanywang"
+    },
+    {
+      "busiTypeID": 1027,
+      "busiTypeDesc": "【包产到户】运营安全组专用",
+      "operatorSe": "fowlerzhu;jollyfan;smengliang;vivayan",
+      "devSe": "fowlerzhu;jollyfan;smengliang;richerye;vivayan"
+    },
+    {
+      "busiTypeID": 1028,
+      "busiTypeDesc": "【包产到户】数据库管理平台",
+      "operatorSe": "tinkerqin;darwinshen",
+      "devSe": "williamlai"
+    },
+    {
+      "busiTypeID": 1029,
+      "busiTypeDesc": "基础交易测试组-基础支付方向",
+      "operatorSe": "sukixu",
+      "devSe": "sukixu"
+    },
+    {
+      "busiTypeID": 1030,
+      "busiTypeDesc": "【包产到户】银行合作业务",
+      "operatorSe": "ericmi",
+      "devSe": "seralei;yurongzhou"
+    },
+    {
+      "busiTypeID": 1031,
+      "busiTypeDesc": "废弃-自动化测试用例",
+      "operatorSe": "timygao;haileyzhou",
+      "devSe": "timygao;sharali;haileyzhou;jessema"
+    },
+    {
+      "busiTypeID": 1032,
+      "busiTypeDesc": "基础交易测试组-银行支付方向",
+      "operatorSe": "flatsun",
+      "devSe": "flatsun;sharali"
+    },
+    {
+      "busiTypeID": 1033,
+      "busiTypeDesc": "基础交易测试组-交易平台方向",
+      "operatorSe": "rhoninzhang",
+      "devSe": "rhoninzhang;sharali"
+    },
+    {
+      "busiTypeID": 1034,
+      "busiTypeDesc": "自动化测试用例",
+      "operatorSe": "funnyren;sukixu;evajyliu;sharali;alexyzheng;timygao;haileyzhou;kikochen;potterhong;alvenzhang;mihuichen;sixilu;tcltan;jeremyqin;florenceyu;eowynzhang;sallyqin",
+      "devSe": "sharali;evajyliu;sukixu;timygao;haileyzhou;kikochen;funnyren;potterhong;alvenzhang;annacheng;lukebai;mihuichen;aaaronguo;tcltan;jeremyqin;sixilu;florenceyu;eowynzhang;sallyqin"
+    },
+    {
+      "busiTypeID": 1035,
+      "busiTypeDesc": "活动中台",
+      "operatorSe": "zhihuasu",
+      "devSe": "zhihuasu"
+    },
+    {
+      "busiTypeID": 1036,
+      "busiTypeDesc": "【包产到户】核算中台",
+      "operatorSe": "andyccyuan;haimingchen",
+      "devSe": "zackcwhuang"
+    },
+    {
+      "busiTypeID": 1037,
+      "busiTypeDesc": "持续集成",
+      "operatorSe": "daveliu",
+      "devSe": "daveliu"
+    },
+    {
+      "busiTypeID": 1038,
+      "busiTypeDesc": "研效数据",
+      "operatorSe": "daveliu;darylzhang",
+      "devSe": "daveliu;darylzhang"
+    },
+    {
+      "busiTypeID": 1039,
+      "busiTypeDesc": "数据构建",
+      "operatorSe": "dophylu;waynepwang;xiwenlu;mihuichen",
+      "devSe": "dophylu;mihuichen;xiwenlu;waynepwang;sharali"
+    },
+    {
+      "busiTypeID": 1040,
+      "busiTypeDesc": "通讯前端服务",
+      "operatorSe": "maylynyin;eattazhong",
+      "devSe": "buenazhang;maylynyin;fangjunan"
+    },
+    {
+      "busiTypeID": 1041,
+      "busiTypeDesc": "模块异常监控平台",
+      "operatorSe": "evajyliu",
+      "devSe": "evajyliu"
+    },
+    {
+      "busiTypeID": 1042,
+      "busiTypeDesc": "统一mock平台",
+      "operatorSe": "evajyliu",
+      "devSe": "evajyliu"
+    },
+    {
+      "busiTypeID": 1043,
+      "busiTypeDesc": "【包产到户】余额KV",
+      "operatorSe": "owenwouyang;joeycheng",
+      "devSe": "zedliu;wenlongxia;williamlai"
+    },
+    {
+      "busiTypeID": 1044,
+      "busiTypeDesc": "【包产到户】FitConf配置中心",
+      "operatorSe": "jkguo;frankfyang",
+      "devSe": "skyzhuang;deshengli"
+    },
+    {
+      "busiTypeID": 1045,
+      "busiTypeDesc": "理财通运营前端",
+      "operatorSe": "deweyyang;hanwillfeng;monliu;kodyqywang",
+      "devSe": "slarkzhang;adyli;jerryqing;stevenszhou"
+    },
+    {
+      "busiTypeID": 1046,
+      "busiTypeDesc": "理财通基础前端",
+      "operatorSe": "deweyyang;hanwillfeng;monliu;kodyqywang",
+      "devSe": "stevenqhxu;slarkzhang;finleyliang;rongteng;zhexu"
+    },
+    {
+      "busiTypeID": 1047,
+      "busiTypeDesc": "【包产到户】基础支付-同城容灾",
+      "operatorSe": "miuylchen;anndychen;thinkzhao",
+      "devSe": "thinkzhao;celiafeng"
+    },
+    {
+      "busiTypeID": 1048,
+      "busiTypeDesc": "【包产到户】Stark名字服务",
+      "operatorSe": "jkguo;frankfyang",
+      "devSe": "qhanhuang;colbyyang;hymanzhu;misakachen"
+    },
+    {
+      "busiTypeID": 1049,
+      "busiTypeDesc": "理财通质量管理",
+      "operatorSe": "zhenyuqiao;lukebai;annacheng;matthewchen;elvismhguo;jasonpeng;funnyren",
+      "devSe": "zhenyuqiao;alvenzhang;lukebai;annacheng;matthewchen;jasonpeng;elvismhguo;funnyren"
+    },
+    {
+      "busiTypeID": 1050,
+      "busiTypeDesc": "理财通交易平台",
+      "operatorSe": "monliu;kodyqywang;deweyyang;hanwillfeng",
+      "devSe": "winterzhang;arsirzhang;louisjiang"
+    },
+    {
+      "busiTypeID": 1051,
+      "busiTypeDesc": "反洗钱风控测试",
+      "operatorSe": "neoyao",
+      "devSe": "atugao"
+    },
+    {
+      "busiTypeID": 1052,
+      "busiTypeDesc": "【包产到户】FMQ",
+      "operatorSe": "jkguo;jerrikyang",
+      "devSe": "rendongfu;enleyang"
+    },
+    {
+      "busiTypeID": 1053,
+      "busiTypeDesc": "【包产到户】内存KV",
+      "operatorSe": "jkguo",
+      "devSe": "rendongfu;jinyanghe;enleyang;zedliu"
+    },
+    {
+      "busiTypeID": 1054,
+      "busiTypeDesc": "分布式任务调度平台",
+      "operatorSe": "jkguo",
+      "devSe": "everhuang"
+    },
+    {
+      "busiTypeID": 1055,
+      "busiTypeDesc": "混沌工程",
+      "operatorSe": "assialv",
+      "devSe": "pauluszhou"
+    },
+    {
+      "busiTypeID": 1056,
+      "busiTypeDesc": "【包产到户】通讯充值(后台验证用，非发布)",
+      "operatorSe": "monliu;kodyqywang",
+      "devSe": "eattazhong"
+    },
+    {
+      "busiTypeID": 1057,
+      "busiTypeDesc": "分布式框架",
+      "operatorSe": "jkguo",
+      "devSe": "deshengli;rendongfu;shinxzhou"
+    },
+    {
+      "busiTypeID": 1058,
+      "busiTypeDesc": "【包产到户】路由总线",
+      "operatorSe": "zeroduan;frankfyang;jerrikyang;roothuang;jkguo",
+      "devSe": "shinxzhou"
+    },
+    {
+      "busiTypeID": 1059,
+      "busiTypeDesc": "【包产到户】清算研发管理",
+      "operatorSe": "haimingchen",
+      "devSe": "bovindai;maxfeng;casezheng;shawnshi;damianyang;lukexywang"
+    },
+    {
+      "busiTypeID": 1060,
+      "busiTypeDesc": "公共库系统",
+      "operatorSe": "darylzhang",
+      "devSe": "darylzhang"
+    },
+    {
+      "busiTypeID": 1061,
+      "busiTypeDesc": "支付公共",
+      "operatorSe": "jayfjzhang",
+      "devSe": "dawnzheng;alexzou;zhibinzhou;thinkzhao;celiafeng;pauluszhou"
+    },
+    {
+      "busiTypeID": 1062,
+      "busiTypeDesc": "运维工单实施专用",
+      "operatorSe": "jayfjzhang;jkguo;lhou",
+      "devSe": "jayfjzhang;jkguo;lhou"
+    },
+    {
+      "busiTypeID": 1084,
+      "busiTypeDesc": "虎甲",
+      "operatorSe": "kimqiu",
+      "devSe": "hankchen"
+    },
+    {
+      "busiTypeID": 1077,
+      "busiTypeDesc": "【包产到户】换汇平台_ZX",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "daikinshi;haleyxie;wenzou;jwinwen;simonsmqin;denniszhu;zhibinzhou"
+    },
+    {
+      "busiTypeID": 1103,
+      "busiTypeDesc": "实时计算服务",
+      "operatorSe": "averyzhang",
+      "devSe": "hankchen"
+    },
+    {
+      "busiTypeID": 1076,
+      "busiTypeDesc": "跨境-前端_ZX",
+      "operatorSe": "vitozhao;kitmin",
+      "devSe": "xmagicwu;dddzhang"
+    },
+    {
+      "busiTypeID": 1074,
+      "busiTypeDesc": "跨境-前端_CFT",
+      "operatorSe": "xmagicwu;yanzifu",
+      "devSe": "xmagicwu;dddzhang"
+    },
+    {
+      "busiTypeID": 1075,
+      "busiTypeDesc": "【包产到户】换汇平台_WPHK",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "daikinshi;haleyxie;wenzou;jwinwen;simonsmqin;denniszhu;zhibinzhou"
+    },
+    {
+      "busiTypeID": 1072,
+      "busiTypeDesc": "跨境汇款_WPHK",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "alexbliu;haleyxie"
+    },
+    {
+      "busiTypeID": 1070,
+      "busiTypeDesc": "【包产到户】境外业务_WPMY",
+      "operatorSe": "kitmin;chillaxlai",
+      "devSe": "erickenwu"
+    },
+    {
+      "busiTypeID": 1120,
+      "busiTypeDesc": "资产转让系统",
+      "operatorSe": "ericmi;asingzhao",
+      "devSe": "rockyqiu;rainapeng"
+    },
+    {
+      "busiTypeID": 1094,
+      "busiTypeDesc": "一体化平台",
+      "operatorSe": "daveliu",
+      "devSe": "daveliu"
+    },
+    {
+      "busiTypeID": 1095,
+      "busiTypeDesc": "风控分析",
+      "operatorSe": "lhou",
+      "devSe": "annehu;ethansheng;rockyyliu;debrali;ethanyliu;jackiezhao;printan"
+    },
+    {
+      "busiTypeID": 1097,
+      "busiTypeDesc": "数据中台-金融数据库",
+      "operatorSe": "fwindychen",
+      "devSe": "glancegong"
+    },
+    {
+      "busiTypeID": 1092,
+      "busiTypeDesc": "polar",
+      "operatorSe": "saintwen",
+      "devSe": "lobbyluo"
+    },
+    {
+      "busiTypeID": 1098,
+      "busiTypeDesc": "数据中台-Hbase服务",
+      "operatorSe": "huizhong",
+      "devSe": "zyuanwang;rainapeng"
+    },
+    {
+      "busiTypeID": 1099,
+      "busiTypeDesc": "海雀&上报服务",
+      "operatorSe": "brooksun",
+      "devSe": "zyuanwang"
+    },
+    {
+      "busiTypeID": 1069,
+      "busiTypeDesc": "【包产到户】境外业务_WPHK",
+      "operatorSe": "kitmin;chillaxlai",
+      "devSe": "erickenwu"
+    },
+    {
+      "busiTypeID": 1068,
+      "busiTypeDesc": "企业外汇",
+      "operatorSe": "lhou;kitmin;vitozhao",
+      "devSe": "jwinwen;ayanshen"
+    },
+    {
+      "busiTypeID": 1063,
+      "busiTypeDesc": "【包产到户】NODEJS",
+      "operatorSe": "petergeng;gionouyang",
+      "devSe": "petergeng;gionouyang"
+    },
+    {
+      "busiTypeID": 1067,
+      "busiTypeDesc": "【包产到户】企业支付银行接入",
+      "operatorSe": "lhou;hanwillfeng;witerzheng",
+      "devSe": "landwei;witerzheng;youweiliu"
+    },
+    {
+      "busiTypeID": 1066,
+      "busiTypeDesc": "测试工具",
+      "operatorSe": "timygao",
+      "devSe": "timygao"
+    },
+    {
+      "busiTypeID": 1065,
+      "busiTypeDesc": "【包产到户】trpc-java",
+      "operatorSe": "jkguo;gavinchang",
+      "devSe": "zhiliangli;dfenghuang"
+    },
+    {
+      "busiTypeID": 1078,
+      "busiTypeDesc": "【包产到户】技术合规",
+      "operatorSe": "alphawwang",
+      "devSe": "alphawwang"
+    },
+    {
+      "busiTypeID": 1071,
+      "busiTypeDesc": "跨境汇款_CFT",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "alexbliu;haleyxie"
+    },
+    {
+      "busiTypeID": 1087,
+      "busiTypeDesc": "Smartapi",
+      "operatorSe": "andyslin",
+      "devSe": "hankchen"
+    },
+    {
+      "busiTypeID": 1093,
+      "busiTypeDesc": "腾讯大V卡",
+      "operatorSe": "seralei",
+      "devSe": "seralei;yurongzhou"
+    },
+    {
+      "busiTypeID": 1085,
+      "busiTypeDesc": "用户画像",
+      "operatorSe": "jayxjwu;cecemeng",
+      "devSe": "lincyzhou"
+    },
+    {
+      "busiTypeID": 1073,
+      "busiTypeDesc": "跨境-前端_WPHK",
+      "operatorSe": "vitozhao;kitmin",
+      "devSe": "xmagicwu;dddzhang"
+    },
+    {
+      "busiTypeID": 1080,
+      "busiTypeDesc": "瑞银交易",
+      "operatorSe": "lilacni;elizaliang",
+      "devSe": "elizaliang;lilacni"
+    },
+    {
+      "busiTypeID": 1121,
+      "busiTypeDesc": "云原生平台",
+      "operatorSe": "jkguo;zeroduan;jerrikyang",
+      "devSe": "cafeeqiu"
+    },
+    {
+      "busiTypeID": 1064,
+      "busiTypeDesc": "【包产到户】企金支撑平台",
+      "operatorSe": "lhou;hanwillfeng",
+      "devSe": "landwei;witerzheng"
+    },
+    {
+      "busiTypeID": 1089,
+      "busiTypeDesc": "海雀",
+      "operatorSe": "brooksun",
+      "devSe": "zyuanwang"
+    },
+    {
+      "busiTypeID": 1106,
+      "busiTypeDesc": "【包产到户】资金出境业务",
+      "operatorSe": "vitozhao;kitmin",
+      "devSe": "vinceguo;zhibinzhou;haleyxie;simonsmqin"
+    },
+    {
+      "busiTypeID": 1107,
+      "busiTypeDesc": "FCD测试验证",
+      "operatorSe": "daveliu;darylzhang;elpowang",
+      "devSe": "daveliu;darylzhang;elpowang"
+    },
+    {
+      "busiTypeID": 1104,
+      "busiTypeDesc": "数据中台-IP流量",
+      "operatorSe": "dpzhou",
+      "devSe": "hankchen"
+    },
+    {
+      "busiTypeID": 1102,
+      "busiTypeDesc": "云豹&数仓链路",
+      "operatorSe": "cruzfu",
+      "devSe": "zyuanwang"
+    },
+    {
+      "busiTypeID": 1100,
+      "busiTypeDesc": "全民bi",
+      "operatorSe": "leontong",
+      "devSe": "hankchen"
+    },
+    {
+      "busiTypeID": 1101,
+      "busiTypeDesc": "智能搜索",
+      "operatorSe": "hongjianzou",
+      "devSe": "glfang"
+    },
+    {
+      "busiTypeID": 1108,
+      "busiTypeDesc": "FCD-haopeng测试使用",
+      "operatorSe": "mickchen",
+      "devSe": "mickchen"
+    },
+    {
+      "busiTypeID": 1109,
+      "busiTypeDesc": "FCD-haopeng测试使用1",
+      "operatorSe": "mickchen",
+      "devSe": "mickchen;viviennyang"
+    },
+    {
+      "busiTypeID": 1088,
+      "busiTypeDesc": "ip流量",
+      "operatorSe": "dpzhou",
+      "devSe": "zyuanwang;rainapeng"
+    },
+    {
+      "busiTypeID": 1096,
+      "busiTypeDesc": "数据中台-智能客服",
+      "operatorSe": "magroshi",
+      "devSe": "hankchen"
+    },
+    {
+      "busiTypeID": 1090,
+      "busiTypeDesc": "云豹",
+      "operatorSe": "cruzfu;dpzhou",
+      "devSe": "zyuanwang"
+    },
+    {
+      "busiTypeID": 1091,
+      "busiTypeDesc": "基础数据管理",
+      "operatorSe": "cruzfu",
+      "devSe": "zyuanwang"
+    },
+    {
+      "busiTypeID": 1111,
+      "busiTypeDesc": "FCD-haopeng测试使用3",
+      "operatorSe": "mickchen",
+      "devSe": "mickchen"
+    },
+    {
+      "busiTypeID": 1110,
+      "busiTypeDesc": "FCD-haopeng测试使用2",
+      "operatorSe": "mickchen",
+      "devSe": "mickchen"
+    },
+    {
+      "busiTypeID": 1113,
+      "busiTypeDesc": "FCD-haopeng测试使用5",
+      "operatorSe": "mickchen",
+      "devSe": "mickchen"
+    },
+    {
+      "busiTypeID": 1112,
+      "busiTypeDesc": "FCD-haopeng测试使用4",
+      "operatorSe": "mickchen",
+      "devSe": "mickchen"
+    },
+    {
+      "busiTypeID": 1115,
+      "busiTypeDesc": "fcd-mickchen测试",
+      "operatorSe": "mickchen",
+      "devSe": "mickchen"
+    },
+    {
+      "busiTypeID": 1114,
+      "busiTypeDesc": "FCD-haopeng测试使用6",
+      "operatorSe": "mickchen",
+      "devSe": "mickchen"
+    },
+    {
+      "busiTypeID": 1117,
+      "busiTypeDesc": "产品管理-腾安",
+      "operatorSe": "huaxinghe;wuqiangliao;jiaxixu",
+      "devSe": "huaxinghe;wuqiangliao;jiaxixu"
+    },
+    {
+      "busiTypeID": 1116,
+      "busiTypeDesc": "投顾系统",
+      "operatorSe": "huaxinghe;wuqiangliao",
+      "devSe": "huaxinghe;wuqiangliao"
+    },
+    {
+      "busiTypeID": 1119,
+      "busiTypeDesc": "通讯前端小程序",
+      "operatorSe": "eattazhong;maylynyin",
+      "devSe": "buenazhang;seasonsli;anonlin"
+    },
+    {
+      "busiTypeID": 1118,
+      "busiTypeDesc": "分付资产",
+      "operatorSe": "andyccyuan;haimingchen",
+      "devSe": "macoma;samilin;casezheng;jakehu"
+    },
+    {
+      "busiTypeID": 1086,
+      "busiTypeDesc": "金融数据库",
+      "operatorSe": "fwindychen",
+      "devSe": "glancegong;rainapeng"
+    },
+    {
+      "busiTypeID": 1105,
+      "busiTypeDesc": "可疑交易监测",
+      "operatorSe": "lhou",
+      "devSe": "bryancui;yorickma;sindyzhou;jarvishuang"
+    },
+    {
+      "busiTypeID": 1122,
+      "busiTypeDesc": "理财通用户服务应用",
+      "operatorSe": "lydonliu;hanwillfeng;deweyyang;kodyqywang;monliu",
+      "devSe": "fuweiliu;jandyxu;yaphishuang;jeffqiao"
+    },
+    {
+      "busiTypeID": 1123,
+      "busiTypeDesc": "自动化测试用例",
+      "operatorSe": "carriehuang;cherishyu",
+      "devSe": "carriehuang;cherishyu"
+    },
+    {
+      "busiTypeID": 1124,
+      "busiTypeDesc": "支付自动化用例",
+      "operatorSe": "sukixu;miaolin;xiwenlu;sharali",
+      "devSe": "sukixu;miaolin;xiwenlu;sharali;saltchen;ginaxiang;henryding"
+    },
+    {
+      "busiTypeID": 1125,
+      "busiTypeDesc": "测试框架",
+      "operatorSe": "funnyren;dawntang",
+      "devSe": "funnyren;atugao;dawntang"
+    },
+    {
+      "busiTypeID": 1126,
+      "busiTypeDesc": "清算自动化测试",
+      "operatorSe": "alexyzheng;loleinaliao;tessiecui;tianqiaoliu;helenahuang;evajyliu",
+      "devSe": "evajyliu;alexyzheng;loleinaliao;tessiecui;helenahuang;tianqiaoliu"
+    },
+    {
+      "busiTypeID": 1127,
+      "busiTypeDesc": "理财通基础公共库",
+      "operatorSe": "monliu;kodyqywang;hanwillfeng;deweyyang",
+      "devSe": "jasonpeng;qiguo"
+    },
+    {
+      "busiTypeID": 1128,
+      "busiTypeDesc": "核心支付上云压测",
+      "operatorSe": "silasliu",
+      "devSe": "verminniu;levichen;lebyzhao;clarebu;neilyu"
+    },
+    {
+      "busiTypeID": 1129,
+      "busiTypeDesc": "【包产到户】香港虚拟银行对公系统",
+      "operatorSe": "xavierzhang",
+      "devSe": "kevinzou"
+    },
+    {
+      "busiTypeID": 1130,
+      "busiTypeDesc": "数据工程",
+      "operatorSe": "lhou;xiaoshzhang",
+      "devSe": "caitlinchen;cocoshu"
+    },
+    {
+      "busiTypeID": 1131,
+      "busiTypeDesc": "方舟",
+      "operatorSe": "lucianlv",
+      "devSe": "lucianlv;vitaswan"
+    },
+    {
+      "busiTypeID": 1132,
+      "busiTypeDesc": "数字货币",
+      "operatorSe": "lucianlv",
+      "devSe": "lucianlv;superbsu;herbiegong"
+    },
+    {
+      "busiTypeID": 1133,
+      "busiTypeDesc": "有权机关",
+      "operatorSe": "lucianlv",
+      "devSe": "lucianlv"
+    },
+    {
+      "busiTypeID": 1134,
+      "busiTypeDesc": "企业支付自动化测试",
+      "operatorSe": "tcltan;sixilu;jeremyqin",
+      "devSe": "tcltan;sixilu;jeremyqin"
+    },
+    {
+      "busiTypeID": 1135,
+      "busiTypeDesc": "数据引流回放",
+      "operatorSe": "alexyzheng;liminpeng;vicentechen",
+      "devSe": "alexyzheng;liminpeng;vicentechen"
+    },
+    {
+      "busiTypeID": 1136,
+      "busiTypeDesc": "通讯质量管理",
+      "operatorSe": "lhou",
+      "devSe": "lisazhao"
+    },
+    {
+      "busiTypeID": 1137,
+      "busiTypeDesc": "前端-行情",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "victorwyan;shannontian;robinczhang;evanfan"
+    },
+    {
+      "busiTypeID": 1138,
+      "busiTypeDesc": "前端-资讯",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "shannontian;evanfan;victorwyan;robinczhang;linqiao"
+    },
+    {
+      "busiTypeID": 1139,
+      "busiTypeDesc": "前端-交易",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "rockyxue"
+    },
+    {
+      "busiTypeID": 1140,
+      "busiTypeDesc": "前端-运营",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "teffyliu"
+    },
+    {
+      "busiTypeID": 1141,
+      "busiTypeDesc": "前端-基础",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "mandydyluo"
+    },
+    {
+      "busiTypeID": 1142,
+      "busiTypeDesc": "前端-区块链",
+      "operatorSe": "xiaoshzhang",
+      "devSe": "bingoshe"
+    },
+    {
+      "busiTypeID": 1143,
+      "busiTypeDesc": "证券自动化测试",
+      "operatorSe": "larehe;kikochen;mandyding;jimmyxjliu;sherryzhou;cindymywang;aimeewang;joycelei;isapeng;sashalysu;jefferychen;bonnypeng;belleqzhang;axelji;caliji",
+      "devSe": "larehe;kikochen;mandyding;jimmyxjliu;sherryzhou;cindymywang;aimeewang;joycelei;isapeng;sashalysu;jefferychen;bonnypeng;belleqzhang;axelji;caliji"
+    },
+    {
+      "busiTypeID": 1144,
+      "busiTypeDesc": "同源测试用例开发",
+      "operatorSe": "haileyzhou;stevruan;sparrowzeng;eowynzhang;sallyqin;florenceyu",
+      "devSe": "paytonwan;haileyzhou;stevruan;sparrowzeng;florenceyu;eowynzhang;sallyqin;tracyzhang;leonlong;funnyren"
+    },
+    {
+      "busiTypeID": 1145,
+      "busiTypeDesc": "【包产到户】FiT Session",
+      "operatorSe": "lockli",
+      "devSe": "zedliu;williamlai"
+    },
+    {
+      "busiTypeID": 1146,
+      "busiTypeDesc": "通讯前端内部平台",
+      "operatorSe": "eattazhong",
+      "devSe": "billfang;maylynyin"
+    },
+    {
+      "busiTypeID": 1147,
+      "busiTypeDesc": "清算质量管理",
+      "operatorSe": "evajyliu;alexyzheng;tessiecui",
+      "devSe": "evajyliu;alexyzheng;tessiecui"
+    },
+    {
+      "busiTypeID": 1148,
+      "busiTypeDesc": "理财通应用前端",
+      "operatorSe": "deweyyang;hanwillfeng;monliu;kodyqywang",
+      "devSe": "slarkzhang;drewlzhang"
+    },
+    {
+      "busiTypeID": 1149,
+      "busiTypeDesc": "理财通客户端",
+      "operatorSe": "deweyyang;hanwillfeng",
+      "devSe": "slarkzhang;kaikxiao"
+    },
+    {
+      "busiTypeID": 1150,
+      "busiTypeDesc": "信用卡测试",
+      "operatorSe": "toviwang;emmyli;carolji;lvanzheng;yangfang",
+      "devSe": "toviwang;emmyli;lvanzheng;yangfang;carolji"
+    },
+    {
+      "busiTypeID": 1151,
+      "busiTypeDesc": "【包产到户】单号公共组件billno",
+      "operatorSe": "liliwang;jkguo",
+      "devSe": "rendongfu;edmeng;deshengli;colinjing"
+    },
+    {
+      "busiTypeID": 1152,
+      "busiTypeDesc": "互联业务",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "wenzou;jwinwen;haleyxie;vinceguo;denniszhu;edisonyang;simonsmqin;zhibinzhou"
+    },
+    {
+      "busiTypeID": 1153,
+      "busiTypeDesc": "外汇交易",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "haleyxie;wenzou;daikinshi;jwinwen;simonsmqin;zhibinzhou;denniszhu;vinceguo;edisonyang"
+    },
+    {
+      "busiTypeID": 1154,
+      "busiTypeDesc": "订单交易",
+      "operatorSe": "kitmin;vitozhao;lhou",
+      "devSe": "vinceguo;wenzou;jwinwen;haleyxie;xmagicwu;daikinshi;denniszhu;edisonyang;simonsmqin;zhibinzhou"
+    },
+    {
+      "busiTypeID": 1155,
+      "busiTypeDesc": "外汇清算",
+      "operatorSe": "kitmin;vitozhao",
+      "devSe": "daikinshi;haleyxie;wenzou;jwinwen;simonsmqin;denniszhu;vinceguo;edisonyang;zhibinzhou"
+    },
+    {
+      "busiTypeID": 1156,
+      "busiTypeDesc": "跨境金融渠道",
+      "operatorSe": "vitozhao;kitmin",
+      "devSe": "zhibinzhou;choqczhang;ningshchen;jasonfei"
+    },
+    {
+      "busiTypeID": 1157,
+      "busiTypeDesc": "清算平台",
+      "operatorSe": "jerrikyang",
+      "devSe": "macoma;casezheng;jakehu"
+    },
+    {
+      "busiTypeID": 1158,
+      "busiTypeDesc": "资金服务",
+      "operatorSe": "jerrikyang",
+      "devSe": "dawnzheng;haibojiang"
+    },
+    {
+      "busiTypeID": 1159,
+      "busiTypeDesc": "会计核算平台",
+      "operatorSe": "jerrikyang",
+      "devSe": "zackcwhuang"
+    },
+    {
+      "busiTypeID": 1160,
+      "busiTypeDesc": "Tango自动化测试",
+      "operatorSe": "saltchen;cherryyuehu;chengggli",
+      "devSe": "saltchen;cherryyuehu;chengggli"
+    },
+    {
+      "busiTypeID": 1161,
+      "busiTypeDesc": "【包产到户】错误码系统",
+      "operatorSe": "jkguo",
+      "devSe": "rendongfu;enleyang;zirowu"
+    },
+    {
+      "busiTypeID": 1162,
+      "busiTypeDesc": "香港虚拟银行运维工具系统",
+      "operatorSe": "xavierzhang;p_zugenqiu;p_yanzzfu;p_tqchen;p_qdeng;p_hancli;p_hhxian",
+      "devSe": "xavierzhang;p_zugenqiu;p_yanzzfu;p_tqchen;p_qdeng;p_hancli;p_hhxian"
+    },
+    {
+      "busiTypeID": 1163,
+      "busiTypeDesc": "业务环境",
+      "operatorSe": "tokidong",
+      "devSe": "tokidong"
+    },
+    {
+      "busiTypeID": 1164,
+      "busiTypeDesc": "资金中台场景用例",
+      "operatorSe": "sukixu",
+      "devSe": "sukixu;appleyang;penniepeng;gormannong"
+    },
+    {
+      "busiTypeID": 1165,
+      "busiTypeDesc": "监管调证",
+      "operatorSe": "magroshi;zhihuasu",
+      "devSe": "magroshi;zhihuasu"
+    },
+    {
+      "busiTypeID": 1166,
+      "busiTypeDesc": "交易测试",
+      "operatorSe": "axelji;isapeng;kikochen;bonnypeng;sashalysu;jefferychen",
+      "devSe": "kikochen;isapeng;sashalysu;jefferychen;bonnypeng;axelji"
+    },
+    {
+      "busiTypeID": 1167,
+      "busiTypeDesc": "微证券测试",
+      "operatorSe": "kikochen;cindymywang",
+      "devSe": "kikochen;cindymywang"
+    },
+    {
+      "busiTypeID": 1168,
+      "busiTypeDesc": "选股测试",
+      "operatorSe": "kikochen;joycelei",
+      "devSe": "kikochen;joycelei"
+    },
+    {
+      "busiTypeID": 1169,
+      "busiTypeDesc": "资讯测试",
+      "operatorSe": "kikochen;larehe;caliji",
+      "devSe": "kikochen;larehe;caliji"
+    },
+    {
+      "busiTypeID": 1170,
+      "busiTypeDesc": "基础测试",
+      "operatorSe": "kikochen;mandyding;sherryzhou;caliji",
+      "devSe": "kikochen;mandyding;sherryzhou;caliji"
+    },
+    {
+      "busiTypeID": 1171,
+      "busiTypeDesc": "行情测试",
+      "operatorSe": "kikochen;mandyding;sherryzhou;caliji",
+      "devSe": "kikochen;mandyding;sherryzhou;caliji"
+    },
+    {
+      "busiTypeID": 1172,
+      "busiTypeDesc": "【包产到户】安全组件",
+      "operatorSe": "jkguo;liliwang;frankfyang;jinpengshen",
+      "devSe": "zhiliangli;dfenghuang;totoroyang;changkunwei"
+    },
+    {
+      "busiTypeID": 1173,
+      "busiTypeDesc": "【包产到户】安全组件工具",
+      "operatorSe": "jkguo;liliwang;frankfyang;jinpengshen",
+      "devSe": "zhiliangli;dfenghuang;totoroyang"
+    },
+    {
+      "busiTypeID": 1174,
+      "busiTypeDesc": "理财通KYP",
+      "operatorSe": "hanwillfeng;sonnyjia;lynnsswu;jasonfu;annatxhu;cissyhu",
+      "devSe": "sonnyjia;lynnsswu;annatxhu;cissyhu;jasonfu"
+    },
+    {
+      "busiTypeID": 1175,
+      "busiTypeDesc": "资金安全自动检测平台",
+      "operatorSe": "franklinpei;mmhuang;alexyzheng",
+      "devSe": "easylu;alexyzheng;xiwenlu;christywxli;toddyuli;franklinpei"
+    },
+    {
+      "busiTypeID": 1176,
+      "busiTypeDesc": "体验专用方向",
+      "operatorSe": "daveliu",
+      "devSe": "daveliu"
+    },
+    {
+      "busiTypeID": 1177,
+      "busiTypeDesc": "香港虚拟银行拨测平台",
+      "operatorSe": "ivanguo;p_dvhuang;cathyyuan",
+      "devSe": "ivanguo;p_dvhuang;cathyyuan"
+    },
+    {
+      "busiTypeID": 1178,
+      "busiTypeDesc": "区块链测试",
+      "operatorSe": "jerichen;dibai",
+      "devSe": "jerichen;dibai"
+    },
+    {
+      "busiTypeID": 1179,
+      "busiTypeDesc": "理财通搜索推荐",
+      "operatorSe": "hanwillfeng",
+      "devSe": "harryzhong"
+    },
+    {
+      "busiTypeID": 1180,
+      "busiTypeDesc": "支付合规管理",
+      "operatorSe": "deweyyang;lhou",
+      "devSe": "bradyhao;rocketchen;lyrricliu"
+    },
+    {
+      "busiTypeID": 1181,
+      "busiTypeDesc": "研效前端",
+      "operatorSe": "sendguan;karsashen",
+      "devSe": "sendguan"
+    },
+    {
+      "busiTypeID": 1182,
+      "busiTypeDesc": "零钱通自动化测试",
+      "operatorSe": "ginaxiang;gingeryang;sixilu",
+      "devSe": "sixilu;gingeryang;ginaxiang"
+    },
+    {
+      "busiTypeID": 1183,
+      "busiTypeDesc": "KYC",
+      "operatorSe": "lucianlv",
+      "devSe": "lucianlv;vitaswan"
+    }
+  ]
+}

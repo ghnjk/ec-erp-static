@@ -1,0 +1,45 @@
+{
+  "result": 0,
+  "resultMsg": "ok",
+  "traceId": "i8GKA4S8KhfANwy4AddY3JXNDATZh3dP",
+  "data": {
+    "area": [
+      {
+        "name": "yn",
+        "desc": "yn_core",
+        "city": [
+          {
+            "name": "Shenzhen",
+            "desc": "深圳",
+            "idc": [
+              {
+                "name": "GM",
+                "desc": "光明",
+                "totalCount": 3,
+                "statusInUseCount": 3,
+                "flowOnlineCount": 0,
+                "ipList": [
+                  "10.164.211.7",
+                  "10.164.212.29",
+                  "10.164.212.33"
+                ]
+              },
+              {
+                "name": "JX",
+                "desc": "锦绣",
+                "totalCount": 3,
+                "statusInUseCount": 3,
+                "flowOnlineCount": 0,
+                "ipList": [
+                  "10.153.191.8",
+                  "10.153.196.5",
+                  "10.153.198.5"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

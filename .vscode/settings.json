@@ -1,0 +1,15 @@
+{
+  "cSpell.words": [
+    "antfu",
+    "echarts",
+    "pinia",
+    "tdesign",
+    "tvision",
+    "unhealth"
+  ],
+  "prettier.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "vite.port": 8000
+}

@@ -1,0 +1,172 @@
+{
+  "result": 0,
+  "resultMsg": "ok",
+  "traceId": "Z5x4EaN8QZcienYWDasApc85ibPJ7Ar3",
+  "data": {
+    "totalCount": 90,
+    "data": [
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "authencation_server_middle",
+        "confKeyType": "1",
+        "relateInstanceType": null,
+        "relateInstanceId": null,
+        "relateReason": null,
+        "createTime": "2022-05-23T09:47:51.000+00:00",
+        "modifyTime": "2022-05-23T09:47:51.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "AuthenticationDB_switch",
+        "confKeyType": "5",
+        "relateInstanceType": "ckv",
+        "relateInstanceId": "AuthenticationDB_switch",
+        "relateReason": {
+          "traceId": "20220523t8q4nWdthywichLOXlFcUfn8"
+        },
+        "createTime": "2022-05-17T02:42:54.000+00:00",
+        "modifyTime": "2022-05-23T07:18:34.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "authen_query_server_middle",
+        "confKeyType": "1",
+        "relateInstanceType": null,
+        "relateInstanceId": null,
+        "relateReason": null,
+        "createTime": "2022-05-23T09:47:50.000+00:00",
+        "modifyTime": "2022-05-23T09:47:50.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "au_check_server_middle",
+        "confKeyType": "1",
+        "relateInstanceType": null,
+        "relateInstanceId": null,
+        "relateReason": null,
+        "createTime": "2022-05-23T09:47:50.000+00:00",
+        "modifyTime": "2022-05-23T09:47:50.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "bank_channel_itg_server_middle",
+        "confKeyType": "1",
+        "relateInstanceType": null,
+        "relateInstanceId": null,
+        "relateReason": null,
+        "createTime": "2022-05-23T09:48:22.000+00:00",
+        "modifyTime": "2022-05-23T09:48:22.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "bank_proxy_busi_sys",
+        "confKeyType": "4",
+        "relateInstanceType": "server",
+        "relateInstanceId": "bank_proxy",
+        "relateReason": {
+          "traceId": "20220523phGzjCZv4MxZALMfsFMVxzwa",
+          "opServerOrder": [
+            {
+              "opServer": "bank_proxy",
+              "occurCount": 5,
+              "similarity": 0.6666666
+            },
+            {
+              "opServer": "WeiXin_FastCGI_Fast",
+              "occurCount": 5,
+              "similarity": 0.15789473
+            },
+            {
+              "opServer": "fpay_itg_server",
+              "occurCount": 5,
+              "similarity": 0.06666666
+            }
+          ],
+          "matchOpServer": "bank_proxy"
+        },
+        "createTime": "2022-05-16T16:50:21.000+00:00",
+        "modifyTime": "2022-05-23T07:42:54.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "bank_relay_sys",
+        "confKeyType": "4",
+        "relateInstanceType": "server",
+        "relateInstanceId": "bank_proxy",
+        "relateReason": {
+          "traceId": "20220523HZGDlr6ilN0RcRc4ggWn6tPl",
+          "opServerOrder": [
+            {
+              "opServer": "bank_proxy",
+              "occurCount": 27,
+              "similarity": 0.6
+            },
+            {
+              "opServer": "fpay_itg_server",
+              "occurCount": 27,
+              "similarity": 0.19999999
+            },
+            {
+              "opServer": "WeiXin_FastCGI_Fast",
+              "occurCount": 27,
+              "similarity": 0.10526317
+            }
+          ],
+          "matchOpServer": "bank_proxy"
+        },
+        "createTime": "2022-05-17T02:59:50.000+00:00",
+        "modifyTime": "2022-05-23T07:43:20.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "billno_server_sys",
+        "confKeyType": "4",
+        "relateInstanceType": "server",
+        "relateInstanceId": "fpay_itg_server",
+        "relateReason": {
+          "traceId": "20220523ljMDT5CmeWqiDopduzxE7n4g",
+          "opServerOrder": [
+            {
+              "opServer": "fpay_itg_server",
+              "occurCount": 1,
+              "similarity": 0.46666664
+            },
+            {
+              "opServer": "bank_proxy",
+              "occurCount": 1,
+              "similarity": 0.3076923
+            },
+            {
+              "opServer": "WeiXin_FastCGI_Fast",
+              "occurCount": 1,
+              "similarity": 0.15789473
+            }
+          ],
+          "matchOpServer": "fpay_itg_server"
+        },
+        "createTime": "2022-05-17T02:59:50.000+00:00",
+        "modifyTime": "2022-05-23T07:18:36.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "bind_itg_server_middle",
+        "confKeyType": "1",
+        "relateInstanceType": null,
+        "relateInstanceId": null,
+        "relateReason": null,
+        "createTime": "2022-05-23T09:52:24.000+00:00",
+        "modifyTime": "2022-05-23T09:52:24.000+00:00"
+      },
+      {
+        "busiSpaceName": "yn.default",
+        "confKey": "bind_pay_query_server_middle",
+        "confKeyType": "1",
+        "relateInstanceType": null,
+        "relateInstanceId": null,
+        "relateReason": null,
+        "createTime": "2022-05-23T09:52:31.000+00:00",
+        "modifyTime": "2022-05-23T09:52:31.000+00:00"
+      }
+    ]
+  }
+}
