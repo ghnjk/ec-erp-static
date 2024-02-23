@@ -3,11 +3,11 @@ import MockUtil from '../mock_util';
 
 const apiList = [
   {
-    url: '/aop_web/system/get_login_user_info',
+    url: '/erp_api/system/get_login_user_info',
     method: 'post',
   },
   {
-    url: '/aop_web/system/dict',
+    url: '/erp_api/system/dict',
     method: 'post',
   },
 ];

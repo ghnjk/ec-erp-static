@@ -44,7 +44,7 @@ const omsRequestConf = (config) => {
   if (config.method === 'post') {
     config.data = {
       timestamp: Date.now(),
-      serviceName: 'aop_static',
+      serviceName: 'ec_erp_static',
       apiUrl: config.url,
       traceId: genTraceId(32),
       body: config.data,

@@ -2,12 +2,14 @@ import { createRouter, createWebHashHistory, RouteRecordRaw, useRoute } from 'vu
 
 import uniq from 'lodash/uniq';
 import baseRouters from './modules/base';
+import userRouters from './modules/user';
 
 // 关于单层路由，meta 中设置 { single: true } 即可为单层路由，{ hidden: true } 即可在侧边栏隐藏该路由
 
 // 存放动态路由
 export const asyncRouterList: Array<RouteRecordRaw> = [
   ...baseRouters,
+  ...userRouters,
 ];
 
 // 存放固定的路由

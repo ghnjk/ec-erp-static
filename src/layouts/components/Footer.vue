@@ -1,7 +1,6 @@
 <template>
   <div :class="prefix + '-footer'">
     Copyright @ 2021-{{ new Date().getFullYear() }} EC-ERP. All Rights Reserved
-    <a href="https://aop.cf.com">回到旧版</a>
   </div>
 </template>
 

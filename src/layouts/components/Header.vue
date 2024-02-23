@@ -29,8 +29,13 @@
           <t-tooltip content="个人信息" placement="bottom">
             <t-button class="header-user-btn" theme="default" variant="text">
               <template #icon>
+                <t-icon class="header-user-avatar" name="user-circle" />
+
+                <!--
                 <t-avatar :image="usrImage" :hide-on-load-failed="false" size="small" />
+                -->
               </template>
+
               <div class="header-user-account">{{ userName }}</div>
             </t-button>
           </t-tooltip>

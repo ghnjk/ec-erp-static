@@ -42,8 +42,8 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       host: '0.0.0.0',
       hmr: true,
       proxy: {
-        '^/aop_web/.*': {
-          target: 'http://localhost:18069',
+        '^/erp_api/.*': {
+          target: 'http://localhost:15002',
           changeOrigin: true,
         },
       },

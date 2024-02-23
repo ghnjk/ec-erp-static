@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { TOKEN_NAME } from '@/config/global';
 import { store } from '@/store';
-import { getLoginUserInfo } from '@/apis/sysApis';
+import { getLoginUserInfo, login } from '@/apis/sysApis';
 
 export interface IRole {
   id: number;
@@ -44,9 +44,17 @@ export const useUserStore = defineStore('user', {
     },
   },
   actions: {
-    async login() {
+    async getLoginAccout() {
       try {
         this.userInfo = await getLoginUserInfo();
+      } catch (err) {
+        console.error(err);
+        throw err;
+      }
+    },
+    async login(loginInfo) {
+      try {
+        this.userInfo = await login(loginInfo);
       } catch (err) {
         console.error(err);
         throw err;

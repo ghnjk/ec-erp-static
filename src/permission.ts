@@ -26,15 +26,12 @@ const { whiteListRouters } = permissionStore;
 
 router.beforeEach(async (to, from, next) => {
   // eslint-disable-next-line no-restricted-globals
-  if (self !== top && self.name === 'ftp-aopx') {
-    // 判断是在FTP基座下运行才进行触发回调
-    if (window.FTP_EVENT && typeof window.FTP_EVENT.routeChangeCb === 'function') {
-      window.FTP_EVENT.routeChangeCb(to);
-    }
-  }
   NProgress.start();
   const { userInfo } = userStore;
-  if (userInfo) {
+  console.log('permission check: userInfo', userInfo, 'to', to);
+  if (whiteListRouters.includes(to.path)) {
+    next();
+  } else if (userInfo) {
     const { roles, isAdmin } = userStore;
 
     if ((roles && roles.length > 0) || isAdmin) {
@@ -46,13 +43,13 @@ router.beforeEach(async (to, from, next) => {
       try {
         await sleep(800);
 
-        await userStore.login();
+        await userStore.getLoginAccout();
 
-        const { roles, isAdmin } = userStore;
+        const { roles, isAdmin, userInfo } = userStore;
+
+        console.log('permission get user info: userInfo', userInfo);
 
         await permissionStore.initRoutes(roles, isAdmin);
-        // 基础平台SRE组员工
-        await getGroupInfoStore().getStaffInfo();
         if (router.hasRoute(to.name)) {
           next();
         } else {
@@ -60,31 +57,10 @@ router.beforeEach(async (to, from, next) => {
         }
         MessagePlugin.close(authMsg);
       } catch (error) {
-        if (error?.response?.status === 401) {
-          MessagePlugin.close(authMsg);
-          const { redirecturl } = error.response.headers;
-          if (redirecturl) {
-            MessagePlugin.loading(`即将跳转到power登录...`);
-            setTimeout(() => {
-              MessagePlugin.closeAll();
-              window.location.href = redirecturl;
-            }, 800);
-          }
-        } else if (error?.response?.status === 403) {
-          MessagePlugin.close(authMsg);
-          DialogPlugin.alert({
-            theme: 'danger',
-            header: '无权限提示',
-            body: '用户无aopx平台权限，请到power平台申请对应角色权限',
-            confirmBtn: '点击申请',
-            onConfirm: () => {
-              window.open(constantStore.getPowerDirectUrl, '_blank');
-            },
-          });
-        } else {
-          MessagePlugin.error(`系统异常, 请稍后重试: ${error}`);
-          // MessagePlugin.closeAll();
-        }
+        setTimeout(() => {
+          MessagePlugin.closeAll();
+          window.location.href = '#/login';
+        }, 800);
         NProgress.done();
       }
     }

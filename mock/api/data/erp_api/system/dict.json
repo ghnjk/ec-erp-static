@@ -1,0 +1,15 @@
+{
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": "mhk47KbFpdFk86XZZMTTtkiCcDi2tMcb",
+  "data": {
+    "0": {
+      "value": "ELSE",
+      "label": "其他"
+    },
+    "1": {
+      "value": "OP_DEPLOY",
+      "label": "OP发布"
+    }
+  }
+}
