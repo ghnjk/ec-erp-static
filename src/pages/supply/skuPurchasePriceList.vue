@@ -3,16 +3,19 @@
     <t-card>
       <div class="table-container">
         <t-table
-          :columns="supplierTableColumns"
-          :data="supplierTableData"
-          :loading="supplierTableLoading"
+          :columns="skuTableColumns"
+          :data="skuTableData"
+          :loading="skuTableLoading"
           bordered
           hover
-          row-key="supplier_id"
+          row-key="sku"
           stripe
         >
-          <template #detail="{ row }">
-            <pre>{{ row.detail }}</pre>
+          <template #erp_sku_image_url="{ row }">
+            <t-image :src="row.erp_sku_image_url" :style="{ width: '60px', height: '60px' }" />
+          </template>
+          <template #purchase_price="{ row }">
+            {{ row.purchase_price / 100.0 }}
           </template>
         </t-table>
         <t-pagination
@@ -30,71 +33,83 @@
 
 <script lang="ts">
 export default {
-  name: 'SupplierList',
+  name: 'SkuPurchasePriceList',
 };
 </script>
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import { MessagePlugin } from 'tdesign-vue-next';
-import { searchSupplier } from '@/apis/supplierApis';
+import { searchSkuPurchasePrice } from '@/apis/supplierApis';
 
-const supplierTableColumns = [
-  {
-    width: 120,
-    colKey: 'supplier_id',
-    title: '供应商id',
-    align: 'center',
-  },
+const skuTableColumns = [
   {
     width: 120,
     colKey: 'supplier_name',
-    title: '供应商名',
+    title: '供应商',
+    align: 'center',
+  },
+  {
+    width: 60,
+    colKey: 'erp_sku_image_url',
+    title: '商品图片',
     align: 'center',
   },
   {
     width: 120,
-    colKey: 'wechat_account',
-    title: '微信号',
+    colKey: 'sku_group',
+    title: 'sku分组',
     align: 'center',
   },
   {
-    width: 300,
-    colKey: 'detail',
-    title: '详细信息',
+    width: 120,
+    colKey: 'sku_name',
+    title: '商品名',
+    align: 'center',
+  },
+  {
+    width: 120,
+    colKey: 'sku',
+    title: '商品SKU',
+    align: 'center',
+  },
+  {
+    width: 120,
+    colKey: 'purchase_price',
+    title: '采购价(RMB)',
+    align: 'center',
   },
 ];
-const supplierTableData = ref([]);
-const supplierTableLoading = ref(false);
+const skuTableData = ref([]);
+const skuTableLoading = ref(false);
 const paginationCurrentPage = ref(1);
 const paginationTotalCount = ref(0);
 const paginationPageSize = ref(10);
 const paginationPageSizeOptions = [10, 20, 50, 100];
 
 onMounted(() => {
-  onSearchSupplier();
+  onSearchSku();
 });
 
-const onPaginationChange = async ({ current, pageSize }) => {
+const onPaginationChange = ({ current, pageSize }) => {
   paginationCurrentPage.value = current;
   paginationPageSize.value = pageSize;
-  await onSearchSupplier();
+  onSearchSku();
 };
-
-const onSearchSupplier = async () => {
+const onSearchSku = async () => {
   const req = {
     current_page: paginationCurrentPage.value,
     page_size: paginationPageSize.value,
   };
-  supplierTableLoading.value = true;
+  skuTableLoading.value = true;
   try {
-    const res = await searchSupplier(req);
+    const res = await searchSkuPurchasePrice(req);
     paginationTotalCount.value = res.total;
-    supplierTableData.value = res.list;
+    skuTableData.value = res.list;
   } catch (e) {
     console.error(e);
-    await MessagePlugin.error(`查询商户异常: ${e}`);
+    await MessagePlugin.error(`查询sku异常: ${e}`);
   }
-  supplierTableLoading.value = false;
+  skuTableLoading.value = false;
 };
 </script>
 

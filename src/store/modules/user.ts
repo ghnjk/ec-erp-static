@@ -4,13 +4,10 @@ import { store } from '@/store';
 import { getLoginUserInfo, login } from '@/apis/sysApis';
 
 export interface IRole {
-  id: number;
-  systemId: number;
+  project: string;
   name: string;
   memo: string;
   level: number;
-  auditTmplId: number;
-  tag: string;
 }
 
 export interface IUserInfo {

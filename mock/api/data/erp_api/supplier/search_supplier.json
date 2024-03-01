@@ -1,0 +1,34 @@
+{
+  "data": {
+    "list": [
+      {
+        "create_time": "2024-02-24 21:05:51",
+        "detail": "6212260408009471538 \u4e2d\u56fd\u5de5\u5546\u94f6\u884c \u5b97\u5b50\u9f99\n18531712555",
+        "is_delete": 0,
+        "modify_time": "2024-02-24 21:05:51",
+        "modify_user": "",
+        "project_id": "dev",
+        "supplier_id": 1,
+        "supplier_name": "\u8349\u5730\u5382\u5bb6(\u5b50\u9f99)",
+        "version": 0,
+        "wechat_account": "-zilong"
+      },
+      {
+        "create_time": "2024-02-24 21:06:21",
+        "detail": "6212260408009471538 \u4e2d\u56fd\u5de5\u5546\u94f6\u884c \u5b97\u5b50\u9f99\n18531712555",
+        "is_delete": 0,
+        "modify_time": "2024-02-24 21:06:21",
+        "modify_user": "",
+        "project_id": "dev",
+        "supplier_id": 2,
+        "supplier_name": "\u8349\u5730\u5382\u5bb6(\u5b50\u9f99)",
+        "version": 0,
+        "wechat_account": "-zilong"
+      }
+    ],
+    "total": 2
+  },
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": 1708844000800
+}

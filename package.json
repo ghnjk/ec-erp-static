@@ -39,7 +39,8 @@
     "vue-json-viewer": "3",
     "vue-router": "~4.0.11",
     "xlsx": "^0.18.5",
-    "gojs": "2.2.18"
+    "gojs": "2.2.18",
+    "vue3-print-nb": "^0.1.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",

@@ -21,7 +21,7 @@ export default {
   name: 'LoginIndex',
 };
 </script>
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref } from 'vue';
 
 import Login from './components/Login.vue';
