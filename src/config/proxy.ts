@@ -14,7 +14,7 @@ export default {
   },
   release: {
     // 正式环境接口地址
-    host: 'https://aopx.cf.woa.com',
+    host: '/',
     // 正式环境 cdn 路径
     cdn: '',
   },

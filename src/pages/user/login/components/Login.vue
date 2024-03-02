@@ -79,31 +79,31 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
-import { useRouter } from "vue-router";
-import QrcodeVue from "qrcode.vue";
-import { FormInstanceFunctions, MessagePlugin } from "tdesign-vue-next";
-import { useCounter } from "@/hooks";
-import { useUserStore } from "@/store";
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import QrcodeVue from 'qrcode.vue';
+import { FormInstanceFunctions, MessagePlugin } from 'tdesign-vue-next';
+import { useCounter } from '@/hooks';
+import { useUserStore } from '@/store';
 
 const userStore = useUserStore();
 
 const INITIAL_DATA = {
-  phone: "",
-  account: "admin",
-  password: "admin",
-  verifyCode: "",
-  checked: false
+  phone: '',
+  account: 'admin',
+  password: 'admin',
+  verifyCode: '',
+  checked: false,
 };
 
 const FORM_RULES = {
-  phone: [{ required: true, message: "手机号必填", type: "error" }],
-  account: [{ required: true, message: "账号必填", type: "error" }],
-  password: [{ required: true, message: "密码必填", type: "error" }],
-  verifyCode: [{ required: true, message: "验证码必填", type: "error" }]
+  phone: [{ required: true, message: '手机号必填', type: 'error' }],
+  account: [{ required: true, message: '账号必填', type: 'error' }],
+  password: [{ required: true, message: '密码必填', type: 'error' }],
+  verifyCode: [{ required: true, message: '验证码必填', type: 'error' }],
 };
 
-const type = ref("password");
+const type = ref('password');
 
 const form = ref<FormInstanceFunctions>();
 const formData = ref({ ...INITIAL_DATA });
@@ -121,7 +121,7 @@ const router = useRouter();
  * 发送验证码
  */
 const sendCode = () => {
-  form.value.validate({ fields: ["phone"] }).then((e) => {
+  form.value.validate({ fields: ['phone'] }).then((e) => {
     if (e === true) {
       handleCounter();
     }
@@ -132,18 +132,16 @@ const onSubmit = async ({ validateResult }) => {
   if (validateResult === true) {
     try {
       const loginForm = {
-        ...formData.value
+        ...formData.value,
       };
-      console.log("start login...", loginForm);
+      console.log('start login...', loginForm);
       await userStore.login(loginForm);
 
-      MessagePlugin.success("登陆成功");
-      router.push({
-        path: "/"
-      });
+      await MessagePlugin.success('登陆成功');
+      window.location.href = '/';
     } catch (e) {
       console.log(e);
-      MessagePlugin.error("用户登录异常", e.message);
+      await MessagePlugin.error('用户登录异常', e.message);
     }
   }
 };
