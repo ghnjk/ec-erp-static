@@ -157,6 +157,12 @@ const skuTableColumns = [
       defaultEditable: true,
     },
   },
+  {
+    width: 120,
+    colKey: 'sku_unit_name',
+    title: '单位',
+    align: 'center',
+  },
 ];
 const emit = defineEmits(['onOrderChange']);
 
@@ -175,6 +181,10 @@ const popupDialog = async (pOrder: any) => {
       erp_sku_image_url: sku.erp_sku_image_url,
       unit_price: item.unit_price,
       quantity: item.quantity,
+      sku_unit_name: item.sku_unit_name,
+      sku_unit_quantity: item.sku_unit_quantity,
+      avg_sell_quantity: item.avg_sell_quantity,
+      shipping_stock_quantity: item.shipping_stock_quantity,
       check_in_quantity: item.check_in_quantity,
     });
   });

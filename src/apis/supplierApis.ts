@@ -15,6 +15,12 @@ export const searchSupplier = (req: any) => {
 export const searchSku = (req: any) => {
   return request.post<any, PageVO>('/erp_api/supplier/search_sku', req);
 };
+export const saveSku = (req: any) => {
+  return request.post<any, PageVO>('/erp_api/supplier/save_sku', req);
+};
+export const syncAllSku = () => {
+  return request.post<any, any>('/erp_api/supplier/sync_all_sku', {});
+};
 /**
  * 检索商品SKU采购价
  * @param req

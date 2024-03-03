@@ -138,7 +138,7 @@ const onSubmit = async ({ validateResult }) => {
       await userStore.login(loginForm);
 
       await MessagePlugin.success('登陆成功');
-      window.location.href = '/';
+      window.location.href = '/index.html';
     } catch (e) {
       console.log(e);
       await MessagePlugin.error('用户登录异常', e.message);

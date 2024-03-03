@@ -22,7 +22,12 @@
           <t-input v-model="purchaseOrder.purchase_date" disabled />
         </t-form-item>
         <t-form-item label="海运公司:" name="shipping_company">
-          <t-input v-model="purchaseOrder.shipping_company" />
+          <t-select
+            v-model="purchaseOrder.shipping_company"
+            :options="shippingCompanyOptions"
+            filterable
+            placeholder="-请选择海运公司-"
+          />
         </t-form-item>
         <t-form-item label="港口:" name="maritime_port">
           <t-select
@@ -69,6 +74,24 @@ const emit = defineEmits(['onOrderChange']);
 
 const visible = ref(false);
 const purchaseOrder = ref(null);
+const shippingCompanyOptions = [
+  {
+    label: '环世',
+    value: '环世',
+  },
+  {
+    label: '通达',
+    value: '通达',
+  },
+  {
+    label: '恒盛',
+    value: '恒盛',
+  },
+  {
+    label: '信誉',
+    value: '信誉',
+  },
+];
 const maritimePortOptions = [
   {
     label: '义乌',

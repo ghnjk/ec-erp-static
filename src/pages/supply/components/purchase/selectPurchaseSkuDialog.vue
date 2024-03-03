@@ -182,6 +182,12 @@ const skuTableColumns = [
   },
   {
     width: 120,
+    colKey: 'sku_unit_name',
+    title: '单位',
+    align: 'center',
+  },
+  {
+    width: 120,
     colKey: 'unit_price',
     title: '单价',
     align: 'center',
@@ -243,6 +249,10 @@ const onAddSkuGroup = async () => {
         sku: item.sku,
         erp_sku_image_url: item.erp_sku_image_url,
         inventory: item.inventory,
+        sku_unit_name: item.sku_unit_name,
+        sku_unit_quantity: item.sku_unit_quantity,
+        avg_sell_quantity: item.avg_sell_quantity,
+        shipping_stock_quantity: item.shipping_stock_quantity,
         quantity: 0,
         unit_price: purchasePrice.unit_price / 100.0,
       });
@@ -267,6 +277,10 @@ const popupDialog = async (pOrder: any) => {
         sku: item.sku,
         erp_sku_image_url: sku.erp_sku_image_url,
         inventory: sku.inventory,
+        sku_unit_name: item.sku_unit_name,
+        sku_unit_quantity: item.sku_unit_quantity,
+        avg_sell_quantity: item.avg_sell_quantity,
+        shipping_stock_quantity: item.shipping_stock_quantity,
         quantity: item.quantity,
         unit_price: item.unit_price / 100.0,
       });

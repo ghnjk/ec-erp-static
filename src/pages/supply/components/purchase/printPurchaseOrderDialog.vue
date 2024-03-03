@@ -100,6 +100,12 @@ const skuTableColumns = [
     title: '采购数量',
     align: 'center',
   },
+  {
+    width: 120,
+    colKey: 'sku_unit_name',
+    title: '单位',
+    align: 'center',
+  },
 ];
 
 const getConfirmBtn: DialogProps['confirmBtn'] = () => {
@@ -124,6 +130,10 @@ const popupDialog = async (pOrder: any) => {
       sku: item.sku,
       erp_sku_image_url: sku.erp_sku_image_url,
       quantity: item.quantity,
+      sku_unit_name: sku.sku_unit_name,
+      sku_unit_quantity: sku.sku_unit_quantity,
+      avg_sell_quantity: sku.avg_sell_quantity,
+      shipping_stock_quantity: sku.shipping_stock_quantity,
     });
   });
   visible.value = true;
