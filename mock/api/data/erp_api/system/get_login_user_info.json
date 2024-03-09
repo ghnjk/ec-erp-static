@@ -1,21 +1,24 @@
 {
-  "result": 0,
-  "resultMsg": "success",
-  "traceId": "20220519ksnj4ZOkSoZ51YBEjuGg3Iaf",
   "data": {
-    "userName": "jkguo",
-    "groupName": "基础平台SRE组",
+    "admin": 0,
+    "groupName": "",
     "roles": [
       {
-        "id": 9010,
-        "systemId": 624,
-        "name": "admin",
-        "memo": "管理员",
         "level": 1,
-        "auditTmplId": 0,
-        "tag": "0964a4f9-ada1-4fce-a8d6-c56515c84b1d"
+        "memo": "u4f9bu5e94u94feu7ba1u7406",
+        "name": "supply",
+        "project_id": "philipine"
+      },
+      {
+        "level": 1,
+        "memo": "u4ed3u5e93u7ba1u7406",
+        "name": "storehouse",
+        "project_id": "philipine"
       }
     ],
-    "admin": true
-  }
+    "userName": "jk"
+  },
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": 1709991728857
 }

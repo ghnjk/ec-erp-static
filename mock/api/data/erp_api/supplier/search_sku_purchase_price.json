@@ -1,0 +1,85 @@
+{
+  "data": {
+    "list": [
+      {
+        "create_time": "2024-03-02 21:51:42",
+        "erp_sku_image_url": "https://bigseller-1251220924.cos.accelerate.myqcloud.com/album/279590/20230706074750640dc2ad09607578d8b1546866c91cf7.jpg?imageView2/1/w/300/h/300",
+        "is_delete": 0,
+        "modify_time": "2024-03-02 21:51:42",
+        "modify_user": "",
+        "project_id": "philipine",
+        "purchase_price": 30,
+        "sku": "A-11-Beige Reed leaf",
+        "sku_group": "\u85e4\u6761/\u82a6\u82c7\u53f6",
+        "sku_name": "\u7c73\u8272\u82a6\u82c7\u53f6",
+        "supplier_id": 4,
+        "supplier_name": "\u65b0\u8349\u5730\u5382\u5bb6(\u9ea6\u68ee\u4eba\u9020\u8349\u576a\uff09",
+        "version": 0
+      },
+      {
+        "create_time": "2024-03-02 21:51:42",
+        "erp_sku_image_url": "https://bigseller-1251220924.cos.accelerate.myqcloud.com/album/279590/202401030650052d9b6760d759a189c5a7d3d72cd5a693.jpg?imageView2/1/w/300/h/300",
+        "is_delete": 0,
+        "modify_time": "2024-03-02 21:51:42",
+        "modify_user": "",
+        "project_id": "philipine",
+        "purchase_price": 30,
+        "sku": "A-11-Blue Reed leaf",
+        "sku_group": "\u85e4\u6761/\u82a6\u82c7\u53f6",
+        "sku_name": "\u84dd\u8272\u82a6\u82c7\u53f6",
+        "supplier_id": 4,
+        "supplier_name": "\u65b0\u8349\u5730\u5382\u5bb6(\u9ea6\u68ee\u4eba\u9020\u8349\u576a\uff09",
+        "version": 0
+      },
+      {
+        "create_time": "2024-03-02 21:51:42",
+        "erp_sku_image_url": "https://bigseller-1251220924.cos.accelerate.myqcloud.com/album/279590/20230921032407789265c025e8d2aadb754cf2c48f9366.jpg?imageView2/1/w/300/h/300",
+        "is_delete": 0,
+        "modify_time": "2024-03-02 21:51:42",
+        "modify_user": "",
+        "project_id": "philipine",
+        "purchase_price": 30,
+        "sku": "A-11-Brown Reed leaf",
+        "sku_group": "\u85e4\u6761/\u82a6\u82c7\u53f6",
+        "sku_name": "\u8910\u8272\u82a6\u82c7\u53f6",
+        "supplier_id": 4,
+        "supplier_name": "\u65b0\u8349\u5730\u5382\u5bb6(\u9ea6\u68ee\u4eba\u9020\u8349\u576a\uff09",
+        "version": 0
+      },
+      {
+        "create_time": "2024-03-01 22:46:51",
+        "erp_sku_image_url": "https://res.bigseller.pro/sku/images/merchantsku/279590/1672738511546.jpg?imageView2/1/w/300/h/300",
+        "is_delete": 0,
+        "modify_time": "2024-03-01 22:46:51",
+        "modify_user": "",
+        "project_id": "philipine",
+        "purchase_price": 980,
+        "sku": "G-10-White Edged Mango Leaves",
+        "sku_group": "\u85e4\u6761/\u8292\u679c\u53f6",
+        "sku_name": "\u767d\u8fb9\u8292\u679c\u53f6",
+        "supplier_id": 4,
+        "supplier_name": "\u65b0\u8349\u5730\u5382\u5bb6(\u9ea6\u68ee\u4eba\u9020\u8349\u576a\uff09",
+        "version": 0
+      },
+      {
+        "create_time": "2024-03-01 22:46:51",
+        "erp_sku_image_url": "https://res.bigseller.pro/sku/images/merchantsku/279590/1672738513381.jpg?imageView2/1/w/300/h/300",
+        "is_delete": 0,
+        "modify_time": "2024-03-01 22:46:51",
+        "modify_user": "",
+        "project_id": "philipine",
+        "purchase_price": 980,
+        "sku": "G-10-Yellow Edged Mango Leaves",
+        "sku_group": "\u85e4\u6761/\u8292\u679c\u53f6",
+        "sku_name": "\u9ec4\u8fb9\u8292\u679c\u53f6",
+        "supplier_id": 4,
+        "supplier_name": "\u65b0\u8349\u5730\u5382\u5bb6(\u9ea6\u68ee\u4eba\u9020\u8349\u576a\uff09",
+        "version": 0
+      }
+    ],
+    "total": 5
+  },
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": 1709991821760
+}

@@ -2,13 +2,13 @@ import Layout from '@/layouts/index.vue';
 import DashboardIcon from '@/assets/assets-slide-dashboard.svg';
 import FormIcon from '@/assets/assets-slide-form.svg';
 
-import { USER_ROLE_SUPPLIER } from '@/config/global';
+import { USER_ROLE_ADMIN, USER_ROLE_SUPPLIER } from '@/config/global';
 
 export default [
   {
     path: '/supply',
     component: Layout,
-    redirect: '/supply/supplierList',
+    redirect: '/supply/skuList',
     name: 'supply',
     group: 'supply',
     meta: { title: '供应链', icon: FormIcon, hidden: false },
@@ -17,7 +17,7 @@ export default [
         path: 'supplierList',
         name: 'supplierList',
         component: () => import('@/pages/supply/supplierList.vue'),
-        meta: { title: '供应商', roleCode: [USER_ROLE_SUPPLIER] },
+        meta: { title: '供应商', roleCode: [USER_ROLE_ADMIN] },
       },
       {
         path: 'skuList',
@@ -29,7 +29,7 @@ export default [
         path: 'skuPurchasePriceList',
         name: 'skuPurchasePriceList',
         component: () => import('@/pages/supply/skuPurchasePriceList.vue'),
-        meta: { title: '采购价', roleCode: [USER_ROLE_SUPPLIER] },
+        meta: { title: '采购价', roleCode: [USER_ROLE_ADMIN] },
       },
       {
         path: 'purchaseOrderList',
