@@ -1,5 +1,7 @@
 import Layout from '@/layouts/index.vue';
 import DashboardIcon from '@/assets/assets-slide-dashboard.svg';
+import FormIcon from '@/assets/assets-slide-form.svg';
+
 import { USER_ROLE_SUPPLIER } from '@/config/global';
 
 export default [
@@ -9,7 +11,7 @@ export default [
     redirect: '/supply/supplierList',
     name: 'supply',
     group: 'supply',
-    meta: { title: '供应链', icon: DashboardIcon, hidden: false },
+    meta: { title: '供应链', icon: FormIcon, hidden: false },
     children: [
       {
         path: 'supplierList',
@@ -35,11 +37,27 @@ export default [
         component: () => import('@/pages/supply/purchaseOrderList.vue'),
         meta: { title: '采购单', roleCode: [USER_ROLE_SUPPLIER] },
       },
+    ],
+  },
+  {
+    path: '/dashboard',
+    component: Layout,
+    redirect: '/dashboard/shopSale',
+    name: 'dashboard',
+    group: 'dashboard',
+    meta: { title: '销售报表', icon: DashboardIcon, hidden: false },
+    children: [
       {
-        path: 'test',
-        name: 'test',
-        component: () => import('@/pages/supply/components/purchase/test.vue'),
-        meta: { title: '测试', roleCode: [USER_ROLE_SUPPLIER] },
+        path: 'shopSale',
+        name: 'shopSale',
+        component: () => import('@/pages/dashboard/shopSale.vue'),
+        meta: { title: '店铺销售报表', roleCode: [USER_ROLE_SUPPLIER] },
+      },
+      {
+        path: 'skuSale',
+        name: 'skuSale',
+        component: () => import('@/pages/dashboard/skuSale.vue'),
+        meta: { title: '商品销售报表', roleCode: [USER_ROLE_SUPPLIER] },
       },
     ],
   },

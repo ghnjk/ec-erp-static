@@ -20,6 +20,9 @@
             <t-form-item label="商品SKU:" name="sku">
               <t-input v-model="queryParam.sku" placeholder="商品SKU" />
             </t-form-item>
+            <t-form-item label="支撑天数:" name="supportDays">
+              <t-input-number v-model="queryParam.supportDays" theme="column"></t-input-number>
+            </t-form-item>
             <t-form-item>
               <t-space size="small" style="align-items: center; margin-left: 30px">
                 <t-button theme="primary" @click="onSearchSku">查询</t-button>
@@ -37,11 +40,17 @@
           :columns="skuTableColumns"
           :data="skuTableData"
           :loading="skuTableLoading"
+          :show-sort-column-bg-color="true"
+          :sort="sortTable"
           bordered
           hover
           row-key="sku"
           stripe
+          @sort-change="sortTableChange"
         >
+          <template #avg_sell_quantity="{ row }">
+            {{ row.avg_sell_quantity.toFixed(2) }}
+          </template>
           <template #erp_sku_image_url="{ row }">
             <t-image :src="row.erp_sku_image_url" :style="{ width: '60px', height: '60px' }" />
           </template>
@@ -66,7 +75,7 @@ export default {
 </script>
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
-import { MessagePlugin, InputNumber, Input } from 'tdesign-vue-next';
+import { MessagePlugin, InputNumber, Input, TableProps } from 'tdesign-vue-next';
 import { saveSku, searchSku, syncAllSku } from '@/apis/supplierApis';
 import { skuGroupNameOptions, loadSkuInfo } from '@/utils/skuUtil';
 
@@ -74,8 +83,12 @@ const queryParam = ref({
   skuGroup: '',
   skuName: '',
   sku: '',
+  supportDays: '',
 });
-
+const sortTable = ref<TableProps['sort']>({
+  sortBy: 'avg_sell_quantity',
+  descending: true,
+});
 const skuTableColumns = [
   {
     width: 60,
@@ -205,6 +218,8 @@ const skuTableColumns = [
     colKey: 'sku_unit_quantity',
     title: '单位的SKU数',
     align: 'center',
+    sortType: 'all',
+    sorter: true,
     // 编辑状态相关配置，全部集中在 edit
     edit: {
       // 1. 支持任意组件。需保证组件包含 `value` 和 `onChange` 两个属性，且 onChange 的第一个参数值为 new value。
@@ -237,21 +252,35 @@ const skuTableColumns = [
   },
   {
     width: 120,
+    colKey: 'inventory',
+    sortType: 'all',
+    sorter: true,
+    title: '库存',
+    align: 'center',
+  },
+  {
+    width: 120,
     colKey: 'avg_sell_quantity',
     title: '平均日销售量',
     align: 'center',
+    sortType: 'all',
+    sorter: true,
+  },
+  {
+    width: 120,
+    colKey: 'inventory_support_days',
+    title: '库存支撑天数',
+    align: 'center',
+    sortType: 'all',
+    sorter: true,
   },
   {
     width: 120,
     colKey: 'shipping_stock_quantity',
     title: '海运中的SKU',
     align: 'center',
-  },
-  {
-    width: 120,
-    colKey: 'inventory',
-    title: '库存',
-    align: 'center',
+    sortType: 'all',
+    sorter: true,
   },
 ];
 const skuTableData = ref([]);
@@ -265,7 +294,10 @@ onMounted(() => {
   onSearchSku();
   loadSkuInfo();
 });
-
+const sortTableChange: TableProps['onSortChange'] = (val) => {
+  sortTable.value = val;
+  onSearchSku();
+};
 const onPaginationChange = ({ current, pageSize }) => {
   paginationCurrentPage.value = current;
   paginationPageSize.value = pageSize;
@@ -296,8 +328,10 @@ const onSearchSku = async () => {
     sku_group: queryParam.value.skuGroup,
     sku_name: queryParam.value.skuName,
     sku: queryParam.value.sku,
+    inventory_support_days: queryParam.value.supportDays,
     current_page: paginationCurrentPage.value,
     page_size: paginationPageSize.value,
+    sort: sortTable.value,
   };
   skuTableLoading.value = true;
   try {
