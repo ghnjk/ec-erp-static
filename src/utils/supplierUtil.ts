@@ -56,3 +56,22 @@ export function getNextPurchaseAction(currentStep) {
   }
   return '下一步';
 }
+
+export function getPurchaseOrderPreState(currentStep) {
+  if (currentStep === null || currentStep === undefined || currentStep === '草稿') {
+    return null;
+  }
+  if (currentStep === '供应商捡货中') {
+    return '草稿';
+  }
+  if (currentStep === '待发货') {
+    return '供应商捡货中';
+  }
+  if (currentStep === '海运中') {
+    return '待发货';
+  }
+  if (currentStep === '已入库') {
+    return '海运中';
+  }
+  return null;
+}

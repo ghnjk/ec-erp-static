@@ -70,6 +70,14 @@
             >
               支付
             </t-button>
+            <t-popconfirm
+              v-if="row.purchase_step !== '草稿' && row.purchase_step !== '完成'"
+              content="是否确认将该订单修改到上一步状态？"
+              theme="danger"
+              @confirm="goPreStep(row)"
+            >
+              <t-button size="small" theme="danger" variant="text">上一步</t-button>
+            </t-popconfirm>
           </template>
         </t-table>
         <t-pagination
@@ -112,7 +120,7 @@ export default {
 import { ref, onMounted } from 'vue';
 import { searchPurchaseOrder, savePurchaseOrder, submitPurchaseOrderAndNextStep } from '@/apis/supplierApis';
 import { Textarea, MessagePlugin } from 'tdesign-vue-next';
-import { getNextPurchaseAction } from '@/utils/supplierUtil';
+import { getNextPurchaseAction, getPurchaseOrderPreState } from '@/utils/supplierUtil';
 
 const currencyFormatter = new Intl.NumberFormat('zh-CN', {
   style: 'currency',
@@ -281,6 +289,15 @@ const popupPrintPurchaseOrderDialog = (order) => {
 };
 const popupPayOrderDialog = (order) => {
   payDialog.value.popupDialog(order);
+};
+const goPreStep = async (order) => {
+  const state = getPurchaseOrderPreState(order.purchase_step);
+  if (state === null) {
+    return;
+  }
+  order.purchase_step = state;
+  await savePurchaseOrder(order);
+  await onSearchOrder();
 };
 </script>
 

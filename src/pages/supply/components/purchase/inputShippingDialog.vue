@@ -113,6 +113,10 @@ const maritimePortOptions = [
     label: '河北',
     value: '河北',
   },
+  {
+    label: '天津',
+    value: '天津',
+  },
 ];
 const popupDialog = async (pOrder: any) => {
   purchaseOrder.value = pOrder;
