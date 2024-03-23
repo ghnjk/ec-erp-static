@@ -18,6 +18,9 @@ export const searchSku = (req: any) => {
 export const saveSku = (req: any) => {
   return request.post<any, PageVO>('/erp_api/supplier/save_sku', req);
 };
+export const addSku = (req: any) => {
+  return request.post<any, any>('/erp_api/supplier/add_sku', req);
+};
 export const syncAllSku = () => {
   return request.post<any, any>('/erp_api/supplier/sync_all_sku', {});
 };

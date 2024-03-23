@@ -28,6 +28,9 @@
                 <t-button theme="primary" @click="onSearchSku">查询</t-button>
               </t-space>
               <t-space size="small" style="align-items: center; margin-left: 30px">
+                <t-button theme="success" @click="popupAddSkuDialog">添加SKU</t-button>
+              </t-space>
+              <t-space size="small" style="align-items: center; margin-left: 30px">
                 <t-button theme="default" variant="text" @click="onSyncAllSku">同步所有库存</t-button>
               </t-space>
             </t-form-item>
@@ -65,6 +68,39 @@
         />
       </div>
     </t-card>
+    <t-dialog
+      v-if="addSkuDialog.visible"
+      v-model:visible="addSkuDialog.visible"
+      :cancel-btn="null"
+      :close-on-esc-keydown="false"
+      :close-on-overlay-click="false"
+      :confirm-btn="null"
+      header="添加SKU"
+      show-overlay
+      width="60%"
+    >
+      <t-alert message="需要提前在bigseller添加好sku" />
+      <br />
+      <t-form>
+        <t-form-item label="sku:" name="supplier_name">
+          <t-textarea
+            v-model="addSkuDialog.skus"
+            :autosize="{ minRows: 3, maxRows: 5 }"
+            name="description"
+            placeholder="需要添加的sku。多个换行"
+          />
+        </t-form-item>
+      </t-form>
+      <br />
+      <t-row>
+        <t-col :span="9"></t-col>
+        <t-col :span="3">
+          <t-space>
+            <t-button style="float: right" theme="primary" @click="onAddSku">批量添加</t-button>
+          </t-space>
+        </t-col>
+      </t-row>
+    </t-dialog>
   </div>
 </template>
 
@@ -76,7 +112,7 @@ export default {
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import { MessagePlugin, InputNumber, Input, TableProps } from 'tdesign-vue-next';
-import { saveSku, searchSku, syncAllSku } from '@/apis/supplierApis';
+import { saveSku, searchSku, syncAllSku, addSku } from '@/apis/supplierApis';
 import { skuGroupNameOptions, loadSkuInfo } from '@/utils/skuUtil';
 
 const queryParam = ref({
@@ -289,6 +325,10 @@ const paginationCurrentPage = ref(1);
 const paginationTotalCount = ref(0);
 const paginationPageSize = ref(10);
 const paginationPageSizeOptions = [10, 20, 50, 100];
+const addSkuDialog = ref({
+  visible: false,
+  skus: '',
+});
 
 onMounted(() => {
   onSearchSku();
@@ -311,6 +351,22 @@ const onSaveSku = async (sku) => {
     console.error(e);
     await MessagePlugin.error(`更新sku异常: ${e}`);
   }
+};
+const onAddSku = async () => {
+  try {
+    const { success_count, ignore_count, fail_count, detail } = await addSku({
+      skus: addSkuDialog.value.skus,
+    });
+    console.log('onAddSku response', detail);
+    await MessagePlugin.success(`成功添加：${success_count}, 失败：${fail_count}， 忽略： ${ignore_count}`);
+    onSearchSku();
+  } catch (e) {
+    console.error(e);
+    await MessagePlugin.error(`添加sku异常: ${e}`);
+  }
+};
+const popupAddSkuDialog = () => {
+  addSkuDialog.value.visible = true;
 };
 const onSyncAllSku = async () => {
   skuTableLoading.value = true;

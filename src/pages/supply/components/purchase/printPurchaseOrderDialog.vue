@@ -10,7 +10,7 @@
       width="80%"
       @confirm="printDialog"
     >
-      <div id="printDiv">
+      <div id="printDiv" ref="printDiv">
         <t-row>
           <t-col :span="12">
             <t-form layout="inline">
@@ -50,7 +50,8 @@
       <br />
       <hr />
       <br />
-      <t-button v-print="printSetting" style="float: right" theme="primary"> 打印</t-button>
+      <t-button style="float: right; margin-left: 10px" theme="success" @click="saveAsPic">保存图片</t-button>
+      <t-button v-print="printSetting" style="float: right" theme="primary">打印</t-button>
     </t-dialog>
   </div>
 </template>
@@ -64,12 +65,15 @@ export default {
 import { ref, defineExpose, defineEmits } from 'vue';
 import { TableProps, DialogProps } from 'tdesign-vue-next';
 import print from 'vue3-print-nb';
+import html2canvas from 'html2canvas';
+import { saveAs } from 'file-saver';
 import { skuMap, loadSkuInfo } from '@/utils/skuUtil';
 
 const vPrint = print;
 const printSetting = ref({
   id: 'printDiv',
 });
+const printDiv = ref(null);
 
 const skuTableData = ref([]);
 
@@ -107,13 +111,12 @@ const skuTableColumns = [
     align: 'center',
   },
 ];
-
-const getConfirmBtn: DialogProps['confirmBtn'] = () => {
-  return (
-    <t-button v-print="printSetting" theme="primary">
-      打印
-    </t-button>
-  );
+const saveAsPic = () => {
+  html2canvas(printDiv.value).then((canvas) => {
+    canvas.toBlob((blob) => {
+      saveAs(blob, `采购单-${purchaseOrder.value.purchase_date}.png`);
+    });
+  });
 };
 
 const popupDialog = async (pOrder: any) => {
