@@ -153,8 +153,8 @@ const orderTableColumns = [
   },
   {
     width: 40,
-    colKey: 'maritime_port',
-    title: '国内港口',
+    colKey: 'shipping_company',
+    title: '海运公司',
     align: 'center',
   },
   {

@@ -91,6 +91,10 @@ const shippingCompanyOptions = [
     label: '信誉',
     value: '信誉',
   },
+  {
+    label: '悦希',
+    value: '悦希',
+  },
 ];
 const maritimePortOptions = [
   {

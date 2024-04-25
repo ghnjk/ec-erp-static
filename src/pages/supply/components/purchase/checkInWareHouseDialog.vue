@@ -178,7 +178,7 @@ const popupDialog = async (pOrder: any) => {
       sku_group: item.sku_group,
       sku_name: item.sku_name,
       sku: item.sku,
-      erp_sku_image_url: sku.erp_sku_image_url,
+      erp_sku_image_url: sku?.erp_sku_image_url,
       unit_price: item.unit_price,
       quantity: item.quantity,
       sku_unit_name: item.sku_unit_name,
