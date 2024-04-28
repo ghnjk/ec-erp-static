@@ -14,6 +14,12 @@ export const login = (loginInfo) => {
   return request.post('/erp_api/system/login_user', loginInfo);
 };
 
+export const loginWithToken = (token) => {
+  return request.post('/erp_api/system/login_user_with_token', {
+    token,
+  });
+};
+
 /**
  * 字典
  */

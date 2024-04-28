@@ -1,6 +1,7 @@
 import Layout from '@/layouts/index.vue';
 import DashboardIcon from '@/assets/assets-slide-dashboard.svg';
 import FormIcon from '@/assets/assets-slide-form.svg';
+import ListIcon from '@/assets/assets-slide-list.svg';
 
 import { USER_ROLE_ADMIN, USER_ROLE_SUPPLIER } from '@/config/global';
 
@@ -60,5 +61,11 @@ export default [
         meta: { title: '商品销售报表', roleCode: [USER_ROLE_SUPPLIER] },
       },
     ],
+  },
+  {
+    path: '/mobile/stocktaking',
+    name: 'stocktaking',
+    component: () => import('@/pages/warehouse/stocktaking.vue'),
+    meta: { title: '仓库盘点', icon: ListIcon, roleCode: [USER_ROLE_SUPPLIER] },
   },
 ];
