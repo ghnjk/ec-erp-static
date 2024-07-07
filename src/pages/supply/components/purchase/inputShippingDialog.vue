@@ -95,6 +95,22 @@ const shippingCompanyOptions = [
     label: '悦希',
     value: '悦希',
   },
+  {
+    label: '喜运达',
+    value: '喜运达',
+  },
+  {
+    label: '速凡国际',
+    value: '速凡国际',
+  },
+  {
+    label: '羊驼帮',
+    value: '羊驼帮',
+  },
+  {
+    label: '德羽',
+    value: '德羽',
+  },
 ];
 const maritimePortOptions = [
   {
@@ -120,6 +136,14 @@ const maritimePortOptions = [
   {
     label: '天津',
     value: '天津',
+  },
+  {
+    label: '深圳',
+    value: '深圳',
+  },
+  {
+    label: '山东',
+    value: '山东',
   },
 ];
 const popupDialog = async (pOrder: any) => {

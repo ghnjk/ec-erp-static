@@ -92,6 +92,7 @@
         </t-form-item>
         <t-form-item label="实际库存" name="real_quantity">
           <t-input-number v-model="stocktakingDrawer.sku.real_stock_sku" />
+          <span style="margin-left: 15px; font-size: medium">{{ stocktakingDrawer.sku.taking_unit }}</span>
         </t-form-item>
         <t-form-item label="盘点单位" name="taking_unit">
           <t-input v-model="stocktakingDrawer.sku.taking_unit" />
@@ -174,9 +175,9 @@ const onSkuGroupChange = () => {
 };
 const popupTakingDrawer = (sku: any) => {
   stocktakingDrawer.value.title = `货物盘点：${sku.sku_name}`;
-  sku.real_stock_sku = sku.inventory;
   sku.taking_unit = sku.sku_unit_name;
   sku.taking_unit_sku_count = sku.sku_unit_quantity;
+  sku.real_stock_sku = Math.floor(sku.inventory / sku.taking_unit_sku_count);
   stocktakingDrawer.value.sku = sku;
   stocktakingDrawer.value.visible = true;
 };
