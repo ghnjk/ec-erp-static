@@ -1,0 +1,19 @@
+{
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": 1709991821760,
+  "data": {
+    "task": {
+      "project_id": "dev",
+      "task_id": "dddxx",
+      "current_step": "打印的PDF文件生成ok。",
+      "progress": 100,
+      "order_list": [],
+      "logs": [
+        "2024-10-01 00:00:00 - 创建订单任务",
+        "2024-10-01 00:00:00 - 启动打印任务"
+      ],
+      "pdf_file_url": "/pdf_files/xxxx/xxx.pdf"
+    }
+  }
+}

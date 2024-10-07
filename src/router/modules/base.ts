@@ -3,7 +3,7 @@ import DashboardIcon from '@/assets/assets-slide-dashboard.svg';
 import FormIcon from '@/assets/assets-slide-form.svg';
 import ListIcon from '@/assets/assets-slide-list.svg';
 
-import { USER_ROLE_ADMIN, USER_ROLE_SUPPLIER } from '@/config/global';
+import { USER_ROLE_ADMIN, USER_ROLE_SUPPLIER, USER_ROLE_WAREHOUSE } from '@/config/global';
 
 export default [
   {
@@ -41,12 +41,40 @@ export default [
     ],
   },
   {
+    path: '/warehouse',
+    component: Layout,
+    redirect: '/warehouse/printOrder',
+    name: 'printOrder',
+    group: 'printOrder',
+    meta: { title: '仓库管理', icon: DashboardIcon, hidden: false },
+    children: [
+      {
+        path: '/warehouse/printOrder',
+        name: 'printOrder',
+        component: () => import('@/pages/warehouse/printOrder.vue'),
+        meta: { title: '订单打印', icon: ListIcon, roleCode: [USER_ROLE_WAREHOUSE] },
+      },
+      {
+        path: '/warehouse/pickingNote',
+        name: 'pickingNote',
+        component: () => import('@/pages/warehouse/skuPickingNote.vue'),
+        meta: { title: '拣货备注', icon: ListIcon, roleCode: [USER_ROLE_WAREHOUSE] },
+      },
+      {
+        path: '/warehouse/stock',
+        name: 'stock',
+        component: () => import('@/pages/warehouse/stocktaking.vue'),
+        meta: { title: '仓库盘点', icon: ListIcon, roleCode: [USER_ROLE_SUPPLIER] },
+      },
+    ],
+  },
+  {
     path: '/dashboard',
     component: Layout,
     redirect: '/dashboard/shopSale',
     name: 'dashboard',
     group: 'dashboard',
-    meta: { title: '销售报表', icon: DashboardIcon, hidden: false },
+    meta: { title: '销售报表', icon: ListIcon, hidden: false },
     children: [
       {
         path: 'shopSale',
@@ -66,6 +94,6 @@ export default [
     path: '/mobile/stocktaking',
     name: 'stocktaking',
     component: () => import('@/pages/warehouse/stocktaking.vue'),
-    meta: { title: '仓库盘点', icon: ListIcon, roleCode: [USER_ROLE_SUPPLIER] },
+    meta: { title: '仓库盘点', hidden: false, icon: ListIcon, roleCode: [USER_ROLE_SUPPLIER] },
   },
 ];

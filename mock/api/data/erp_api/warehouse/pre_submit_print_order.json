@@ -1,0 +1,15 @@
+{
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": 1709991821760,
+  "data": {
+    "task_id": "xxxxdsfds",
+    "need_manual_mark_sku_list": [
+      {
+        "sku": "Lawn-3.5m*5m",
+        "image_url": "https://cf.shopee.ph/file/ph-11134207-7r98v-lzg47xuonptmd6",
+        "desc": "案例：买家购买3个[G-10-TWO]  => 实际扣除sku: 20个[G-10]"
+      }
+    ]
+  }
+}

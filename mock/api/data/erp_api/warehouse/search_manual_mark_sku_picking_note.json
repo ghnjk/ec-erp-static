@@ -1,0 +1,22 @@
+{
+  "data": {
+    "list": [
+      {
+        "project_id": "dev",
+        "sku": "test",
+        "picking_unit": 1,
+        "picking_unit_name": "pcs",
+        "support_pkg_picking": false,
+        "pkg_picking_unit": 0,
+        "pkg_picking_unit_name": "",
+        "picking_sku_name": "G-20",
+        "erp_sku_name": "2m*0.5m(\u4e00\u5e73\u65b9\u7c73\u8349\u5730)",
+        "erp_sku_image_url": "https://res.bigseller.pro/sku/images/merchantsku/279590/1674962429302.jpg?imageView2/1/w/300/h/300"
+      }
+    ],
+    "total": 171
+  },
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": 1709991729751
+}

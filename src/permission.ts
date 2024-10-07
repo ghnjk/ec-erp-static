@@ -29,6 +29,25 @@ router.beforeEach(async (to, from, next) => {
   NProgress.start();
   const { userInfo } = userStore;
   console.log('permission check: userInfo', userInfo, 'to', to);
+  const { roles, isAdmin } = userStore;
+
+  if ((roles && roles.length > 0) || isAdmin) {
+    // 当已经在页面中, 跳转到其他页面, 会走这个逻辑
+    next();
+  } else {
+    try {
+      await userStore.getLoginAccout();
+
+      const { roles, isAdmin, userInfo } = userStore;
+
+      console.log('permission get user info: userInfo', userInfo);
+      await permissionStore.initRoutes(roles, isAdmin);
+      if ((roles && roles.length > 0) || isAdmin) {
+        // 当已经在页面中, 跳转到其他页面, 会走这个逻辑
+        next();
+      }
+    } catch (e) {}
+  }
   if (whiteListRouters.includes(to.path)) {
     next();
   } else if (userInfo) {

@@ -6,3 +6,4 @@ export const TOKEN_NAME = 'tdesign-starter';
 export const USER_ROLE_ADMIN = 'admin';
 // 运维人员power角色id
 export const USER_ROLE_SUPPLIER = 'supply';
+export const USER_ROLE_WAREHOUSE = 'warehouse';
