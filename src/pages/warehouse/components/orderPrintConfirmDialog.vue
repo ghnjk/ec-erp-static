@@ -9,6 +9,7 @@
       header="订单打印信息确认"
       show-overlay
       width="80%"
+      @cancel="onClose"
       @confirm="onSubmitPrintOrder"
     >
       <t-loading :loading="isLoading">
@@ -47,6 +48,10 @@
               </t-list>
             </t-space>
           </t-form-item>
+          <!--          <t-form-item>-->
+          <!--            <t-button theme="default" @click="onClose">关闭</t-button>-->
+          <!--            <t-button :disabled="isLoading" theme="primary" @click="onSubmitPrintOrder">确认 & 提交打印</t-button>-->
+          <!--          </t-form-item>-->
         </t-form>
       </t-loading>
     </t-dialog>
@@ -80,12 +85,13 @@ const popupDialog = async (totalCount, orderList) => {
   waitPrintOrderList.value = orderList;
   orderSummary.value = `本次打印 ${orderList.length} 单 / 共 ${totalCount} 单`;
   visible.value = true;
+  isLoading.value = true;
   await tryPreSubmitPrintOrderTask();
+  isLoading.value = false;
 };
 const tryPreSubmitPrintOrderTask = async () => {
   try {
     manualMarkSkuList.value = [];
-    isLoading.value = true;
     const req = {
       order_list: waitPrintOrderList.value,
     };
@@ -104,7 +110,6 @@ const tryPreSubmitPrintOrderTask = async () => {
       });
     });
     console.log('manualMarkSkuList', manualMarkSkuList.value);
-    isLoading.value = false;
     if (manualMarkSkuList.value.length > 0) {
       await MessagePlugin.info('需要补充sku拣货备注.');
       return null;
@@ -114,7 +119,6 @@ const tryPreSubmitPrintOrderTask = async () => {
   } catch (e) {
     console.error(e);
     await MessagePlugin.error(`打印订单失败: ${e}`);
-    isLoading.value = false;
   }
   return null;
 };
@@ -169,17 +173,26 @@ const onStartupPrintTask = async (taskId) => {
     };
     const task = await startRunPrintOrderTask(req);
     console.log('task', task);
+    await orderPrintProgressDialog.value.popupDialog(taskId);
     visible.value = false;
-    orderPrintProgressDialog.value.popupDialog(taskId);
   } catch (e) {
     console.error(e);
     await MessagePlugin.error(`启动后台任务失败: ${e}`);
+    isLoading.value = false;
   }
 };
+const onClose = () => {
+  visible.value = false;
+};
 const onSubmitPrintOrder = async () => {
+  if (isLoading.value) {
+    return;
+  }
+  isLoading.value = true;
   // 先提交备注信息
   const isOk = await onSubmitAllPickingNote();
   if (!isOk) {
+    isLoading.value = false;
     return;
   }
   // 再尝试提交打印任务
@@ -187,6 +200,8 @@ const onSubmitPrintOrder = async () => {
   if (taskId != null) {
     // 启动任务
     await onStartupPrintTask(taskId);
+  } else {
+    isLoading.value = false;
   }
 };
 defineExpose({ popupDialog });

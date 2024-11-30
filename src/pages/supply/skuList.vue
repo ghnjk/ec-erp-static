@@ -57,6 +57,12 @@
           <template #erp_sku_image_url="{ row }">
             <t-image :src="row.erp_sku_image_url" :style="{ width: '60px', height: '60px' }" />
           </template>
+          <template #avg_sell_quantity_pkg="{ row }">
+            {{ calcAvgSellQuantityPkg(row) }}
+          </template>
+          <template #shipping_stock_quantity_pkg="{ row }">
+            {{ calcShippingStockQuantityPkg(row) }}
+          </template>
         </t-table>
         <t-pagination
           v-model="paginationCurrentPage"
@@ -297,7 +303,15 @@ const skuTableColumns = [
   {
     width: 120,
     colKey: 'avg_sell_quantity',
-    title: '平均日销售量',
+    title: '平均日销-SKU',
+    align: 'center',
+    sortType: 'all',
+    sorter: true,
+  },
+  {
+    width: 120,
+    colKey: 'avg_sell_quantity_pkg',
+    title: '平均日销-采购单位',
     align: 'center',
     sortType: 'all',
     sorter: true,
@@ -313,7 +327,15 @@ const skuTableColumns = [
   {
     width: 120,
     colKey: 'shipping_stock_quantity',
-    title: '海运中的SKU',
+    title: '海运中-SKU',
+    align: 'center',
+    sortType: 'all',
+    sorter: true,
+  },
+  {
+    width: 120,
+    colKey: 'shipping_stock_quantity_pkg',
+    title: '海运中-采购单位',
     align: 'center',
     sortType: 'all',
     sorter: true,
@@ -342,6 +364,20 @@ const onPaginationChange = ({ current, pageSize }) => {
   paginationCurrentPage.value = current;
   paginationPageSize.value = pageSize;
   onSearchSku();
+};
+const calcAvgSellQuantityPkg = (row) => {
+  if (row.sku_unit_quantity === null || row.sku_unit_quantity === undefined || row.sku_unit_quantity <= 0) {
+    return row.avg_sell_quantity.toFixed(1);
+  }
+  const res = row.avg_sell_quantity / row.sku_unit_quantity;
+  return res.toFixed(1);
+};
+const calcShippingStockQuantityPkg = (row) => {
+  if (row.sku_unit_quantity === null || row.sku_unit_quantity === undefined || row.sku_unit_quantity <= 0) {
+    return row.shipping_stock_quantity.toFixed(1);
+  }
+  const res = row.shipping_stock_quantity / row.sku_unit_quantity;
+  return res.toFixed(1);
 };
 const onSaveSku = async (sku) => {
   try {
