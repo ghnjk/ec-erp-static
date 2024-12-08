@@ -42,7 +42,10 @@
         <t-table
           :columns="skuTableColumns"
           :data="skuTableData"
+          :fixed-rows="[0, 0]"
+          :header-affixed-top="true"
           :loading="skuTableLoading"
+          :max-height="1000"
           :show-sort-column-bg-color="true"
           :sort="sortTable"
           bordered
@@ -138,12 +141,14 @@ const skuTableColumns = [
   {
     width: 60,
     colKey: 'erp_sku_image_url',
+    fixed: 'left',
     title: '商品图片',
     align: 'center',
   },
   {
     width: 120,
     colKey: 'sku_group',
+    fixed: 'left',
     title: 'sku分组',
     align: 'center',
     // 编辑状态相关配置，全部集中在 edit
@@ -179,6 +184,7 @@ const skuTableColumns = [
   {
     width: 120,
     colKey: 'sku_name',
+    fixed: 'left',
     title: '商品名',
     align: 'center',
     // 编辑状态相关配置，全部集中在 edit
@@ -381,21 +387,21 @@ const calcAvgSellQuantityPkg = (row) => {
     return row.avg_sell_quantity.toFixed(1);
   }
   const res = row.avg_sell_quantity / row.sku_unit_quantity;
-  return res.toFixed(1);
+  return `${res.toFixed(1)} (${row.sku_unit_name})`;
 };
 const calcInventoryPkg = (row) => {
   if (row.sku_unit_quantity === null || row.sku_unit_quantity === undefined || row.sku_unit_quantity <= 0) {
     return row.inventory.toFixed(1);
   }
   const res = row.inventory / row.sku_unit_quantity;
-  return res.toFixed(1);
+  return `${res.toFixed(1)} (${row.sku_unit_name})`;
 };
 const calcShippingStockQuantityPkg = (row) => {
   if (row.sku_unit_quantity === null || row.sku_unit_quantity === undefined || row.sku_unit_quantity <= 0) {
     return row.shipping_stock_quantity.toFixed(1);
   }
   const res = row.shipping_stock_quantity / row.sku_unit_quantity;
-  return res.toFixed(1);
+  return `${res.toFixed(1)} (${row.sku_unit_name})`;
 };
 const onSaveSku = async (sku) => {
   try {
