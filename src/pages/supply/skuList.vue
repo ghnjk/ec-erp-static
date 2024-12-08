@@ -57,6 +57,9 @@
           <template #erp_sku_image_url="{ row }">
             <t-image :src="row.erp_sku_image_url" :style="{ width: '60px', height: '60px' }" />
           </template>
+          <template #inventory_pkg="{ row }">
+            {{ calcInventoryPkg(row) }}
+          </template>
           <template #avg_sell_quantity_pkg="{ row }">
             {{ calcAvgSellQuantityPkg(row) }}
           </template>
@@ -297,7 +300,15 @@ const skuTableColumns = [
     colKey: 'inventory',
     sortType: 'all',
     sorter: true,
-    title: '库存',
+    title: '库存-SKU',
+    align: 'center',
+  },
+  {
+    width: 120,
+    colKey: 'inventory_pkg',
+    sortType: 'all',
+    sorter: true,
+    title: '库存-采购单位',
     align: 'center',
   },
   {
@@ -370,6 +381,13 @@ const calcAvgSellQuantityPkg = (row) => {
     return row.avg_sell_quantity.toFixed(1);
   }
   const res = row.avg_sell_quantity / row.sku_unit_quantity;
+  return res.toFixed(1);
+};
+const calcInventoryPkg = (row) => {
+  if (row.sku_unit_quantity === null || row.sku_unit_quantity === undefined || row.sku_unit_quantity <= 0) {
+    return row.inventory.toFixed(1);
+  }
+  const res = row.inventory / row.sku_unit_quantity;
   return res.toFixed(1);
 };
 const calcShippingStockQuantityPkg = (row) => {
