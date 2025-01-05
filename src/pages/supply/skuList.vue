@@ -43,7 +43,6 @@
           :columns="skuTableColumns"
           :data="skuTableData"
           :fixed-rows="[0, 0]"
-          :header-affixed-top="true"
           :loading="skuTableLoading"
           :max-height="1000"
           :show-sort-column-bg-color="true"
@@ -68,6 +67,9 @@
           </template>
           <template #shipping_stock_quantity_pkg="{ row }">
             {{ calcShippingStockQuantityPkg(row) }}
+          </template>
+          <template #shipping_stock_support_days="{ row }">
+            {{ calcShippingSupportDays(row) }}
           </template>
         </t-table>
         <t-pagination
@@ -357,6 +359,14 @@ const skuTableColumns = [
     sortType: 'all',
     sorter: true,
   },
+  {
+    width: 120,
+    colKey: 'shipping_stock_support_days',
+    title: '海运中-支撑天数',
+    align: 'center',
+    sortType: 'all',
+    sorter: true,
+  },
 ];
 const skuTableData = ref([]);
 const skuTableLoading = ref(false);
@@ -387,21 +397,31 @@ const calcAvgSellQuantityPkg = (row) => {
     return row.avg_sell_quantity.toFixed(1);
   }
   const res = row.avg_sell_quantity / row.sku_unit_quantity;
-  return `${res.toFixed(1)} (${row.sku_unit_name})`;
+  return `${res.toFixed(1)} ${row.sku_unit_name.substring(0, 1)}`;
 };
 const calcInventoryPkg = (row) => {
   if (row.sku_unit_quantity === null || row.sku_unit_quantity === undefined || row.sku_unit_quantity <= 0) {
     return row.inventory.toFixed(1);
   }
   const res = row.inventory / row.sku_unit_quantity;
-  return `${res.toFixed(1)} (${row.sku_unit_name})`;
+  return `${res.toFixed(1)} ${row.sku_unit_name.substring(0, 1)}`;
 };
 const calcShippingStockQuantityPkg = (row) => {
   if (row.sku_unit_quantity === null || row.sku_unit_quantity === undefined || row.sku_unit_quantity <= 0) {
     return row.shipping_stock_quantity.toFixed(1);
   }
   const res = row.shipping_stock_quantity / row.sku_unit_quantity;
-  return `${res.toFixed(1)} (${row.sku_unit_name})`;
+  return `${res.toFixed(1)} ${row.sku_unit_name.substring(0, 1)}`;
+};
+const calcShippingSupportDays = (row) => {
+  if (row.shipping_stock_quantity === 0) {
+    return '0';
+  }
+  if (row.avg_sell_quantity === 0) {
+    return '--';
+  }
+  const supportDays = row.shipping_stock_quantity / row.avg_sell_quantity;
+  return supportDays.toFixed(1);
 };
 const onSaveSku = async (sku) => {
   try {
