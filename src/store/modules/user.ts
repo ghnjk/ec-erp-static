@@ -15,6 +15,7 @@ export interface IUserInfo {
   groupName: string;
   roles: IRole[];
   admin: boolean;
+  project_id: string;
 }
 
 const InitUserInfo: IUserInfo = {
@@ -22,6 +23,7 @@ const InitUserInfo: IUserInfo = {
   groupName: '',
   roles: [],
   admin: false,
+  project_id: '',
 };
 
 export const useUserStore = defineStore('user', {

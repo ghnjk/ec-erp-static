@@ -13,7 +13,14 @@
       </template>
       <div id="projectSelector">
         <span class="label">国家：</span>
-        <t-select v-model="selectedProject" :options="projectOptions" placeholder="请选择项目" size="medium" style="width: 120px;" @change="handleProjectChange" />
+        <t-select
+          v-model="selectedProject"
+          :options="projectOptions"
+          placeholder="请选择项目"
+          size="medium"
+          style="width: 120px"
+          @change="handleProjectChange"
+        />
       </div>
       <template #operations>
         <div class="operations-container">
@@ -107,9 +114,8 @@ const projectOptions = [
 // 获取用户信息并设置默认项目
 const initializeProject = async () => {
   try {
-    const res = await getLoginUserInfo();
-    selectedProject.value = res?.project_id;
-    console.log("initializeProject", project_id, "project_id", selectedProject.value);
+    const res: any = await getLoginUserInfo();
+    selectedProject.value = res.project_id;
   } catch (error) {
     console.error('获取用户信息失败:', error);
   }
@@ -122,7 +128,7 @@ onMounted(() => {
 const handleProjectChange = (value: string) => {
   const urlMap = {
     philipine: 'http://150.109.158.22/index.html',
-    malaysia: 'http://8.210.60.7:2080/index.html#/supply/skuList'
+    malaysia: 'http://8.210.60.7:2080/index.html#/supply/skuList',
   };
   const targetUrl = urlMap[value];
   if (targetUrl) {
@@ -370,7 +376,7 @@ const navToHelper = () => {
   margin: 0 8px;
   display: flex;
   align-items: center;
-  
+
   .label {
     margin-right: 4px;
     color: var(--td-text-color-primary);
