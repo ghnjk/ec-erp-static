@@ -11,8 +11,11 @@
           row-key="supplier_id"
           stripe
         >
+          <template #wechat_account="{ row }">
+            ***
+          </template>
           <template #detail="{ row }">
-            <pre>{{ row.detail }}</pre>
+            ***
           </template>
         </t-table>
         <t-pagination

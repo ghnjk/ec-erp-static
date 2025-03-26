@@ -132,7 +132,7 @@ const handleProjectChange = (value: string) => {
   };
   const targetUrl = urlMap[value];
   if (targetUrl) {
-    window.open(targetUrl);
+    window.open(targetUrl, '_self');
   }
 };
 

@@ -74,7 +74,7 @@ export default [
     redirect: '/dashboard/shopSale',
     name: 'dashboard',
     group: 'dashboard',
-    meta: { title: '销售报表', icon: ListIcon, hidden: false },
+    meta: { title: '销售报表', icon: ListIcon, roleCode: [USER_ROLE_ADMIN] , hidden: false },
     children: [
       {
         path: 'shopSale',
