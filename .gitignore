@@ -21,3 +21,5 @@ yarn-error.log
 .history
 .stylelintcache
 yarn.lock
+.vscode/
+.vscode
