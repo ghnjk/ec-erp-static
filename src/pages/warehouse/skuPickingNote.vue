@@ -1,6 +1,12 @@
 <template>
   <div>
     <t-card>
+      <div class="action-buttons" style="margin-bottom: 16px;">
+        <t-button theme="primary" @click="onShowAddDialog">
+          新增拣货备注
+        </t-button>
+      </div>
+      
       <div class="table-container">
         <t-table
           :columns="noteTableColumns"
@@ -25,6 +31,76 @@
         />
       </div>
     </t-card>
+
+    <t-dialog
+      v-model:visible="addDialogVisible"
+      header="新增拣货备注"
+      width="600px"
+      :confirm-btn="{ content: '保存', loading: addDialogLoading }"
+      @confirm="onConfirmAdd"
+      @cancel="onCancelAdd"
+    >
+      <t-form
+        ref="addFormRef"
+        :data="addFormData"
+        :rules="addFormRules"
+        label-align="left"
+        label-width="120px"
+      >
+        <t-form-item label="SKU" name="sku">
+          <t-input v-model="addFormData.sku" placeholder="请输入SKU" />
+        </t-form-item>
+        
+        <t-form-item label="拣货单位数量" name="picking_unit">
+          <t-input-number 
+            v-model="addFormData.picking_unit" 
+            :min="1"
+            placeholder="请输入1拣货单位=多少sku"
+          />
+        </t-form-item>
+        
+        <t-form-item label="拣货单位名" name="picking_unit_name">
+          <t-input v-model="addFormData.picking_unit_name" placeholder="请输入拣货单位名" />
+        </t-form-item>
+        
+        <t-form-item label="拣货SKU名" name="picking_sku_name">
+          <t-input v-model="addFormData.picking_sku_name" placeholder="请输入拣货SKU名" />
+        </t-form-item>
+        
+        <t-form-item label="是否支持PKG打包" name="support_pkg_picking">
+          <t-select 
+            v-model="addFormData.support_pkg_picking" 
+            placeholder="请选择是否支持PKG打包"
+            :options="[
+              { label: '否', value: false },
+              { label: '是', value: true }
+            ]"
+          />
+        </t-form-item>
+        
+        <t-form-item 
+          v-if="addFormData.support_pkg_picking" 
+          label="PKG打包单位数量" 
+          name="pkg_picking_unit"
+          :rules="addFormData.support_pkg_picking ? [{ required: true, message: 'PKG打包单位数量不能为空' }] : []"
+        >
+          <t-input-number 
+            v-model="addFormData.pkg_picking_unit" 
+            :min="1"
+            placeholder="请输入1 PKG=多少SKU"
+          />
+        </t-form-item>
+        
+        <t-form-item 
+          v-if="addFormData.support_pkg_picking" 
+          label="PKG打包单位名" 
+          name="pkg_picking_unit_name"
+          :rules="addFormData.support_pkg_picking ? [{ required: true, message: 'PKG打包单位名不能为空' }] : []"
+        >
+          <t-input v-model="addFormData.pkg_picking_unit_name" placeholder="请输入PKG打包单位名" />
+        </t-form-item>
+      </t-form>
+    </t-dialog>
   </div>
 </template>
 
@@ -35,7 +111,7 @@ export default {
 </script>
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
-import { InputNumber, Select, Input, MessagePlugin } from 'tdesign-vue-next';
+import { InputNumber, Select, Input, MessagePlugin, Dialog, Form, FormItem, Button } from 'tdesign-vue-next';
 import { savePurchaseOrder, searchPurchaseOrder } from '@/apis/supplierApis';
 import { searchManualMarkSkuPickingNote, submitManualMarkSkuPickingNote } from '@/apis/warehouseApis';
 
@@ -261,6 +337,26 @@ const paginationTotalCount = ref(0);
 const paginationPageSize = ref(10);
 const paginationPageSizeOptions = [10, 20, 50, 100];
 
+const addDialogVisible = ref(false);
+const addDialogLoading = ref(false);
+const addFormRef = ref(null);
+const addFormData = ref({
+  sku: '',
+  picking_unit: 1,
+  picking_unit_name: '',
+  picking_sku_name: '',
+  support_pkg_picking: false,
+  pkg_picking_unit: 1,
+  pkg_picking_unit_name: '',
+});
+const addFormRules = ref({
+  sku: [{ required: true, message: 'SKU不能为空' }],
+  picking_unit: [{ required: true, message: '拣货单位数量不能为空' }],
+  picking_unit_name: [{ required: true, message: '拣货单位名不能为空' }],
+  picking_sku_name: [{ required: true, message: '拣货SKU名不能为空' }],
+  support_pkg_picking: [{ required: true, message: '请选择是否支持PKG打包' }],
+});
+
 onMounted(async () => {
   await onSearchPickingNote();
 });
@@ -314,6 +410,69 @@ const onSavePickingNote = async (pickingNote) => {
     console.error(e);
     await MessagePlugin.error(`保存sku拣货备注失败: ${e}`);
     return false;
+  }
+};
+const onShowAddDialog = () => {
+  // 重置表单数据
+  addFormData.value = {
+    sku: '',
+    picking_unit: 1,
+    picking_unit_name: '',
+    picking_sku_name: '',
+    support_pkg_picking: false,
+    pkg_picking_unit: 1,
+    pkg_picking_unit_name: '',
+  };
+  addDialogVisible.value = true;
+};
+const onConfirmAdd = async () => {
+  try {
+    addDialogLoading.value = true;
+    
+    // 表单验证
+    if (addFormRef.value) {
+      const validateResult = await addFormRef.value.validate();
+      if (validateResult !== true) {
+        addDialogLoading.value = false;
+        return;
+      }
+    }
+
+    // 创建要保存的数据
+    const pickingNoteData: any = {
+      sku: addFormData.value.sku,
+      picking_unit: addFormData.value.picking_unit,
+      picking_unit_name: addFormData.value.picking_unit_name,
+      picking_sku_name: addFormData.value.picking_sku_name,
+      support_pkg_picking: addFormData.value.support_pkg_picking,
+    };
+
+    // 如果支持PKG打包，添加相关字段
+    if (addFormData.value.support_pkg_picking) {
+      pickingNoteData.pkg_picking_unit = addFormData.value.pkg_picking_unit;
+      pickingNoteData.pkg_picking_unit_name = addFormData.value.pkg_picking_unit_name;
+    } else {
+      pickingNoteData.pkg_picking_unit = 0;
+      pickingNoteData.pkg_picking_unit_name = 'pk';
+    }
+
+    const isValid = await onSavePickingNote(pickingNoteData);
+    if (isValid) {
+      addDialogVisible.value = false;
+      MessagePlugin.success('新增拣货备注成功');
+    }
+  } catch (error) {
+    console.error('新增拣货备注失败:', error);
+    MessagePlugin.error('新增拣货备注失败');
+  } finally {
+    addDialogLoading.value = false;
+  }
+};
+const onCancelAdd = () => {
+  addDialogVisible.value = false;
+  // 清空表单错误状态
+  if (addFormRef.value) {
+    addFormRef.value.clearValidate();
   }
 };
 </script>
