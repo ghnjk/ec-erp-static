@@ -1,10 +1,24 @@
 <template>
   <div>
     <t-card>
-      <div class="action-buttons" style="margin-bottom: 16px;">
-        <t-button theme="primary" @click="onShowAddDialog">
+      <div class="search-container" style="margin-bottom: 16px;">
+        <t-form layout="inline">
+          <t-form-item label="SKU搜索">
+            <t-input 
+              v-model="searchSku" 
+              placeholder="请输入SKU进行搜索"
+              style="width: 200px;"
+              @enter="onSearch"
+              clearable
+            />
+          </t-form-item>
+          <t-form-item>
+            <t-button theme="primary" @click="onSearch">搜索</t-button>
+            <t-button theme="default" @click="onShowAddDialog">
           新增拣货备注
         </t-button>
+          </t-form-item>
+        </t-form>
       </div>
       
       <div class="table-container">
@@ -357,6 +371,8 @@ const addFormRules = ref({
   support_pkg_picking: [{ required: true, message: '请选择是否支持PKG打包' }],
 });
 
+const searchSku = ref('');
+
 onMounted(async () => {
   await onSearchPickingNote();
 });
@@ -365,10 +381,15 @@ const onPaginationChange = async ({ current, pageSize }) => {
   paginationPageSize.value = pageSize;
   await onSearchPickingNote();
 };
+const onSearch = async () => {
+  paginationCurrentPage.value = 1;
+  await onSearchPickingNote();
+};
 const onSearchPickingNote = async () => {
   const req = {
     current_page: paginationCurrentPage.value,
     page_size: paginationPageSize.value,
+    search_sku: searchSku.value,
   };
   noteTableLoading.value = true;
   try {
@@ -474,6 +495,11 @@ const onCancelAdd = () => {
   if (addFormRef.value) {
     addFormRef.value.clearValidate();
   }
+};
+const onResetSearch = async () => {
+  searchSku.value = '';
+  paginationCurrentPage.value = 1; // 重置到第一页
+  await onSearchPickingNote();
 };
 </script>
 <style scoped></style>
