@@ -119,6 +119,10 @@ const shippingCompanyOptions = [
     label: '百世',
     value: '百世',
   },
+  {
+    label: '中印通达',
+    value: '中印通达',
+  }
 ];
 const maritimePortOptions = [
   {

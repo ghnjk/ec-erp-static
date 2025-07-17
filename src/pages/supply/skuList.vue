@@ -397,6 +397,9 @@ const calcAvgSellQuantityPkg = (row) => {
     return row.avg_sell_quantity.toFixed(1);
   }
   const res = row.avg_sell_quantity / row.sku_unit_quantity;
+  if (!row.sku_unit_name || !row.sku_unit_name.trim() || row.sku_unit_name.toLowerCase().includes('pcs')) {
+    return `${res.toFixed(0)}`;
+  }
   return `${res.toFixed(1)} ${row.sku_unit_name.substring(0, 1)}`;
 };
 const calcInventoryPkg = (row) => {
@@ -404,6 +407,9 @@ const calcInventoryPkg = (row) => {
     return row.inventory.toFixed(1);
   }
   const res = row.inventory / row.sku_unit_quantity;
+  if (!row.sku_unit_name || !row.sku_unit_name.trim() || row.sku_unit_name.toLowerCase().includes('pcs')) {
+    return `${res.toFixed(0)}`;
+  }
   return `${res.toFixed(1)} ${row.sku_unit_name.substring(0, 1)}`;
 };
 const calcShippingStockQuantityPkg = (row) => {
@@ -411,6 +417,9 @@ const calcShippingStockQuantityPkg = (row) => {
     return row.shipping_stock_quantity.toFixed(1);
   }
   const res = row.shipping_stock_quantity / row.sku_unit_quantity;
+  if (!row.sku_unit_name || !row.sku_unit_name.trim() || row.sku_unit_name.toLowerCase().includes('pcs')) {
+    return `${res.toFixed(0)}`;
+  }
   return `${res.toFixed(1)} ${row.sku_unit_name.substring(0, 1)}`;
 };
 const calcShippingSupportDays = (row) => {

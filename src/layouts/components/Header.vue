@@ -109,6 +109,8 @@ const selectedProject = ref('');
 const projectOptions = [
   { label: '菲律宾', value: 'philipine' },
   { label: '马来西亚', value: 'malaysia' },
+  { label: '印度尼西亚', value: 'indonesia' },
+  { label: '泰国', value: 'thailand' },
 ];
 
 // 获取用户信息并设置默认项目
@@ -128,7 +130,9 @@ onMounted(() => {
 const handleProjectChange = (value: string) => {
   const urlMap = {
     philipine: 'http://150.109.158.22/index.html',
-    malaysia: 'http://8.210.60.7:2080/index.html#/supply/skuList',
+    malaysia: 'http://8.210.60.7:2080/index.html',
+    indonesia: 'http://8.210.60.7:2081/index.html',
+    thailand: 'http://8.210.60.7:2082/index.html',
   };
   const targetUrl = urlMap[value];
   if (targetUrl) {
