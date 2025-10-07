@@ -7,7 +7,7 @@
       :close-on-esc-keydown="false"
       :close-on-overlay-click="false"
       :confirm-btn="null"
-      :header="isCreateMode ? '新建销售订单' : '编辑销售订单'"
+      :header="isReadonly ? '查看销售订单' : isCreateMode ? '新建销售订单' : '编辑销售订单'"
       show-overlay
       width="85%"
     >
@@ -17,6 +17,7 @@
             <t-form-item label="订单日期:" name="orderDate" required>
               <t-date-picker
                 v-model="orderDate"
+                :disabled="isReadonly"
                 allow-input
                 clearable
                 format="YYYY-MM-DD"
@@ -27,7 +28,7 @@
           </t-form>
         </t-col>
       </t-row>
-      <t-row>
+      <t-row v-if="!isReadonly">
         <t-col :span="8">
           <t-form layout="inline">
             <t-form-item label="SKU分组:" name="skuGroupName">
@@ -57,6 +58,12 @@
           <h3 style="text-align: right">总金额：{{ currencyFormatter.format(totalAmount) }}</h3>
         </t-col>
       </t-row>
+      <t-row v-else>
+        <t-col :span="12"></t-col>
+        <t-col :span="12">
+          <h3 style="text-align: right">总金额：{{ currencyFormatter.format(totalAmount) }}</h3>
+        </t-col>
+      </t-row>
       <br />
       <div class="table-container">
         <t-table
@@ -81,7 +88,9 @@
             {{ currencyFormatter.format(row.total_amount) }}
           </template>
           <template #operation="{ row }">
-            <t-button size="small" theme="danger" variant="text" @click="onDeleteSku(row)">删除</t-button>
+            <t-button v-if="!isReadonly" size="small" theme="danger" variant="text" @click="onDeleteSku(row)">
+              删除
+            </t-button>
           </template>
         </t-table>
         <br />
@@ -89,8 +98,12 @@
           <t-col :span="9"></t-col>
           <t-col :span="3">
             <t-space>
-              <t-button style="float: right" theme="default" @click="visible = false">取消</t-button>
-              <t-button style="float: right" theme="primary" @click="onSaveSaleOrder">保存</t-button>
+              <t-button style="float: right" theme="default" @click="visible = false">
+                {{ isReadonly ? '关闭' : '取消' }}
+              </t-button>
+              <t-button v-if="!isReadonly" style="float: right" theme="primary" @click="onSaveSaleOrder">
+                保存
+              </t-button>
             </t-space>
           </t-col>
         </t-row>
@@ -107,11 +120,18 @@ export default {
 <script lang="ts" setup>
 import { ref, computed, defineExpose, defineEmits, watch } from 'vue';
 import { InputNumber, MessagePlugin, DialogPlugin } from 'tdesign-vue-next';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 import { skuGroupNameOptions, skuGroupMap, skuMap, loadSkuInfo } from '@/utils/skuUtil';
 import { loadAllSkuSalePrice, getSkuSalePrice, batchUpdateSkuSalePrice } from '@/utils/saleUtil';
 import { calculatePickingInfo } from '@/utils/skuPickingNoteUtil';
 import { createSaleOrder, updateSaleOrder } from '@/apis/saleApis';
 import type { ISaleOrder, ISaleSkuItem } from '@/apis/dto/saleDto';
+
+// 扩展 dayjs 时区插件
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 const currencyFormatter = new Intl.NumberFormat('zh-CN', {
   style: 'currency',
@@ -120,6 +140,7 @@ const currencyFormatter = new Intl.NumberFormat('zh-CN', {
 
 const visible = ref(false);
 const isCreateMode = ref(true);
+const isReadonly = ref(false);
 const saleOrder = ref<ISaleOrder | null>(null);
 const orderDate = ref('');
 const skuGroupName = ref('');
@@ -143,99 +164,111 @@ const currentSkuOptions = computed(() => {
   }));
 });
 
-// 表格列配置
-const saleSkuTableColumns = [
-  {
-    width: 100,
-    colKey: 'sku_group',
-    title: 'SKU分组',
-    align: 'center',
-  },
-  {
-    width: 120,
-    colKey: 'sku_name',
-    title: '商品名',
-    align: 'center',
-  },
-  {
-    width: 150,
-    colKey: 'sku',
-    title: '商品SKU',
-    align: 'center',
-  },
-  {
-    width: 100,
-    colKey: 'quantity',
-    title: '数量',
-    align: 'center',
-    edit: {
-      component: InputNumber,
-      props: {
-        autofocus: true,
-        min: 1,
-      },
-      validateTrigger: 'change',
-      abortEditOnEvent: ['onEnter', 'onBlur'],
-      onEdited: (context: any) => {
-        saleSkuTableData.value.splice(context.rowIndex, 1, context.newRowData);
-        updateRowPickingInfo(context.rowIndex);
-        calcTotalAmount();
-      },
-      rules: [
-        {
-          required: true,
-          message: '不能为空',
-        },
-      ],
-      defaultEditable: true,
+// 表格列配置（动态根据只读模式调整）
+const saleSkuTableColumns = computed(() => {
+  const columns: any[] = [
+    {
+      width: 100,
+      colKey: 'sku_group',
+      title: 'SKU分组',
+      align: 'center',
     },
-  },
-  {
-    width: 150,
-    colKey: 'picking_info',
-    title: '拣货信息',
-    align: 'center',
-  },
-  {
-    width: 100,
-    colKey: 'unit_price',
-    title: '单价',
-    align: 'center',
-    edit: {
-      component: InputNumber,
-      props: {
-        autofocus: true,
-        min: 0.01,
-        step: 0.01,
-      },
-      validateTrigger: 'change',
-      abortEditOnEvent: ['onEnter', 'onBlur'],
-      onEdited: (context: any) => {
-        saleSkuTableData.value.splice(context.rowIndex, 1, context.newRowData);
-        calcTotalAmount();
-      },
-      rules: [
-        {
-          required: true,
-          message: '不能为空',
-        },
-      ],
-      defaultEditable: false,
+    {
+      width: 120,
+      colKey: 'sku_name',
+      title: '商品名',
+      align: 'center',
     },
-  },
-  {
-    width: 120,
-    colKey: 'total_amount',
-    title: '总价',
-    align: 'center',
-  },
-  {
-    width: 80,
-    colKey: 'operation',
-    title: '操作',
-    align: 'center',
-  },
-];
+    {
+      width: 150,
+      colKey: 'sku',
+      title: '商品SKU',
+      align: 'center',
+    },
+    {
+      width: 100,
+      colKey: 'quantity',
+      title: '数量',
+      align: 'center',
+      edit: isReadonly.value
+        ? undefined
+        : {
+            component: InputNumber,
+            props: {
+              autofocus: true,
+              min: 1,
+            },
+            validateTrigger: 'change',
+            abortEditOnEvent: ['onEnter', 'onBlur'],
+            onEdited: (context: any) => {
+              saleSkuTableData.value.splice(context.rowIndex, 1, context.newRowData);
+              updateRowPickingInfo(context.rowIndex);
+              calcTotalAmount();
+            },
+            rules: [
+              {
+                required: true,
+                message: '不能为空',
+              },
+            ],
+            defaultEditable: true,
+          },
+    },
+    {
+      width: 150,
+      colKey: 'picking_info',
+      title: '拣货信息',
+      align: 'center',
+    },
+    {
+      width: 100,
+      colKey: 'unit_price',
+      title: '单价',
+      align: 'center',
+      edit: isReadonly.value
+        ? undefined
+        : {
+            component: InputNumber,
+            props: {
+              autofocus: true,
+              min: 0.01,
+              step: 0.01,
+            },
+            validateTrigger: 'change',
+            abortEditOnEvent: ['onEnter', 'onBlur'],
+            onEdited: (context: any) => {
+              saleSkuTableData.value.splice(context.rowIndex, 1, context.newRowData);
+              calcTotalAmount();
+            },
+            rules: [
+              {
+                required: true,
+                message: '不能为空',
+              },
+            ],
+            defaultEditable: false,
+          },
+    },
+    {
+      width: 120,
+      colKey: 'total_amount',
+      title: '总价',
+      align: 'center',
+    },
+  ];
+
+  // 只有非只读模式才显示操作列
+  if (!isReadonly.value) {
+    columns.push({
+      width: 80,
+      colKey: 'operation',
+      title: '操作',
+      align: 'center',
+    });
+  }
+
+  return columns;
+});
 
 // 更新某行的拣货信息
 const updateRowPickingInfo = (rowIndex: number) => {
@@ -309,13 +342,16 @@ const calcTotalAmount = () => {
 };
 
 // 打开对话框
-const popupDialog = async (order: ISaleOrder | null) => {
+const popupDialog = async (order: ISaleOrder | null, readonly = false) => {
+  // 设置只读模式
+  isReadonly.value = readonly;
+  
   // 加载基础数据
   await loadSkuInfo();
   await loadAllSkuSalePrice();
 
   if (order) {
-    // 编辑模式
+    // 编辑/查看模式
     isCreateMode.value = false;
     saleOrder.value = order;
     orderDate.value = order.order_date;
@@ -341,7 +377,8 @@ const popupDialog = async (order: ISaleOrder | null) => {
     // 新建模式
     isCreateMode.value = true;
     saleOrder.value = null;
-    orderDate.value = new Date().toISOString().slice(0, 10);
+    // 使用东八区（Asia/Shanghai）时区获取当前日期
+    orderDate.value = dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD');
     saleSkuTableData.value = [];
   }
 

@@ -74,6 +74,15 @@
             >
               编辑
             </t-button>
+            <t-button
+              v-if="row.status === '已同步'"
+              size="small"
+              theme="primary"
+              variant="text"
+              @click="onViewOrder(row)"
+            >
+              查看
+            </t-button>
             <t-popconfirm
               v-if="row.status === '待同步'"
               content="确认提交该订单吗？提交后，会将相应的库存从erp中扣除。"
@@ -236,12 +245,17 @@ const onPaginationChange = () => {
 
 // 新建订单
 const onCreateSaleOrder = () => {
-  editSaleOrderDialog.value.popupDialog(null);
+  editSaleOrderDialog.value.popupDialog(null, false);
 };
 
 // 编辑订单
 const onEditOrder = (row: any) => {
-  editSaleOrderDialog.value.popupDialog(row);
+  editSaleOrderDialog.value.popupDialog(row, false);
+};
+
+// 查看订单（只读模式）
+const onViewOrder = (row: any) => {
+  editSaleOrderDialog.value.popupDialog(row, true);
 };
 
 // 提交订单
