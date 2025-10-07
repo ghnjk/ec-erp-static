@@ -5,18 +5,34 @@ import type { ISkuSalePrice } from '@/apis/dto/saleDto';
 
 // SKU销售价格映射表 <sku, price>
 export const skuSalePriceMap = ref(new Map<string, number>());
+// 数据是否已加载
+export const skuSalePriceLoaded = ref(false);
+// 正在加载的Promise（防止重复加载）
+let loadingPromise: Promise<void> | null = null;
 
 /**
  * 加载所有SKU销售价格信息
  */
 export async function loadAllSkuSalePrice() {
-  skuSalePriceMap.value = new Map<string, number>();
-  
-  const pageSize = 10000;
-  let currentPage = 1;
-  let hasMore = true;
+  // 如果正在加载，返回加载中的Promise
+  if (loadingPromise) {
+    return loadingPromise;
+  }
 
-  try {
+  // 如果已加载，直接返回
+  if (skuSalePriceLoaded.value) {
+    return Promise.resolve();
+  }
+
+  loadingPromise = (async () => {
+    skuSalePriceMap.value = new Map<string, number>();
+    skuSalePriceLoaded.value = false;
+    
+    const pageSize = 10000;
+    let currentPage = 1;
+    let hasMore = true;
+
+    try {
     while (hasMore) {
       const req = {
         current_page: currentPage,
@@ -39,10 +55,18 @@ export async function loadAllSkuSalePrice() {
     }
     
     console.log(`成功加载 ${skuSalePriceMap.value.size} 条SKU销售价格信息`);
+    
+    // 标记为已加载
+    skuSalePriceLoaded.value = true;
   } catch (e) {
     console.error('加载SKU销售价格失败:', e);
     await MessagePlugin.error(`加载SKU销售价格异常: ${e}`);
+  } finally {
+    loadingPromise = null;
   }
+  })();
+
+  return loadingPromise;
 }
 
 /**

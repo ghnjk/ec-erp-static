@@ -76,11 +76,11 @@
             </t-button>
             <t-popconfirm
               v-if="row.status === '待同步'"
-              content="确认提交该订单吗？提交后订单状态将变为「已同步」"
+              content="确认提交该订单吗？提交后，会将相应的库存从erp中扣除。"
               theme="success"
               @confirm="onSubmitOrder(row)"
             >
-              <t-button size="small" theme="success" variant="text">提交</t-button>
+              <t-button size="small" theme="success" variant="text">同步erp</t-button>
             </t-popconfirm>
             <t-popconfirm content="确认删除该订单吗？删除后不可恢复" theme="danger" @confirm="onDeleteOrder(row)">
               <t-button size="small" theme="danger" variant="text">删除</t-button>
@@ -116,6 +116,8 @@ import { ref, onMounted } from 'vue';
 import { MessagePlugin } from 'tdesign-vue-next';
 import { searchSaleOrder, deleteSaleOrder, submitSaleOrder } from '@/apis/saleApis';
 import { loadAllSkuPickingNote, generateOrderSummary } from '@/utils/skuPickingNoteUtil';
+import { loadSkuInfo } from '@/utils/skuUtil';
+import { loadAllSkuSalePrice } from '@/utils/saleUtil';
 import type { ISaleOrder } from '@/apis/dto/saleDto';
 
 const currencyFormatter = new Intl.NumberFormat('zh-CN', {
@@ -211,12 +213,14 @@ const onSearchOrder = async () => {
     const res = await searchSaleOrder(req);
     
     // 处理数据，生成订单摘要
-    orderTableData.value = res.records.map((order: ISaleOrder) => ({
+    // 注意：后端实际返回的是 list 字段，文档中是 records 字段，这里兼容两种情况
+    const orderList = res.list || res.records || [];
+    orderTableData.value = orderList.map((order: ISaleOrder) => ({
       ...order,
       sku_order_summary: generateOrderSummary(order.sale_sku_list),
     }));
     
-    paginationTotalCount.value = res.total;
+    paginationTotalCount.value = res.total || 0;
   } catch (e) {
     console.error('查询销售订单失败:', e);
     MessagePlugin.error(`查询销售订单异常: ${e}`);
@@ -266,8 +270,15 @@ const onDeleteOrder = async (row: any) => {
 
 // 组件挂载时
 onMounted(async () => {
-  // 加载SKU拣货备注信息
-  await loadAllSkuPickingNote();
+  // 并行预加载基础数据（不阻塞UI，提前准备好数据供dialog使用）
+  Promise.all([
+    loadSkuInfo(),
+    loadAllSkuSalePrice(),
+    loadAllSkuPickingNote(),
+  ]).catch((e) => {
+    console.error('预加载基础数据失败:', e);
+  });
+  
   // 查询订单列表
   await onSearchOrder();
 });

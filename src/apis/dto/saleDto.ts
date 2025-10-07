@@ -100,7 +100,8 @@ export interface ISearchSaleOrderReq {
  */
 export interface ISkuSalePricePageVO {
   total: number;
-  records: ISkuSalePrice[];
+  list?: ISkuSalePrice[];  // 实际返回的字段（兼容）
+  records?: ISkuSalePrice[];  // 文档定义的字段
 }
 
 /**
@@ -108,7 +109,8 @@ export interface ISkuSalePricePageVO {
  */
 export interface ISaleOrderPageVO {
   total: number;
-  records: ISaleOrder[];
+  list?: ISaleOrder[];  // 实际返回的字段
+  records?: ISaleOrder[];  // 文档定义的字段（兼容）
 }
 
 /**
