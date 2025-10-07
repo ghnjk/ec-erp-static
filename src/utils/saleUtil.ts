@@ -42,15 +42,18 @@ export async function loadAllSkuSalePrice() {
       
       const res = await searchSkuSalePrice(req);
       
+      // 优先使用 list 字段（实际返回），兼容 records 字段（文档定义）
+      const dataList = res.list || res.records || [];
+      
       // 建立价格映射
-      if (res.records && res.records.length > 0) {
-        res.records.forEach((item: ISkuSalePrice) => {
+      if (dataList.length > 0) {
+        dataList.forEach((item: ISkuSalePrice) => {
           skuSalePriceMap.value.set(item.sku, item.unit_price);
         });
       }
       
       // 判断是否还有下一页
-      hasMore = res.records && res.records.length === pageSize;
+      hasMore = dataList.length === pageSize;
       currentPage++;
     }
     

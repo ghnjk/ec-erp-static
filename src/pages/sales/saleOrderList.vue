@@ -213,7 +213,7 @@ const onSearchOrder = async () => {
     const res = await searchSaleOrder(req);
     
     // 处理数据，生成订单摘要
-    // 注意：后端实际返回的是 list 字段，文档中是 records 字段，这里兼容两种情况
+    // 注意：标准返回字段是 list，兼容旧版本的 records 字段
     const orderList = res.list || res.records || [];
     orderTableData.value = orderList.map((order: ISaleOrder) => ({
       ...order,
