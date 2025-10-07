@@ -1,0 +1,41 @@
+{
+  "data": {
+    "total": 15,
+    "records": [
+      {
+        "sku": "A-1-Golden-Maple leaf",
+        "unit_price": 150.5,
+        "create_time": "2024-10-01 10:30:00",
+        "modify_time": "2024-10-05 15:20:00"
+      },
+      {
+        "sku": "A-2-Golden-Oak leaf",
+        "unit_price": 180.0,
+        "create_time": "2024-10-02 11:20:00",
+        "modify_time": "2024-10-02 11:20:00"
+      },
+      {
+        "sku": "G-1-Golden-grape leaves",
+        "unit_price": 95.0,
+        "create_time": "2024-10-03 09:15:00",
+        "modify_time": "2024-10-03 09:15:00"
+      },
+      {
+        "sku": "A-3-Golden-Birch leaf",
+        "unit_price": 165.0,
+        "create_time": "2024-10-04 14:30:00",
+        "modify_time": "2024-10-04 14:30:00"
+      },
+      {
+        "sku": "G-2-Golden-strawberry leaves",
+        "unit_price": 120.0,
+        "create_time": "2024-10-05 16:45:00",
+        "modify_time": "2024-10-05 16:45:00"
+      }
+    ]
+  },
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": 1709991821760
+}
+

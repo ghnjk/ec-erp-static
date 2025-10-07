@@ -8,11 +8,13 @@ import aopServer from './api/aop_server';
 import cmdbApi from './api/cmdb';
 import supplierApi from './api/supplier';
 import warehouseApi from './api/warehouse';
+import saleApi from './api/sale';
 
 export default [
   ...systemApi,
   ...supplierApi,
   ...warehouseApi,
+  ...saleApi,
   ...cmdbApi,
   ...workbenchApi,
   ...alarmForward,

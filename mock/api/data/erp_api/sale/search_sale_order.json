@@ -1,0 +1,129 @@
+{
+  "data": {
+    "total": 25,
+    "records": [
+      {
+        "order_id": 1005,
+        "order_date": "2024-10-07 14:20:00",
+        "sale_sku_list": [
+          {
+            "sku": "A-3-Golden-Birch leaf",
+            "sku_group": "A-Golden",
+            "sku_name": "Golden Birch leaf",
+            "erp_sku_image_url": "https://example.com/images/birch.jpg",
+            "unit_price": 165.0,
+            "quantity": 80,
+            "total_amount": 13200.0
+          }
+        ],
+        "total_amount": 13200.0,
+        "status": "待同步",
+        "is_delete": 0,
+        "create_time": "2024-10-07 14:20:00",
+        "modify_time": "2024-10-07 14:20:00"
+      },
+      {
+        "order_id": 1004,
+        "order_date": "2024-10-06 11:30:00",
+        "sale_sku_list": [
+          {
+            "sku": "G-2-Golden-strawberry leaves",
+            "sku_group": "G-Golden",
+            "sku_name": "Golden strawberry leaves",
+            "erp_sku_image_url": "https://example.com/images/strawberry.jpg",
+            "unit_price": 120.0,
+            "quantity": 60,
+            "total_amount": 7200.0
+          },
+          {
+            "sku": "A-1-Golden-Maple leaf",
+            "sku_group": "A-Golden",
+            "sku_name": "Golden Maple leaf",
+            "erp_sku_image_url": "https://example.com/images/maple.jpg",
+            "unit_price": 150.5,
+            "quantity": 40,
+            "total_amount": 6020.0
+          }
+        ],
+        "total_amount": 13220.0,
+        "status": "已同步",
+        "is_delete": 0,
+        "create_time": "2024-10-06 11:30:00",
+        "modify_time": "2024-10-06 15:45:00"
+      },
+      {
+        "order_id": 1003,
+        "order_date": "2024-10-05 16:40:00",
+        "sale_sku_list": [
+          {
+            "sku": "A-2-Golden-Oak leaf",
+            "sku_group": "A-Golden",
+            "sku_name": "Golden Oak leaf",
+            "erp_sku_image_url": "https://example.com/images/oak.jpg",
+            "unit_price": 180.0,
+            "quantity": 30,
+            "total_amount": 5400.0
+          }
+        ],
+        "total_amount": 5400.0,
+        "status": "已同步",
+        "is_delete": 0,
+        "create_time": "2024-10-05 16:40:00",
+        "modify_time": "2024-10-05 17:10:00"
+      },
+      {
+        "order_id": 1002,
+        "order_date": "2024-10-05 15:30:00",
+        "sale_sku_list": [
+          {
+            "sku": "A-1-Golden-Maple leaf",
+            "sku_group": "A-Golden",
+            "sku_name": "Golden Maple leaf",
+            "erp_sku_image_url": "https://example.com/images/maple.jpg",
+            "unit_price": 150.5,
+            "quantity": 100,
+            "total_amount": 15050.0
+          },
+          {
+            "sku": "G-1-Golden-grape leaves",
+            "sku_group": "G-Golden",
+            "sku_name": "Golden grape leaves",
+            "erp_sku_image_url": "https://example.com/images/grape.jpg",
+            "unit_price": 95.0,
+            "quantity": 50,
+            "total_amount": 4750.0
+          }
+        ],
+        "total_amount": 19800.0,
+        "status": "已同步",
+        "is_delete": 0,
+        "create_time": "2024-10-05 15:30:00",
+        "modify_time": "2024-10-05 16:20:00"
+      },
+      {
+        "order_id": 1001,
+        "order_date": "2024-10-04 10:15:00",
+        "sale_sku_list": [
+          {
+            "sku": "A-2-Golden-Oak leaf",
+            "sku_group": "A-Golden",
+            "sku_name": "Golden Oak leaf",
+            "erp_sku_image_url": "https://example.com/images/oak.jpg",
+            "unit_price": 180.0,
+            "quantity": 50,
+            "total_amount": 9000.0
+          }
+        ],
+        "total_amount": 9000.0,
+        "status": "待同步",
+        "is_delete": 0,
+        "create_time": "2024-10-04 10:15:00",
+        "modify_time": "2024-10-04 10:15:00"
+      }
+    ]
+  },
+  "result": 0,
+  "resultMsg": "success",
+  "traceId": 1709991821760
+}
+

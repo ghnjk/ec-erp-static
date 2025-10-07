@@ -41,6 +41,22 @@ export default [
     ],
   },
   {
+    path: '/sales',
+    component: Layout,
+    redirect: '/sales/saleOrderList',
+    name: 'sales',
+    group: 'sales',
+    meta: { title: '销售管理', icon: FormIcon, hidden: false },
+    children: [
+      {
+        path: 'saleOrderList',
+        name: 'saleOrderList',
+        component: () => import('@/pages/sales/saleOrderList.vue'),
+        meta: { title: '销售订单', roleCode: [USER_ROLE_ADMIN, USER_ROLE_SUPPLIER] },
+      },
+    ],
+  },
+  {
     path: '/warehouse',
     component: Layout,
     redirect: '/warehouse/printOrder',
