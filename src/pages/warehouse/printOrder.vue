@@ -137,8 +137,8 @@ const orderTableLoading = ref(false);
 const orderTableSelectedRowKeys = ref<TableProps['selectedRowKeys']>([]);
 const paginationCurrentPage = ref(1);
 const paginationTotalCount = ref(0);
-const paginationPageSize = ref(500);
-const paginationPageSizeOptions = [10, 20, 50, 100, 200, 500, 1000];
+const paginationPageSize = ref(5000);
+const paginationPageSizeOptions = [10, 20, 50, 100, 200, 500, 1000, 5000];
 
 const shippingOptions = ref([]);
 const orderPrintConfirmDialog = ref(null);
