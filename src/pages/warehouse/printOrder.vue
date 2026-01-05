@@ -25,6 +25,14 @@
       </t-row>
       <br />
       <div class="table-container">
+        <t-pagination
+          v-model="paginationCurrentPage"
+          v-model:pageSize="paginationPageSize"
+          :page-size-options="paginationPageSizeOptions"
+          :total="paginationTotalCount"
+          class="pagination"
+          @change="onPaginationChange"
+        />
         <t-table
           :columns="orderTableColumns"
           :data="orderTableData"
@@ -137,8 +145,8 @@ const orderTableLoading = ref(false);
 const orderTableSelectedRowKeys = ref<TableProps['selectedRowKeys']>([]);
 const paginationCurrentPage = ref(1);
 const paginationTotalCount = ref(0);
-const paginationPageSize = ref(5000);
-const paginationPageSizeOptions = [10, 20, 50, 100, 200, 500, 1000, 5000];
+const paginationPageSize = ref(300);
+const paginationPageSizeOptions = [10, 20, 50, 100, 200, 300, 500, 1000, 5000];
 
 const shippingOptions = ref([]);
 const orderPrintConfirmDialog = ref(null);
